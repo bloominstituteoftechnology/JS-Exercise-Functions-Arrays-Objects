@@ -35,11 +35,55 @@ function makePersonObject(id, name, email) {
  * is the name in the object.
  * 
  * For example, if we invoke `getName`
- * passing { id: 1, name: 'Leia', email: 'leia@leia.com` },
+ * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(personObject) {
   return 'Hello, my name is ' + personObject.name;
+}
+
+/**
+ * ### Challenge `makeSmartPerson`
+ * 
+ * @instructions
+ * This function takes a single name argument and returns an object.
+ * The returned object has the following characteristics:
+ *     It has a `name` property that contains the argument passed in.
+ *     It has a `sum` method that takes two numbers as arguments
+ *         and returns the result of adding them together.
+ *     It has a `speak` method that takes no arguments
+ *         and returns a string like `Hello, my name is {name}`.
+ *         where `{name}` is the name passed into `makeSmartPerson`.
+*/
+function makeSmartPerson(name) {
+  return {
+    name,
+    sum: (a, b) => a + b,
+    speak: () => `Hello, my name is ${name}`,
+  };
+}
+
+/**
+ * ### Challenge `carMaker`
+ * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
+ * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
+ * 
+ * @instructions
+ * This function takes a single odometer argument (a number) and returns an object.
+ * The returned object has the following characteristics:
+ *     it has an `odometer` property that contains the argument passed in.
+ *     it has a `drive` method that takes a distance as its argument,
+ *         causes the odometer in the object to be increased by the distance,
+ *         and returns the updated value of the `odometer`.
+*/
+function carMaker(odometer) {
+  return {
+    odometer,
+    drive(distance) {
+      this.odometer += distance;
+      return this.odometer;
+    }
+  };
 }
 
 /// ////// END OF CHALLENGE /////////
@@ -51,4 +95,6 @@ if (typeof exports !== 'undefined') {
   module.exports = module.exports || {}
   if (makePersonObject) { module.exports.makePersonObject = makePersonObject }
   if (getName) { module.exports.getName = getName }
+  if (makeSmartPerson) { module.exports.makeSmartPerson = makeSmartPerson }
+  if (carMaker) { module.exports.carMaker = carMaker }
 }
