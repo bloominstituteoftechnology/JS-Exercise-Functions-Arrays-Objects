@@ -184,7 +184,8 @@ function getOlderCars(inventory, maxYear) {
  * getGermanCars takes a single argument:
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getGermanCars returns an array containing all the cars
- * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`.
+ * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
+ * in the same order as they appear in the original inventory.
 */
 function getGermanCars(inventory) {
   let result = []
