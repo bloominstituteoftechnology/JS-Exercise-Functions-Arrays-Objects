@@ -119,6 +119,26 @@ function getCarInfoById(inventory, id) {
 }
 
 /**
+ * ### Challenge `sortCarInventory`
+ * 
+ * @instructions
+ * sortCarInventory takes a single argument:
+ *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
+ * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
+*/
+function sortCarInventory(inventory) {
+  return inventory.sort((a, b) => {
+    if (a.car_model < b.car_model) {
+      return -1;
+    }
+    if (a.car_model > b.car_model) {
+      return 1;
+    }
+    return 0;
+  })
+}
+
+/**
  * ### Challenge `carMaker`
  * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
  * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
@@ -155,4 +175,5 @@ if (typeof exports !== 'undefined') {
   if (getCarInfoByIndex) { module.exports.getCarInfoByIndex = getCarInfoByIndex }
   if (getLastCarInfo) { module.exports.getLastCarInfo = getLastCarInfo }
   if (getCarInfoById) { module.exports.getCarInfoById = getCarInfoById }
+  if (sortCarInventory) { module.exports.sortCarInventory = sortCarInventory }
 }

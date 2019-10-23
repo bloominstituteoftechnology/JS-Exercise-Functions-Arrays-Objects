@@ -20,6 +20,7 @@ if (typeof exports !== 'undefined') {
     getCarInfoByIndex,
     getLastCarInfo,
     getCarInfoById,
+    sortCarInventory,
   } = require('../index.js')
 }
 var expect = chai.expect
@@ -76,6 +77,14 @@ describe('getCarInfoById()', () => {
   })
   it('returns a string containing the car_model', () => {
     expect(getCarInfoById(inventory, 1)).to.include(inventory[0].car_model)
+  })
+})
+
+describe('sortCarInventory()', () => {
+  it('can sort the inventory', () => {
+    const copyOfInventory = [...inventory]
+    const sorted = sortCarInventory(copyOfInventory)
+    expect(sorted[sorted.length - 1].car_model).to.eql('Yukon')
   })
 })
 
