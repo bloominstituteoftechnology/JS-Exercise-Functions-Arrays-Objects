@@ -72,9 +72,9 @@ function makeSmartPerson(name) {
  * This function takes a single odometer argument (a number) and returns an object.
  * The returned object has the following characteristics:
  *     it has an `odometer` property that contains the argument passed in.
- *     it has a `drive` method that takes a distance as its argument,
- *         causes the odometer in the object to be increased by the distance,
- *         and returns the updated value of the `odometer`.
+ *     it has a `drive` method that takes a distance as its argument, and
+ *         (1) causes the odometer in the object to be increased by the distance,
+ *         (2) returns the updated value of the `odometer`.
 */
 function carMaker(odometer) {
   return {
