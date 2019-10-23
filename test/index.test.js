@@ -11,11 +11,13 @@ if (typeof exports !== 'undefined') {
   // Node/Non-browser test env
 
   var chai = require('chai')
+  var inventory = require('../data/inventory')
   var {
     makePersonObject,
     getName,
     makeSmartPerson,
     carMaker,
+    getCarInfoByIndex,
   } = require('../index.js')
 }
 var expect = chai.expect
@@ -47,6 +49,15 @@ describe('makeSmartPerson()', () => {
   })
 })
 
+
+describe('getCarInfoByIndex()', () => {
+  it('returns a string containing the car_make', () => {
+    expect(getCarInfoByIndex(inventory, 0)).to.include(inventory[0].car_make)
+  })
+  it('returns a string containing the car_model', () => {
+    expect(getCarInfoByIndex(inventory, 0)).to.include(inventory[0].car_model)
+  })
+})
 
 describe('carMaker() STRETCH', () => {
   it('makes a car with an odometer set to the correct value', () => {

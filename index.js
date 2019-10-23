@@ -64,6 +64,23 @@ function makeSmartPerson(name) {
 }
 
 /**
+ * ### Challenge `getCarInfoByIndex`
+ * 
+ * @instructions
+ * getCarInfoByIndex takes two arguments:
+ *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
+ *     (2) a number which is the desired index in the array.
+ * getCarInfoByIndex returns a string in the format `This is a {car_make} {car_model}
+ * 
+ * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
+ * it will return `This is a Lincoln Navigator`.
+*/
+function getCarInfoByIndex(inventory, index) {
+  const car = inventory[index];
+  return `This is a ${car.car_make} ${car.car_model}`;
+}
+
+/**
  * ### Challenge `carMaker`
  * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
  * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
@@ -97,4 +114,5 @@ if (typeof exports !== 'undefined') {
   if (getName) { module.exports.getName = getName }
   if (makeSmartPerson) { module.exports.makeSmartPerson = makeSmartPerson }
   if (carMaker) { module.exports.carMaker = carMaker }
+  if (getCarInfoByIndex) { module.exports.getCarInfoByIndex = getCarInfoByIndex }
 }
