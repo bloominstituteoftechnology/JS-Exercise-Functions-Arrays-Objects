@@ -25,7 +25,7 @@ function exampleFunction(num1, num2) {
  * ### Challenge `makePersonObject`
  * 
  * @instructions
- * This function should be able to take an id, a name and an email,
+ * This function should take an id, a name and an email as arguments,
  * and return an object with `id`, `name` and `email` properties.
  * 
  * For example, if we invoke `makePersonObject`
@@ -34,7 +34,7 @@ function exampleFunction(num1, num2) {
  * {
  *   id: 5,
  *   name: "Leia",
- *   email: "examples@you.edu",
+ *   email: "leia@leia.com",
  * }
 */
 function makePersonObject(id, name, email) {
@@ -45,9 +45,10 @@ function makePersonObject(id, name, email) {
  * ### Challenge `getName`
  * 
  * @instructions
- * This function should be able to take an object that has a `name` property,
- * and return a string that reads `Hello, my name is {name}`, where `{name}`
- * is the name in the object.
+ * This function takes as its only argument
+ * an object containing a `name` property,
+ * and return a string that reads `Hello, my name is {name}`,
+ * where `{name}` is the name stored in the object.
  * 
  * For example, if we invoke `getName`
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
@@ -61,7 +62,7 @@ function getName(personObject) {
  * ### Challenge `makeSmartPerson`
  * 
  * @instructions
- * This function takes a single name argument and returns an object.
+ * This function takes a single `name` argument and returns an object.
  * The returned object has the following characteristics:
  *     It has a `name` property that contains the argument passed in.
  *     It has a `sum` method that takes two numbers as arguments
@@ -179,7 +180,8 @@ function getModelYears(inventory) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  *     (2) a number which is the desired max year.
  * getOlderCars returns an array containing all the cars
- * with a `car_year` which is at most the given desired max year.
+ * with a `car_year` which is at most the given desired max year,
+ * in the same order as they appear in the original inventory.
 */
 function getOlderCars(inventory, maxYear) {
   let result = []
@@ -237,6 +239,7 @@ function getGermanCars(inventory) {
 var sum = (a, b) => a + b; // code here!
 var addFive = a => a + 5; // code here!
 var argTimesTwo = a => a * 2; // code here!
+
 /**
  * ### Challenge `carMaker`
  * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER

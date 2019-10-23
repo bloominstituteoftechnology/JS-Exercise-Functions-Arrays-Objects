@@ -152,6 +152,8 @@ describe('carMaker() STRETCH', () => {
     var car = carMaker(100)
     car.drive(1)
     expect(car.odometer).to.eql(101)
+    car.drive(1)
+    expect(car.odometer).to.eql(102)
   })
   it('driving the car returns the updated odometer', () => {
     expect(carMaker(100).drive(5)).to.eql(105)
