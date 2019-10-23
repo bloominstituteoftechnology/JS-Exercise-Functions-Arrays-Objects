@@ -24,6 +24,9 @@ if (typeof exports !== 'undefined') {
     getModelYears,
     getOlderCars,
     getGermanCars,
+    sum,
+    addFive,
+    argTimesTwo
   } = require('../index.js')
 }
 var expect = chai.expect
@@ -118,6 +121,18 @@ describe('getGermanCars()', () => {
     const makes = ['Audi', 'Mercedes-Benz', 'Volkswagen', 'BMW'];
     const cars = inventory.filter(c => makes.includes(c.car_make))
     expect(getGermanCars(inventory)).to.eql(cars)
+  })
+})
+
+describe('refactor into arrow functions', () => {
+  it('sum uses arrow syntax', () => {
+    expect(sum.toString()).to.include('=>')
+  })
+  it('addFive uses arrow syntax', () => {
+    expect(addFive.toString()).to.include('=>')
+  })
+  it('argTimesTwo uses arrow syntax', () => {
+    expect(argTimesTwo.toString()).to.include('=>')
   })
 })
 

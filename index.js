@@ -199,6 +199,30 @@ function getGermanCars(inventory) {
 }
 
 /**
+ * ### Challenge refactor to arrow functions
+ * 
+ * @instructions
+ * Create arrow function versions of the following commented-out functions:
+ * 
+ * const sum = function (a, b) {
+ *   return a + b
+ * }
+ * 
+ * const addFive = function(num) {
+*    return num + 5
+ * }
+ *
+ * const argTimesTwo = function (num) {
+ *   return num * 2
+ * }
+*/
+// const sum = null; // code here!
+// const addFive = null; // code here!
+// const argTimesTwo = null; // code here!
+const sum = (a, b) => a + b; // code here!
+const addFive = a => a + 5; // code here!
+const argTimesTwo = a => a * 2; // code here!
+/**
  * ### Challenge `carMaker`
  * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
  * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
@@ -239,4 +263,7 @@ if (typeof exports !== 'undefined') {
   if (getModelYears) { module.exports.getModelYears = getModelYears }
   if (getOlderCars) { module.exports.getOlderCars = getOlderCars }
   if (getGermanCars) { module.exports.getGermanCars = getGermanCars }
+  if (sum) { module.exports.sum = sum }
+  if (addFive) { module.exports.addFive = addFive }
+  if (argTimesTwo) { module.exports.argTimesTwo = argTimesTwo }
 }
