@@ -1,4 +1,4 @@
-// ⭐️ Example Challenge ⭐️
+// ⭐️ Example Challenge start ⭐️
 
 /**
  * ### Challenge `exampleFunction`
@@ -13,6 +13,9 @@
 function exampleFunction(num1, num2) {
   return num1 + num2;
 }
+
+// ⭐️ Example Challenge end ⭐️
+
 
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
