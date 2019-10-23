@@ -156,6 +156,27 @@ function getModelYears(inventory) {
 }
 
 /**
+ * ### Challenge `getOlderCars`
+ * 
+ * @instructions
+ * We need a utility to find older cars!
+ * getOlderCars takes two arguments:
+ *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
+ *     (2) a number which is the desired max year.
+ * getOlderCars returns an array containing all the cars
+ * with a `car_year` which is at most the given desired max year.
+*/
+function getOlderCars(inventory, maxYear) {
+  let result = []
+  for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].car_year <= maxYear) {
+      result.push(inventory[i])
+    }
+  }
+  return result
+}
+
+/**
  * ### Challenge `carMaker`
  * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
  * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
@@ -194,4 +215,5 @@ if (typeof exports !== 'undefined') {
   if (getCarInfoById) { module.exports.getCarInfoById = getCarInfoById }
   if (sortCarInventory) { module.exports.sortCarInventory = sortCarInventory }
   if (getModelYears) { module.exports.getModelYears = getModelYears }
+  if (getOlderCars) { module.exports.getOlderCars = getOlderCars }
 }

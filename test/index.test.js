@@ -22,6 +22,7 @@ if (typeof exports !== 'undefined') {
     getCarInfoById,
     sortCarInventory,
     getModelYears,
+    getOlderCars,
   } = require('../index.js')
 }
 var expect = chai.expect
@@ -93,6 +94,21 @@ describe('getModelYears()', () => {
   it('returns an array of car years', () => {
     const carYears = inventory.map(c => c.car_year)
     expect(getModelYears(inventory)).to.eql(carYears)
+  })
+})
+
+describe('getOlderCars()', () => {
+  it('returns an empty array for a very low max year', () => {
+    const cars = inventory.filter(c => c.car_year <= 0)
+    expect(getOlderCars(inventory, 0)).to.eql(cars)
+  })
+  it('returns the entire inventory for a very high max year', () => {
+    const cars = inventory.filter(c => c.car_year <= 3000)
+    expect(getOlderCars(inventory, 3000)).to.eql(cars)
+  })
+  it('returns some cars when the max year is somewhere in the middle', () => {
+    const cars = inventory.filter(c => c.car_year <= 1990)
+    expect(getOlderCars(inventory, 1990)).to.eql(cars)
   })
 })
 
