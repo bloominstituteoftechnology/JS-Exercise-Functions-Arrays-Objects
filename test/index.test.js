@@ -13,6 +13,7 @@ if (typeof exports !== 'undefined') {
   var chai = require('chai')
   var inventory = require('../data/inventory')
   var {
+    exampleFunction,
     makePersonObject,
     getName,
     makeSmartPerson,
@@ -30,6 +31,13 @@ if (typeof exports !== 'undefined') {
   } = require('../index.js')
 }
 var expect = chai.expect
+
+describe('exampleFunction()', () => {
+  it('can add two numbers', () => {
+    expect(exampleFunction(1, 2)).to.eql(3);
+  })
+})
+
 var person = { id: 1, name: 'Luke', email: 'luke@luke.com' }
 
 describe('makePersonObject()', () => {

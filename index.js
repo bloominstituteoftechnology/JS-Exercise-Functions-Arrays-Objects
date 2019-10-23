@@ -1,10 +1,22 @@
-/*
-// ⭐️ Example Solution Provided For First Function ⭐️
+// ⭐️ Example Challenge ⭐️
+
+/**
+ * ### Challenge `exampleFunction`
+ * 
+ * @instructions
+ * This function should be able to take two numbers as arguments
+ * and return the result of adding them up.
+ * 
+ * For example, if we invoke `exampleFunction` passing 5 and 3,
+ * the returned value should be 8.
+*/
+function exampleFunction(num1, num2) {
+  return num1 + num2;
+}
 
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
-*/
 
 /**
  * ### Challenge `makePersonObject`
@@ -252,6 +264,7 @@ if (typeof exports !== 'undefined') {
   // IGNORE: Test/Env Detected
   // For Node/Non-browser test env
   module.exports = module.exports || {}
+  if (exampleFunction) { module.exports.exampleFunction = exampleFunction }
   if (makePersonObject) { module.exports.makePersonObject = makePersonObject }
   if (getName) { module.exports.getName = getName }
   if (makeSmartPerson) { module.exports.makeSmartPerson = makeSmartPerson }
