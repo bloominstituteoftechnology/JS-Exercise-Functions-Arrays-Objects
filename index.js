@@ -81,6 +81,22 @@ function getCarInfoByIndex(inventory, index) {
 }
 
 /**
+ * ### Challenge `getLastCarInfo`
+ * 
+ * @instructions
+ * getLastCarInfo takes a single argument:
+ *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
+ * getLastCarInfo returns a string in the format `This is a {car_make} {car_model}
+ * 
+ * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
+ * it will return `This is a Lincoln Town Car`.
+*/
+function getLastCarInfo(inventory) {
+  const car = inventory[inventory.length - 1];
+  return `This is a ${car.car_make} ${car.car_model}`;
+}
+
+/**
  * ### Challenge `getCarInfoById`
  * 
  * @instructions
@@ -137,5 +153,6 @@ if (typeof exports !== 'undefined') {
   if (makeSmartPerson) { module.exports.makeSmartPerson = makeSmartPerson }
   if (carMaker) { module.exports.carMaker = carMaker }
   if (getCarInfoByIndex) { module.exports.getCarInfoByIndex = getCarInfoByIndex }
+  if (getLastCarInfo) { module.exports.getLastCarInfo = getLastCarInfo }
   if (getCarInfoById) { module.exports.getCarInfoById = getCarInfoById }
 }

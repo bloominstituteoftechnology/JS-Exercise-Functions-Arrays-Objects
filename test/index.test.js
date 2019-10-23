@@ -18,6 +18,7 @@ if (typeof exports !== 'undefined') {
     makeSmartPerson,
     carMaker,
     getCarInfoByIndex,
+    getLastCarInfo,
     getCarInfoById,
   } = require('../index.js')
 }
@@ -50,13 +51,22 @@ describe('makeSmartPerson()', () => {
   })
 })
 
-
 describe('getCarInfoByIndex()', () => {
   it('returns a string containing the car_make', () => {
     expect(getCarInfoByIndex(inventory, 0)).to.include(inventory[0].car_make)
   })
   it('returns a string containing the car_model', () => {
     expect(getCarInfoByIndex(inventory, 0)).to.include(inventory[0].car_model)
+  })
+})
+
+
+describe('getLastCarInfo()', () => {
+  it('returns a string containing the car_make', () => {
+    expect(getLastCarInfo(inventory)).to.include(inventory[inventory.length - 1].car_make)
+  })
+  it('returns a string containing the car_model', () => {
+    expect(getLastCarInfo(inventory)).to.include(inventory[inventory.length - 1].car_model)
   })
 })
 
