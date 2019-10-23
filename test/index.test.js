@@ -18,6 +18,7 @@ if (typeof exports !== 'undefined') {
     makeSmartPerson,
     carMaker,
     getCarInfoByIndex,
+    getCarInfoById,
   } = require('../index.js')
 }
 var expect = chai.expect
@@ -56,6 +57,15 @@ describe('getCarInfoByIndex()', () => {
   })
   it('returns a string containing the car_model', () => {
     expect(getCarInfoByIndex(inventory, 0)).to.include(inventory[0].car_model)
+  })
+})
+
+describe('getCarInfoById()', () => {
+  it('returns a string containing the car_make', () => {
+    expect(getCarInfoById(inventory, 1)).to.include(inventory[0].car_make)
+  })
+  it('returns a string containing the car_model', () => {
+    expect(getCarInfoById(inventory, 1)).to.include(inventory[0].car_model)
   })
 })
 

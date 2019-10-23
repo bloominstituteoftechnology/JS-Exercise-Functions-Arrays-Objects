@@ -81,6 +81,28 @@ function getCarInfoByIndex(inventory, index) {
 }
 
 /**
+ * ### Challenge `getCarInfoById`
+ * 
+ * @instructions
+ * getCarInfoById takes two arguments:
+ *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
+ *     (2) a number which is the desired car id.
+ * getCarInfoById returns a string in the format `This is a {car_make} {car_model}
+ * 
+ * For example, if getCarInfoById is invoked with the inventory and the number 1,
+ * it will return `This is a Lincoln Navigator`.
+*/
+function getCarInfoById(inventory, id) {
+  let car;
+  for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].id === id) {
+      car = inventory[i]
+    }
+  }
+  return `This is a ${car.car_make} ${car.car_model}`;
+}
+
+/**
  * ### Challenge `carMaker`
  * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
  * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
@@ -115,4 +137,5 @@ if (typeof exports !== 'undefined') {
   if (makeSmartPerson) { module.exports.makeSmartPerson = makeSmartPerson }
   if (carMaker) { module.exports.carMaker = carMaker }
   if (getCarInfoByIndex) { module.exports.getCarInfoByIndex = getCarInfoByIndex }
+  if (getCarInfoById) { module.exports.getCarInfoById = getCarInfoById }
 }
