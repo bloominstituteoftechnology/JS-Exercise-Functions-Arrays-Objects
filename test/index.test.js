@@ -21,6 +21,7 @@ if (typeof exports !== 'undefined') {
     getLastCarInfo,
     getCarInfoById,
     sortCarInventory,
+    getModelYears,
   } = require('../index.js')
 }
 var expect = chai.expect
@@ -85,6 +86,13 @@ describe('sortCarInventory()', () => {
     const copyOfInventory = [...inventory]
     const sorted = sortCarInventory(copyOfInventory)
     expect(sorted[sorted.length - 1].car_model).to.eql('Yukon')
+  })
+})
+
+describe('getModelYears()', () => {
+  it('returns an array of car years', () => {
+    const carYears = inventory.map(c => c.car_year)
+    expect(getModelYears(inventory)).to.eql(carYears)
   })
 })
 
