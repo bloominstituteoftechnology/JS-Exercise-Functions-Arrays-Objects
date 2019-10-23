@@ -1,5 +1,6 @@
 {
   "name": "js-exercise-functions-arrays-objects",
+  "description": "",
   "version": "1.0.0",
   "main": "index.js",
   "homepage": "https://codesandbox.io/s/github/LambdaSchool/JS-Exercise-Functions-Arrays-Objects?previewwindow=browser",
@@ -12,7 +13,7 @@
     "start": "NODE_OPTIONS=--no-warnings ./node_modules/.bin/mocha ./test",
     "pretest": "NODE_OPTIONS=--no-warnings npm install > /dev/null",
     "test": "NODE_OPTIONS=--no-warnings ./node_modules/.bin/mocha ./test",
-    "test:watch": "./node_modules/.bin/mocha --growl --reporter=list --bail --watch './test'"
+    "test:watch": "./node_modules/.bin/mocha --growl --reporter=list --watch './test'"
   },
   "keywords": [
     "object",
