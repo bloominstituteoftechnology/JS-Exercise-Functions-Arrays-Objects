@@ -9,27 +9,28 @@
 if (typeof exports !== 'undefined') {
   // IGNORE: Test/Env Detection Stuff //
   // Node/Non-browser test env
-  
-  // TODO: Add any json/data imports
-  var lukeSkywalker = require('../data/person-1.json')
-  // var leiaOrgana = require('../data/person-5.json')
-  // var obiWanKenobi = require('../data/person-10.json')
 
   var chai = require('chai')
   var {
+    makePersonObject,
     getName,
-    // TODO: Add all functions to export/test here
   } = require('../index.js')
 }
 var expect = chai.expect
+var person = { id: 1, name: 'Luke', email: 'luke@luke.com' }
 
-// TODO: Add test `describe` blocks here
+describe('makePersonObject()', () => {
+  it('makes an object of the right shape', () => {
+    expect(makePersonObject(1, 'Luke', 'luke@luke.com'))
+      .to.eql(person)
+  })
+})
 
-// Example:
 describe('getName()', () => {
-  it('expected name for `Luke`', () => { expect(getName(lukeSkywalker)).to.eq(`Luke Skywalker`) })
-  // it('expected name for `Leia`', () => { expect(getName(leiaOrgana)).to.eq(`Leia Organa`) })
-  // it('expected name for `Obi-Wan`', () => { expect(getName(obiWanKenobi)).to.eq(`Obi-Wan Kenobi`) })
+  it('makes an object of the right shape', () => {
+    expect(getName(person))
+      .to.include('my name is Luke')
+  })
 })
 
 
