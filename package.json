@@ -1,8 +1,8 @@
 {
-  "name": "exercises-template",
+  "name": "js-exercise-functions-arrays-objects",
   "version": "1.0.0",
   "main": "index.js",
-  "homepage": "https://codesandbox.io/s/github/{gitHubOrgName}/{gitHubProjectName}?previewwindow=tests",
+  "homepage": "https://codesandbox.io/s/github/LambdaSchool/JS-Exercise-Functions-Arrays-Objects?previewwindow=browser",
   "repository": {
     "url": "git@github.com:LambdaSchool/JS-Exercise-Functions-Arrays-Objects.git",
     "type": "git"
