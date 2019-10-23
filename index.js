@@ -263,7 +263,7 @@ if (typeof exports !== 'undefined') {
   if (getModelYears) { module.exports.getModelYears = getModelYears }
   if (getOlderCars) { module.exports.getOlderCars = getOlderCars }
   if (getGermanCars) { module.exports.getGermanCars = getGermanCars }
-  if (sum) { module.exports.sum = sum }
-  if (addFive) { module.exports.addFive = addFive }
-  if (argTimesTwo) { module.exports.argTimesTwo = argTimesTwo }
+  if (sum) { module.exports.sumF = sum }
+  if (addFive) { module.exports.addFiveF = addFive }
+  if (argTimesTwo) { module.exports.argTimesTwoF = argTimesTwo }
 }

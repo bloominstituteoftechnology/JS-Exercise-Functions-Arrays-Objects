@@ -1,11 +1,10 @@
 {
   "name": "exercises-template",
   "version": "1.0.0",
-  "description": "TODO: REPLACE ALL {gitHubOrgName} AND {gitHubProjectName} BELOW",
   "main": "index.js",
   "homepage": "https://codesandbox.io/s/github/{gitHubOrgName}/{gitHubProjectName}?previewwindow=tests",
   "repository": {
-    "url": "git@github.com:{gitHubOrgName}/{gitHubProjectName}.git",
+    "url": "git@github.com:LambdaSchool/JS-Exercise-Functions-Arrays-Objects.git",
     "type": "git"
   },
   "scripts": {

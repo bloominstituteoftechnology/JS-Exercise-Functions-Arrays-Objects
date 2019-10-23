@@ -75,7 +75,7 @@ The CodeSandbox option is fast & highly recommended.
 
 > TODO: UPDATE CODESANDBOX LINK:
 
-[LAUNCH ON CODESANDBOX 🚀](https://codesandbox.io/s/github/LambdaSchool/exercise-template?previewwindow=tests)
+[LAUNCH ON CODESANDBOX 🚀](https://codesandbox.io/s/github/LambdaSchool/JS-Exercise-Functions-Arrays-Objects?previewwindow=browser)
 
 
 <details>
