@@ -21,7 +21,6 @@
     "exercises",
     "workout"
   ],
-  "author": "Dan Levy",
   "license": "MIT",
   "dependencies": {
     "chai": "^4.2.0",
