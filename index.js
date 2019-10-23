@@ -177,6 +177,27 @@ function getOlderCars(inventory, maxYear) {
 }
 
 /**
+ * ### Challenge `getGermanCars`
+ * 
+ * @instructions
+ * We need a utility to find German cars!
+ * getGermanCars takes a single argument:
+ *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
+ * getGermanCars returns an array containing all the cars
+ * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`.
+*/
+function getGermanCars(inventory) {
+  let result = []
+  const makes = ['Audi', 'Mercedes-Benz', 'Volkswagen', 'BMW'];
+  for (let i = 0; i < inventory.length; i++) {
+    if (makes.includes(inventory[i].car_make)) {
+      result.push(inventory[i])
+    }
+  }
+  return result
+}
+
+/**
  * ### Challenge `carMaker`
  * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
  * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
@@ -216,4 +237,5 @@ if (typeof exports !== 'undefined') {
   if (sortCarInventory) { module.exports.sortCarInventory = sortCarInventory }
   if (getModelYears) { module.exports.getModelYears = getModelYears }
   if (getOlderCars) { module.exports.getOlderCars = getOlderCars }
+  if (getGermanCars) { module.exports.getGermanCars = getGermanCars }
 }

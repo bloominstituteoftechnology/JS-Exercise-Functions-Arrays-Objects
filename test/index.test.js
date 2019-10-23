@@ -23,6 +23,7 @@ if (typeof exports !== 'undefined') {
     sortCarInventory,
     getModelYears,
     getOlderCars,
+    getGermanCars,
   } = require('../index.js')
 }
 var expect = chai.expect
@@ -109,6 +110,14 @@ describe('getOlderCars()', () => {
   it('returns some cars when the max year is somewhere in the middle', () => {
     const cars = inventory.filter(c => c.car_year <= 1990)
     expect(getOlderCars(inventory, 1990)).to.eql(cars)
+  })
+})
+
+describe('getGermanCars()', () => {
+  it('returns an array with the correct cars', () => {
+    const makes = ['Audi', 'Mercedes-Benz', 'Volkswagen', 'BMW'];
+    const cars = inventory.filter(c => makes.includes(c.car_make))
+    expect(getGermanCars(inventory)).to.eql(cars)
   })
 })
 
