@@ -219,9 +219,9 @@ function getGermanCars(inventory) {
 // const sum = null; // code here!
 // const addFive = null; // code here!
 // const argTimesTwo = null; // code here!
-const sum = (a, b) => a + b; // code here!
-const addFive = a => a + 5; // code here!
-const argTimesTwo = a => a * 2; // code here!
+var sum = (a, b) => a + b; // code here!
+var addFive = a => a + 5; // code here!
+var argTimesTwo = a => a * 2; // code here!
 /**
  * ### Challenge `carMaker`
  * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
