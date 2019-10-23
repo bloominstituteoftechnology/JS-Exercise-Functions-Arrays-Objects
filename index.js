@@ -86,7 +86,7 @@ function getCarInfoByIndex(inventory, index) {
  * @instructions
  * getCarInfoById takes two arguments:
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
- *     (2) a number which is the desired car id.
+ *     (2) a number which is the desired car id (see how each car has its own unique id).
  * getCarInfoById returns a string in the format `This is a {car_make} {car_model}
  * 
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
