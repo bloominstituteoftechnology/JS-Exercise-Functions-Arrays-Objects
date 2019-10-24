@@ -2,7 +2,7 @@
 
 This challenge focuses on functions, objects and arrays. You'll convert "traditional" functions into functions that use the ES6 arrow syntax. You'll also manipulate objects and traverse arrays.
 
-__THE USE OF HIGHER-ORDER ARRAY METHODS IS FORBIDDEN!__ These are array methods that take callbacks as arguments, like `map`, `filter`, `reduce`, `some`, `every` etc. You'll have to make do with good old loops!
+__THE USE OF MOST HIGHER-ORDER ARRAY METHODS IS FORBIDDEN!__ These are array methods that take callbacks as arguments and save you from the trouble of manually looping, such as `map`, `filter`, `reduce`, `some`, `every` etc. You'll have to make do with good old loops! The one exception is the `sort` method, which you may use if you'd like.
 
 If you run into trouble while coding, fight the good fight for 20 minutes and then get on the help channel. __Remember to formulate your help request in a professional manner__ - like you would at work - by including error messages, screenshots, and any other pertinent information about the problem, as well as what kinds of things you tried already while attempting to solve it.
 
