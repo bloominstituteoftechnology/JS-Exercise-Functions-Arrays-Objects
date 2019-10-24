@@ -4,7 +4,7 @@ This challenge focuses on functions, objects and arrays. You'll convert "traditi
 
 __THE USE OF HIGHER-ORDER ARRAY METHODS IS FORBIDDEN!__ These are array methods that take callbacks as arguments, like `map`, `filter`, `reduce`, `some`, `every` etc. You'll have to make do with good old loops!
 
-If you run into trouble while coding, fight the good fight for 20 minutes and then get on the help channel. Remember to __formulate your help request in a professional manner__ - like you would at work - including error messages, screenshots, and any other pertinent information about the problem, as well as what kinds of things you attempted to solve it.
+If you run into trouble while coding, fight the good fight for 20 minutes and then get on the help channel. __Remember to formulate your help request in a professional manner__ - like you would at work - by including error messages, screenshots, and any other pertinent information about the problem, as well as what kinds of things you attempted to solve it.
 
 ##### Index
 
