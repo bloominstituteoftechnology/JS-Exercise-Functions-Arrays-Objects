@@ -1,6 +1,10 @@
 # JS-Exercise-Functions-Arrays-Objects
 
-This challenge focuses on functions, arrays and objects.
+This challenge focuses on functions, objects and arrays. You'll convert "traditional" functions into functions that use the ES6 arrow syntax. You'll also manipulate objects and traverse arrays.
+
+__THE USE OF HIGHER ORDER ARRAY METHODS IS FORBIDDEN!__ These are array methods that take callbacks as arguments, like .map(), .filter(), .reduce(), .some(), .every() etc. You'll have to make do with good old loops!
+
+If you run into trouble while coding, fight the good fight for 20 minutes and then get on the help channel. Remember to formulate your help request in a professional manner - like you would at work - including error messages, screenshots, and any other pertinent information about the problem, as well as what kinds of things you attempted to solve it or get around it.
 
 ##### Index
 
@@ -9,7 +13,7 @@ This challenge focuses on functions, arrays and objects.
 
 ## Instructions
 
-Find the file `index.js` and complete the tasks until all of your tests pass.
+Find the file `index.js` and complete the tasks until all of your tests pass. Do not use any of the forbidden methods!
 
 ## Get Started
 
