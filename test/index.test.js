@@ -77,9 +77,9 @@ if (typeof exports !== "undefined") {
     getModelYears,
     getOlderCars,
     getGermanCars,
-    sumF,
-    addFiveF,
-    argTimesTwoF
+    sum,
+    addFive,
+    argTimesTwo
   } = require("../index.js");
 }
 var expect = chai.expect;
@@ -187,13 +187,13 @@ describe("getGermanCars()", () => {
 
 describe("refactor into arrow functions", () => {
   it("sum uses arrow syntax", () => {
-    expect(sumF.toString()).to.include("=>");
+    expect(sum.toString()).to.include("=>");
   });
   it("addFive uses arrow syntax", () => {
-    expect(addFiveF.toString()).to.include("=>");
+    expect(addFive.toString()).to.include("=>");
   });
   it("argTimesTwo uses arrow syntax", () => {
-    expect(argTimesTwoF.toString()).to.include("=>");
+    expect(argTimesTwo.toString()).to.include("=>");
   });
 });
 
