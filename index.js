@@ -5,7 +5,7 @@
  * 
  * @instructions
  * This function should be able to take two numbers as arguments
- * and return the result of adding them up.
+ * and return the result of adding them together.
  * 
  * For example, if we invoke `exampleFunction` passing 5 and 3,
  * the returned value should be 8.
