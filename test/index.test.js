@@ -84,9 +84,9 @@ if (typeof exports !== "undefined") {
 }
 var expect = chai.expect;
 
-describe("exampleFunction()", () => {
+describe("addNumbers()", () => {
   it("can add two numbers", () => {
-    expect(exampleFunction(1, 2)).to.eql(3);
+    expect(addNumbers(1, 2)).to.eql(3);
   });
 });
 
