@@ -65,7 +65,7 @@ if (typeof exports !== "undefined") {
   var chai = require("chai");
 
   var {
-    exampleFunction,
+    addNumbers,
     makePersonObject,
     getName,
     makeSmartPerson,
