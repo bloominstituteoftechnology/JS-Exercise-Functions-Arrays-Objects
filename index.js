@@ -272,7 +272,7 @@ if (typeof exports !== 'undefined') {
   // IGNORE: Test/Env Detected
   // For Node/Non-browser test env
   module.exports = module.exports || {}
-  if (exampleFunction) { module.exports.exampleFunction = exampleFunction }
+  if (addNumbers) { module.exports.exampleFunction = addNumbers }
   if (makePersonObject) { module.exports.makePersonObject = makePersonObject }
   if (getName) { module.exports.getName = getName }
   if (makeSmartPerson) { module.exports.makeSmartPerson = makeSmartPerson }
