@@ -20,7 +20,7 @@ function exampleFunction(num1, num2) {
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
-
+// ===============================================================================
 /**
  * ### Challenge `makePersonObject`
  * 
@@ -37,10 +37,22 @@ function exampleFunction(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
+//          NOTE --------------ANSWER
 function makePersonObject(/* code here */) {
-  /* code here */
-}
 
+  let personObject = {
+id: 5,
+name: "Leia",
+email: "leia@leia.com"
+
+  }
+  /* code here */
+  return personObject;
+}
+makePersonObject()
+
+
+// =========================================================================
 /**
  * ### Challenge `getName`
  * 
@@ -54,9 +66,25 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
-}
+function getName(someName){
+	let nameX = {
+		name: someName
+	}
+		return nameX
+  // }
+  //          NOTE ============= ANSWER
+  function getName(someName){
+    let nameX = {
+      id: 1,
+      name: "Leia",
+      email: "leia@leia.com"
+    }
+      return `Hello my name is ${nameX.name}`
+    }
+  getName();
+  
+  "Hello my name is Leia"
+// ====================================================================================
 
 /**
  * ### Challenge `makeSmartPerson`
@@ -74,6 +102,17 @@ function getName(/* code here */) {
 function makeSmartPerson(/* code here */) {
   /* code here */
 }
+//          NOTE --------------ANSWER
+let makeSmartPerson= {
+  name: "Bob",
+  age: "old",
+  speakAdd: function(num1, num2) {
+    console.log(`Hello, my name is ${makeSmartPerson.name}`);
+    return num1 + num2   
+  }
+  }
+  console.log(makeSmartPerson.speakAdd(5,5));
+// =========================================================================
 
 /**
  * ### Challenge `getCarInfoByIndex`
@@ -87,9 +126,11 @@ function makeSmartPerson(/* code here */) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
+//          NOTE --------------ANSWER
 function getCarInfoByIndex(/* code here */) {
-  /* code here */
+  console.log(`This is an ${exports[3].car_make} ${exports[3].car_model}`)
 }
+// =========================================================================
 
 /**
  * ### Challenge `getLastCarInfo`
@@ -104,8 +145,11 @@ function getCarInfoByIndex(/* code here */) {
 */
 function getLastCarInfo(/* code here */) {
   /* code here */
+//          NOTE --------------ANSWER
+  const lastCar= exports[exports.length-1]
+console.log(lastCar);
 }
-
+// =========================================================================
 /**
  * ### Challenge `getCarInfoById`
  * 
@@ -121,6 +165,14 @@ function getLastCarInfo(/* code here */) {
 function getCarInfoById(/* code here */) {
   /* code here */
 }
+//          NOTE --------------ANSWER
+function getCarInfoById(/* code here */) {
+  /* code here */
+	return `This is a ${exports[5].car_make} ${exports[5].car_model}.`
+}
+getCarInfoById()
+"This is a Honda Accord."
+// =========================================================================
 
 /**
  * ### Challenge `sortCarInventory`
@@ -133,6 +185,16 @@ function getCarInfoById(/* code here */) {
 function sortCarInventory(/* code here */) {
   /* code here */
 }
+//          NOTE ----------------ANSWER
+exports.sort(function(a, b) {
+  if (a.car_model.toLowerCase() < b.car_model.toLowerCase()
+  ) return -1;
+	if (a.car_model.toLowerCase() > b.car_model.toLowerCase()
+  ) return 1;
+		return 0;
+});
+
+// =========================================================================
 
 /**
  * ### Challenge `getModelYears`
@@ -146,6 +208,14 @@ function sortCarInventory(/* code here */) {
 function getModelYears(/* code here */) {
   /* code here */
 }
+//          NOTE ----------------ANSWER
+
+// To SORT by model_year      To SORT by model_year      To SORT by model_year 
+exports.sort(function (a, b) {
+	return a.car_year - b.car_year
+ });
+
+// =========================================================================
 
 /**
  * ### Challenge `getOlderCars`
@@ -162,6 +232,15 @@ function getModelYears(/* code here */) {
 function getOlderCars(/* code here */) {
   /* code here */
 }
+//          NOTE ----------------ANSWER
+const olderCars = [];
+for(let i = 0; i < exports.length; i++) {
+  if (exports[i].car_year < 1990) {
+    olderCars.push(exports[i]);
+  }
+}
+console.log(olderCars);
+// =========================================================================
 
 /**
  * ### Challenge `getGermanCars`
@@ -177,6 +256,15 @@ function getOlderCars(/* code here */) {
 function getGermanCars(/* code here */) {
   /* code here */
 }
+//          NOTE ----------------ANSWER
+const germanCars= [];
+for(let i= 0; i < exports.length; i++) {
+	if (exports[i].car_make === "BMW"||exports[i].car_make=== "Volkswagen"||exports[i].car_make==="Mercedes-Benz"||exports[i].car_make==="Audi") {
+		germanCars.push(exports[i]);
+    }
+}
+console.log(germanCars);
+// =========================================================================
 
 /**
  * ### Challenge refactor to arrow functions
@@ -187,18 +275,29 @@ function getGermanCars(/* code here */) {
  * const sum = function (a, b) {
  *   return a + b
  * }
+ * //          NOTE ----------------ANSWER
+ * const sum= (a, b) =>{ return a+b}
+ * 
  * 
  * const addFive = function(num) {
 *    return num + 5
  * }
- *
+ * //          NOTE ----------------ANSWER
+ *const addFive= (num) => {return num +5}
+ * 
+ * 
  * const argTimesTwo = function (num) {
  *   return num * 2
  * }
+ * //          NOTE ----------------ANSWER
+ * const argTimesTwo= (num) => { return num * 2}
+ * 
+ * 
 */
 const sum = null; // code here!
 const addFive = null; // code here!
 const argTimesTwo = null; // code here!
+// =========================================================================
 
 /**
  * ### Challenge `carMaker`
@@ -216,6 +315,7 @@ const argTimesTwo = null; // code here!
 function carMaker(/* code here */) {
   /* code here */
 }
+// =========================================================================
 
 /// ////// END OF CHALLENGE /////////
 /// ////// END OF CHALLENGE /////////
@@ -240,3 +340,22 @@ if (typeof exports !== 'undefined') {
   if (addFive) { module.exports.addFive = addFive }
   if (argTimesTwo) { module.exports.argTimesTwo = argTimesTwo }
 }
+
+
+
+const foo= 'bar';
+function returnFoo() {
+	return foo
+}
+returnFoo();
+//displays  "bar"
+
+// =================================================
+// =================================================
+// =================================================
+// =================================================
+// =================================================
+// =================================================
+
+
+
