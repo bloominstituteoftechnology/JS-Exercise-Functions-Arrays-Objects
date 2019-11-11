@@ -37,10 +37,16 @@ function addNumbers(num1, num2) {
  *   id: 5,
  *   name: "Leia",
  *   email: "leia@leia.com",
- * }
+ * }:watch
 */
-function makePersonObject(/* code here */) {
+function makePersonObject(id, name, email) {
   /* code here */
+  const myObj = {
+    id: id,
+    name: name,
+    email: email,
+  }
+  return myObj;
 }
 
 /**
