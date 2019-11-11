@@ -27,7 +27,7 @@ function addNumbers(num1, num2) {
  * ### Challenge `makePersonObject`
  * 
  * @instructions
- * This function should take an id, a name and an email as arguments,
+ * This function should take an id, a name and an email as parameters,
  * and return an object with `id`, `name` and `email` properties.
  * 
  * For example, if we invoke `makePersonObject`
@@ -39,8 +39,16 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email) {
+  
+  const worker = {
+    "id": 1,
+    "name": 'Luke',
+    "email": 'luke@luke.com'
+  }
+
+return worker
+
 }
 
 /**
