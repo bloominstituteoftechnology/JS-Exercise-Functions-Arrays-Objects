@@ -40,10 +40,15 @@ function addNumbers(num1, num2) {
  * }
 */
 
-function makePersonObject(id, name ,email){
-  return id + name + email;
+function makePersonObject(userid, username ,useremail){
+   
+  const makePersonOBJ ={
+    id: "userid",
+    name:"username",
+   email:"useremail",
+  }
+  return (makePersonOBJ(5, Leila, leila@leila));
 }
-console.log (makePersonObject(5, "Leila", "leila@leila.com"));
 
 
 /**
@@ -80,8 +85,10 @@ console.log (makePersonObject(5, "Leila", "leila@leila.com"));
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
-  /* code here */
+function makeSmartPerson(name) {
+  const smartName={
+
+  }
 }
 
 
