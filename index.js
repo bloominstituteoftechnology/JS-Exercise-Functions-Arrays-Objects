@@ -40,7 +40,7 @@ function addNumbers(num1, num2) {
  * }
 */
 function makePersonObject(id, name, email) {
-  const myObject1={
+  const myObject1 = {
     id:id,
     name:name,
     email:email,
@@ -62,11 +62,12 @@ function makePersonObject(id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-
-function getName () {
-
+const nameObject = {
+  name: name
 }
- 
+function getName (nameObject) {
+  return 'Hello, my name is ' + nameObject.name;
+}
 
 /**
  * ### Challenge `makeSmartPerson`
