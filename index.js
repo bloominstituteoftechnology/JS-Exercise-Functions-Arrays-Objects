@@ -64,13 +64,13 @@ function makePersonObject(userid, username ,useremail){
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
- function getName(name) {
+ function getName(myname) {
   /* code here */
     const newName = {
-      name: "Andrea",
+      name: myname,
       }
+      return "Hello my name is" + newName.myname
     
-      return 'Hello my name is ' + newName.name;
   }
 /**
  * ### Challenge `makeSmartPerson`
