@@ -62,11 +62,10 @@ function makePersonObject(id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-const nameObject = {
-  name: name
-}
-function getName (nameObject) {
-  return 'Hello, my name is ' + nameObject.name;
+
+
+function getName(myObject1){
+return 'Hello, my name is ' + myObject1.name;
 }
 
 /**
@@ -83,11 +82,15 @@ function getName (nameObject) {
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
 function makeSmartPerson(name) {
-const myObject3= {
-  name: name,
+const smartPersonObject= {
+  name: name ,
   sum: function(num1, num2){
-    return num1 + num2},
+    return num1 + num2;},
+  speak: function(){
+    return 'Hello, my name is ' + smartPersonObject.name;
+    }
   }
+  return smartPersonObject;
 
 }
 
@@ -150,10 +153,11 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoByIndex(inventory, id) {
-  
-  /* code here */
+function getCarInfoByIndex() {
+
 }
+  /* code here */
+
 
 /**
  * ### Challenge `getLastCarInfo`
@@ -166,7 +170,8 @@ function getCarInfoByIndex(inventory, id) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(inventory) {
+
+function getLastCarInfo() {
   /* code here */
   
 }
