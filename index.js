@@ -67,7 +67,7 @@ function makePersonObject(userid, username ,useremail){
  function getName(myname) {
   /* code here */
     const newName = {
-      name: myname,
+      name: 'myname',
       }
       return "Hello my name is" + newName.myname
     
