@@ -66,12 +66,11 @@ function makePersonObject(userid, username ,useremail){
 */
  function getName(myname) {
   /* code here */
-    const newName = {
-      name: myname,
-      }
-      return "Hello my name is" + newName.myname
-    
-  }
+    const newName{
+      
+      return "Hello my name is" + newName;
+    }
+      
 /**
  * ### Challenge `makeSmartPerson`
  * 
@@ -86,9 +85,17 @@ function makePersonObject(userid, username ,useremail){
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
 function makeSmartPerson(name) {
-  const smartName={
+  const smartPersonOBJ= {
+    name: name,
+    sum: function(num1, num2){
+      return num1 + num2;
+    },
+    speak: function (){
+      return "Hello, my  name is " + name;
+    }
 
   }
+return smartPersonOBJ;
 }
 
 
