@@ -153,12 +153,12 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoByIndex() {
-
-}
+function getCarInfoByIndex(inventory, index) {
+  
+return 'This is a ' + inventory[index].car_make + inventory[index].car_model;
   /* code here */
 
-
+}
 /**
  * ### Challenge `getLastCarInfo`
  * 
@@ -171,7 +171,8 @@ function getCarInfoByIndex() {
  * it will return `This is a Lincoln Town Car`.
 */
 
-function getLastCarInfo() {
+function getLastCarInfo(inventory) {
+  return 'This is a ' + inventory[inventory.length-1].car_make + inventory[inventory.length-1].car_model;
   /* code here */
   
 }
@@ -188,8 +189,8 @@ function getLastCarInfo() {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inventory, id) {
+  return 'This is a ' + inventory[id].car_make + inventory[id].car_model;
 }
 
 /**
@@ -200,8 +201,20 @@ function getCarInfoById(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
+function sortCarInventory(inventory) {
   /* code here */
+  return inventory.sort(function(car_model){
+    let nameA = a.car_model.toUpperCase();
+    let nameB = b.car_model.toUppercase();
+    if (nameA < nameB){
+      return -1;
+    }
+    if (nameA > nameB){
+      return 1;
+    }
+    return 0;
+    };
+
 }
 
 /**
@@ -213,8 +226,13 @@ function sortCarInventory(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
+function getModelYears(inventory) {
   /* code here */
+  let yearArray = [];
+  for (let i=0; i < inventory.length; i++){
+    yearArray.push(inventory[i].car_year);
+  }
+  return yearArray;
 }
 
 /**
