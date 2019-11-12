@@ -64,11 +64,10 @@ function makePersonObject(userid, username ,useremail){
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
- function getName(myname) {
+ function getName(name) {
   /* code here */
-    const newName{
-      
-      return "Hello my name is" + newName;
+  
+      return "Hello my name is" + name
     }
       
 /**
@@ -158,6 +157,7 @@ function get3rdCar(inventory) {
 */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
+  
 }
 
 /**
@@ -187,8 +187,9 @@ function getLastCarInfo(/* code here */) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
+function getCarInfoById(inventory, index) {
   /* code here */
+  return 'This is a ${inventory[index].car_make} ${inventory[index].car_model}'
 }
 
 /**
@@ -199,8 +200,11 @@ function getCarInfoById(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
+function sortCarInventory(array) {
   /* code here */
+  return array.sort(function(a,b){
+    return a.car_model.localaCompare(b.car_model);
+  });
 }
 
 /**
