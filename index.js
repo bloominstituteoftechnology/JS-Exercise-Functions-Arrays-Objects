@@ -64,10 +64,10 @@ function makePersonObject(userid, username ,useremail){
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
- function getName(name) {
+ function getName(obj) {
   /* code here */
   
-      return "Hello my name is" + name
+      return "Hello, my name is" + obj.name;
     }
       
 /**
@@ -171,8 +171,8 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
+function getLastCarInfo(inventory) {
+  
 }
 
 /**
@@ -269,7 +269,7 @@ function getGermanCars(inventory){
   }
   return newArray;
   }
-}
+
 
 /**
  * ### Challenge refactor to arrow functions
@@ -289,12 +289,15 @@ function getGermanCars(inventory){
  *   return num * 2
  * }
 */
-const sum = null;  sum => (a,b) 
+const sum = (a,b) =>{
   return a+b// code here!
-const addFive = null;  addFive =>(num)
+}
+const addFive = (num) =>{
   return num +5// code here!
-const argTimesTwo = null;   argTimesTwo => (num)
+}
+const argTimesTwo = (num) =>{
   return num * 2
+}
 
 
 /**
