@@ -315,7 +315,7 @@ function getGermanCars(arr) {
 */
 const sum = (a, b) => {return a + b }; // code here!
 const addFive = (a) => {return a + 5}; // code here!
-const argTimesTwo = (a) => {return arg * 2}; // code here!
+const argTimesTwo = (a) => {return a * 2}; // code here!
 
 /**
  * ### Challenge `carMaker`
