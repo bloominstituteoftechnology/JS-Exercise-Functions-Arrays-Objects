@@ -39,9 +39,12 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
+function makePersonObject(id, name, email) {
   /* code here */
+  return {id, name, email};
 }
+
+
 
 /**
  * ### Challenge `getName`
@@ -56,9 +59,12 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
+function getName( {name} ) {
   /* code here */
+  return `Hello, my name is ${name}`;
 }
+
+
 
 /**
  * ### Challenge `makeSmartPerson`
@@ -73,8 +79,15 @@ function getName(/* code here */) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
+function makeSmartPerson(name) {
   /* code here */
+  return {
+
+    "name": name,
+    sum(a,b){ return a+b; },
+    speak(){ return `Hello, my name is ${name}`; }
+
+  }
 }
 
 
@@ -137,7 +150,13 @@ function get3rdCar(inventory) {
 */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
+  const getCar = inventory.find((item, index) => {
+    return index === 0
+  })
+  return `This is a ${getCar.car_make} ${getCar.car_model}`;
 }
+
+
 
 /**
  * ### Challenge `getLastCarInfo`
@@ -153,6 +172,8 @@ function getCarInfoByIndex(inventory, index) {
 function getLastCarInfo(/* code here */) {
   /* code here */
 }
+
+
 
 /**
  * ### Challenge `getCarInfoById`
@@ -170,6 +191,8 @@ function getCarInfoById(/* code here */) {
   /* code here */
 }
 
+
+
 /**
  * ### Challenge `sortCarInventory`
  * 
@@ -181,6 +204,8 @@ function getCarInfoById(/* code here */) {
 function sortCarInventory(/* code here */) {
   /* code here */
 }
+
+
 
 /**
  * ### Challenge `getModelYears`
@@ -194,6 +219,8 @@ function sortCarInventory(/* code here */) {
 function getModelYears(/* code here */) {
   /* code here */
 }
+
+
 
 /**
  * ### Challenge `getOlderCars`
@@ -211,6 +238,8 @@ function getOlderCars(/* code here */) {
   /* code here */
 }
 
+
+
 /**
  * ### Challenge `getGermanCars`
  * 
@@ -225,6 +254,8 @@ function getOlderCars(/* code here */) {
 function getGermanCars(/* code here */) {
   /* code here */
 }
+
+
 
 /**
  * ### Challenge refactor to arrow functions
@@ -248,6 +279,8 @@ const sum = null; // code here!
 const addFive = null; // code here!
 const argTimesTwo = null; // code here!
 
+
+
 /**
  * ### Challenge `carMaker`
  * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
@@ -264,6 +297,8 @@ const argTimesTwo = null; // code here!
 function carMaker(/* code here */) {
   /* code here */
 }
+
+
 
 /// ////// END OF CHALLENGE /////////
 /// ////// END OF CHALLENGE /////////
