@@ -39,9 +39,13 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(a,b,c) {
+  id: a,
+  name: b,
+  email: c,
 }
+console.log(makePersonObject( "123", "Jason", "jason@yahoo.com" ))
+
 
 /**
  * ### Challenge `getName`
@@ -49,14 +53,15 @@ function makePersonObject(/* code here */) {
  * @instructions
  * This function takes as its only argument
  * an object containing a `name` property,
- * and return a string that reads `Hello, my name is {name}`,
+ * and returns a string that reads `Hello, my name is {name}`,
  * where `{name}` is the name stored in the object.
  * 
  * For example, if we invoke `getName`
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
+function getName(name) {
+
   /* code here */
 }
 
