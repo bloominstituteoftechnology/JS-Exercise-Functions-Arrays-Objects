@@ -13,8 +13,12 @@
  * NOTE: This example has been completed for you.
 */
 function addNumbers(num1, num2) {
-  return num1 + num2;
+  var result=num1 + num2;
+  console.log(result);
 }
+addNumbers(100, 2000);
+addNumbers(1,4);
+
 
 // ⭐️ Example Challenge end ⭐️
 
@@ -121,7 +125,7 @@ function get3rdCar(inventory) {
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
-
+console.log(inventory.length);
 
 /**
  * ### Challenge `getCarInfoByIndex`
