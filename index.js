@@ -150,12 +150,12 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 
-function getCarInfoByIndex(inventory, index) {
+function getCarInfoByIndex(inventory, number) {
   /* code here */
-  const getCarInfoByIndex = inventory ((item, index) => {
-    return index === ()
+  const carInfo = inventory.find((item, index) => {
+    return index === number;
   })
-  return `This is a ${getCarInfoByIndex.car_make} ${getCarInfoByIndex.car_model}`
+  return `This is a ${carInfo.car_make} ${carInfo.car_model}`
 }
 
 /**
@@ -169,8 +169,10 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
+function getLastCarInfo(inventory) {
+  const lastCarInfo = inventory.sort
   /* code here */
+  return `This is a ${lastCarInfo.car_make} ${lastCarInfo.car_model}
 }
 
 /**
@@ -197,8 +199,16 @@ function getCarInfoById(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
+function sortCarInventory(inventory) {
   /* code here */
+//   const sortCarInventory = inventory.sort (function (a, b) {
+//     var carModel1 = a.car_model;
+//     var carModel12 = b.car_model;
+//     if (carModel1 <carModel2) {
+//       return -1;
+//       of (carModel2 )
+//     }
+//   })
 }
 
 /**
