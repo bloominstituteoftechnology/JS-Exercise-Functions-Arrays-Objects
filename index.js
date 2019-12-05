@@ -41,12 +41,16 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(name) {
-  id: 500;
-  name:'Yoda';
-  email:'yoda@leia.com';
-}
-console.log(makePersonObject);
+function makePersonObject(id, name, email) {
+  return {
+    id: id,
+    name: name,
+    email: email
+  };
+  /* code here */
+};
+ console.log(makePersonObject(4, "Sally", "sally@email.com"));
+
 /**
  * ### Challenge `getName`
  * 
@@ -83,16 +87,14 @@ function getName(myObj) {
 */
 
 function makeSmartPerson(name) {
-  const names = ['Teresa']
-    console.log(names);
-   let num1 = 2 + 2;
-     console.log(num1);
-  let speak = ['Hello, my name is Teresa']
-  console.log(speak)
- }
-
+    return {
+      name: name,
+      speak: `Hello, my name is ${name}`
+}
+}
  
-
+let num1 = 1 + 1
+console.log(num1);
 
 
 
