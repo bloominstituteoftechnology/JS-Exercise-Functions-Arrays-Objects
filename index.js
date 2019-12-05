@@ -1,3 +1,4 @@
+//jshint esversion: 6
 // ⭐️ Example Challenge start ⭐️
 
 /**
@@ -60,8 +61,8 @@ function makePersonObject( id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(obj) {
+  return (`Hello, my name is ${obj.name}`);
 }
 
 /**
@@ -77,15 +78,26 @@ function getName(/* code here */) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
-  /* code here */
+function makeSmartPerson(name) {
+  let person = {
+    name: name,
+    sum: function(a, b) {
+      return a + b;
+    },
+    speak: function() {
+      return `Hello, my name is ${name}`;
+    }
+
+  };
+  return person;
 }
 
+makeSmartPerson('Jordan');
 
 
 
 
-/*
+
 // ⭐️ Example Test Data ⭐️
 
 var inventory = [
@@ -105,7 +117,7 @@ var inventory = [
   { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }
   /// ... Truncated
 ]
-*/
+
 /**
   * ### Example Array Challenge:
   * 
@@ -119,7 +131,7 @@ function get3rdCar(inventory) {
   const the3rd = inventory.find((item, index) => {
     return index === 2 // we use 2 because index is zero-based.
   })
-  return `The car is a ${the3rd.car_make} ${the3rd.car_model}`
+  return `The car is a ${the3rd.car_make} ${the3rd.car_model}`;
 }
 
 // 👇 COMPLETE YOUR WORK BELOW 👇
@@ -140,7 +152,10 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  const car = inventory.find((item, index) => {
+    return item[index];
+  });
+  return `This is a ${car.car_make} ${car.car_model}`;
 }
 
 /**
