@@ -44,7 +44,13 @@
   </head>
   <body onload="mocha.run()">
     <div id="mocha"></div>
-
+    function getCarInfoByIndex(inventory, index) {
+      const getCarInfoByIndex = inventory.find((item, index) => {
+        return index ===0
+      })
+      return `This is a ${ getCarInfoByIndex.car_index}`
+     }
+     console.log(inventory.length);
     <!-- load code you want to test here -->
     <script src="index.js"></script>
 
