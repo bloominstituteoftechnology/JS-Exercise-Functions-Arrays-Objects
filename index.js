@@ -169,8 +169,11 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
+function getLastCarInfo(inventory) {
+  const getlastCar = inventory.find((item, value) => {
+    return value === inventory.length -1
+  })
+  return `This is a ${getlastCar.car_make} ${getlastCar.car_model}`;
 }
 
 
@@ -187,8 +190,9 @@ function getLastCarInfo(/* code here */) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inventory, id) {
+  const getId = inventory[id - 1];
+  return `This is a ${getId.car_make} ${getId.car_model}`;
 }
 
 
@@ -201,8 +205,10 @@ function getCarInfoById(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
+function sortCarInventory(inventory) {
   /* code here */
+  return inventory.sort(inventory.car_model);
+
 }
 
 
