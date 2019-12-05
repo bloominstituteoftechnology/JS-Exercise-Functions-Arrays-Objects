@@ -13,11 +13,9 @@
  * NOTE: This example has been completed for you.
 */
 function addNumbers(num1, num2) {
-  var result=num1 + num2;
-  console.log(result);
+  return num1 + num2;
 }
-addNumbers(100, 2000);
-addNumbers(1,4);
+
 
 
 // ⭐️ Example Challenge end ⭐️
@@ -85,13 +83,15 @@ function getName(myObj) {
 */
 
 function makeSmartPerson(name) {
-
-  let num1 = 2 + 2;
-
+  const names = ['Teresa']
+    console.log(names);
+   let num1 = 2 + 2;
+     console.log(num1);
   let speak = ['Hello, my name is Teresa']
-
+  console.log(speak)
  }
 
+ 
 
 
 
@@ -129,9 +129,9 @@ var inventory = [
   *
   * NOTE: This example has been completed for you.
 **/
-function get3rdCar(inventory, index) {
+function get3rdCar(inventory) {
   const the3rd = inventory.find((item, index) => {
-    return index ===2; // we use 2 because index is zero-based.
+    return index === 2 // we use 2 because index is zero-based.
   })
   return `The car is a ${the3rd.car_make} ${the3rd.car_model}`
 }
