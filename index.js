@@ -252,8 +252,9 @@ function getModelYears(inventory) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
+function getOlderCars(inventory, maxYear) {
   /* code here */
+
 }
 
 
@@ -293,9 +294,16 @@ function getGermanCars(/* code here */) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+
+
+//const sum = null; // code here!
+const sum = (a,b) => { a + b};
+
+//const addFive = null; // code here!
+const addFive = (a) => { a + 5 };
+
+//const argTimesTwo = null; // code here!
+const argTimesTwo = (a) => { a * 2 };
 
 
 
