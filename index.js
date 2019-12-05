@@ -39,11 +39,13 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(id, name, email) {
+function makePersonObject(id, name, email){
   /* code here */
-    id: 5
-    name: "Leia"
-    email: "leia@leia.com"
+    return {
+        id: id,
+        name: name,
+        email: email
+    };
 }
 
 /**
@@ -59,9 +61,9 @@ function makePersonObject(id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName = function() {
-  console.log ('Hi, my name is ${this.username}');
-  /* code here */
+function getName(obj) {
+ /* code here */
+  return 'Hi, my name is ${this.name}'; 
 }
 
 /**
