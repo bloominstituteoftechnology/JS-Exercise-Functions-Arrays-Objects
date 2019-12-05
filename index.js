@@ -7,7 +7,7 @@
  * This function should be able to take two numbers as arguments
  * and return the result of adding them together.
  * 
- * For example, if we invoke `addNumberss` passing 5 and 3,
+ * For example, if we invoke `addNumberssg` passing 5 and 3,
  * the returned value should be 8.
  *
  * NOTE: This example has been completed for you.
@@ -39,9 +39,15 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(a,b,c) {
+  return {
+    id: a,
+    name: b,
+    email: c
+  };
 }
+
+
 
 /**
  * ### Challenge `getName`
@@ -56,9 +62,12 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
+function getName(name) {
   /* code here */
+  return `Hello, my name is ${name.name}`;
 }
+
+
 
 /**
  * ### Challenge `makeSmartPerson`
@@ -73,8 +82,19 @@ function getName(/* code here */) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
+function makeSmartPerson(name) {
   /* code here */
+  return {
+    name: name,
+
+    sum: function(number1, number2) {
+      return number1 + number2;
+    },
+
+    speak: function(){
+      return `Hello, my name is ${this.name}`;
+    }
+  };
 }
 
 
@@ -137,6 +157,7 @@ function get3rdCar(inventory) {
 */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
+
 }
 
 /**
