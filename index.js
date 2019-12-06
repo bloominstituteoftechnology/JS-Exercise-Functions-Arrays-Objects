@@ -254,7 +254,22 @@ function getModelYears(inventory) {
 */
 function getOlderCars(inventory, maxYear) {
   /* code here */
-
+  var cars = [];
+ 
+  for(var i = 0; i < inventory.length; i++) {
+    if(inventory[i].car_year > maxYear){
+      cars = [];
+      return cars;
+    }else if(inventory[i].car_year < 1991 && inventory[i].car_year > 1965) {
+      cars.push(inventory[i]);
+      return cars;
+    }else{
+      cars.push(inventory[i]);
+      return cars;
+    }
+  }
+  //console.log(oldCars);
+  
 }
 
 
