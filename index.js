@@ -72,29 +72,42 @@ function getName(myObj) {
 
 
 
+
 /**
  * ### Challenge `makeSmartPerson`
- * 
- * @instructions
- * This function takes a single `name` argument and returns an object.
- * The returned object has the following characteristics:
- *     It has a `name` property that contains the argument passed in.
- *     It has a `sum` method that takes two numbers as arguments
- *         and returns the result of adding them together.
- *     It has a `speak` method that takes no arguments
- *         and returns a string like `Hello, my name is {name}`.
- *         where `{name}` is the name passed into `makeSmartPerson`.
-*/
-
+ * @instructions This function takes a single `name` argument and returns an object.
+The returned object has the following characteristics:
+    It has a `name` property that contains the argument passed in.
+    It has a `sum` method that takes two numbers as arguments
+        and returns the result of adding them together.
+    It has a `speak` method that takes no arguments
+        and returns a string like `Hello, my name is {name}`.
+        where `{name}` is the name passed into `makeSmartPerson`.
+ *
+ */
 function makeSmartPerson(name) {
+    name:name;
     return {
       name: name,
-      speak: `Hello, my name is ${name}`
-}
-}
+      sum : function(a, b) {
+        return a + b;
+      },
+      
+     speak: function () {
+       return  `Hello, my name is $ {name.name}`;
+     },
+    }
+  }
+  
  
-let num1 = 1 + 1
-console.log(num1);
+    
+     
+
+    
+  
+  
+   
+
 
 
 
@@ -156,7 +169,10 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
- return `This is a ${inventory[0].car_make} ${car_model}`
+  const the1st = inventory.find((item, index) => {
+    return index ===0
+  })
+ return `This is a ${the1st.car_make} ${the1st.car_model} `
 }
 
 /**
@@ -171,9 +187,11 @@ function getCarInfoByIndex(inventory, index) {
  * it will return `This is a Lincoln Town Car`.
 */
 function getLastCarInfo(inventory) {
-  const index = 49;
-  return `This is a  ${inventory[inventory.length -1].car_make} ${sortCarInventory.length -1}.car_model`
-};
+  const the49th = inventory.find((item, index) => {
+    return index === 49 
+  })
+  return `The car is a ${the49th.car_make} ${the49th.car_model}`
+}
 
 
 /**
@@ -189,8 +207,10 @@ function getLastCarInfo(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoById(inventory, id) {
-  inventory [0]
-  return `This is a  ${inventory.car_make} ${inventory.car_model}`
+  const the1st = inventory.find((item, index) => {
+    return index ===0
+  })
+ return `This is a ${the1st.car_make} ${the1st.car_model} `
 }
 
 /**
@@ -201,8 +221,8 @@ function getCarInfoById(inventory, id) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
-  /* code here */
+function sortCarInventory(inventory) {
+  return 
 }
 
 /**
