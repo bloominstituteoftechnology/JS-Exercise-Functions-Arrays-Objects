@@ -150,9 +150,7 @@ function get3rdCar(inventory) {
 */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
-  const getCar = inventory.find((item, index) => {
-    return index === 0
-  })
+  const getCar = inventory[index];
   return `This is a ${getCar.car_make} ${getCar.car_model}`;
 }
 
@@ -170,9 +168,7 @@ function getCarInfoByIndex(inventory, index) {
  * it will return `This is a Lincoln Town Car`.
 */
 function getLastCarInfo(inventory) {
-  const getlastCar = inventory.find((item, value) => {
-    return value === inventory.length -1
-  })
+  const getlastCar = inventory[inventory.length - 1];
   return `This is a ${getlastCar.car_make} ${getlastCar.car_model}`;
 }
 
@@ -257,18 +253,12 @@ function getOlderCars(inventory, maxYear) {
   var cars = [];
  
   for(var i = 0; i < inventory.length; i++) {
-    if(inventory[i].car_year > maxYear){
-      cars = [];
-      return cars;
-    }else if(inventory[i].car_year < 1991 && inventory[i].car_year > 1965) {
+    if(inventory[i].car_year <= maxYear){
       cars.push(inventory[i]);
-      return cars;
-    }else{
-      cars.push(inventory[i]);
-      return cars;
     }
   }
   //console.log(oldCars);
+  return cars;
   
 }
 
@@ -285,8 +275,22 @@ function getOlderCars(inventory, maxYear) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
+function getGermanCars(inventory) {
   /* code here */
+  var germanCars = [];
+  for(let i = 0; i < inventory.length; i++){
+    if(inventory[i].car_make === 'Audi'){
+      germanCars.push(inventory[i]);
+    } else if(inventory[i].car_make === "BMW"){
+      germanCars.push(inventory[i]);
+    } else if(inventory[i].car_make === "Mercedes-Benz"){
+      germanCars.push(inventory[i]);
+    } else if(inventory[i].car_make === "Volkswagen"){
+      germanCars.push(inventory[i]);
+    }
+  }
+  //console.log(germanCars);
+  return germanCars;
 }
 
 
