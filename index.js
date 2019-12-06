@@ -39,13 +39,11 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(a,b,c) {
-  id: a,
-  name: b,
-  email: c,
+function makePersonObject(a, b, c) {
+    return {id:a, name:b ,email:c};
 }
-console.log(makePersonObject( "123", "Jason", "jason@yahoo.com" ))
 
+console.log(makePersonObject(5 ,'Leia','leia@leia.com'))
 
 /**
  * ### Challenge `getName`
@@ -60,10 +58,18 @@ console.log(makePersonObject( "123", "Jason", "jason@yahoo.com" ))
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(name) {
 
-  /* code here */
+let person = {
+  id: 5,
+  name:'leia',
+  email:'leia@leia.com',
 }
+function getName(personObj){
+  return `Hello, my name is ${personObj.name}` ;
+  
+}
+
+console.log(getName(person)) ;
 
 /**
  * ### Challenge `makeSmartPerson`
@@ -78,11 +84,21 @@ function getName(name) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
-  /* code here */
+
+function makeSmartPerson(name){
+  return {
+    name: name,
+    sum: function (num1, num2){
+      return num1 + num2;
+    },
+    speak: function(){
+      return `Hello, my name is ${this.name}`
+    }
+
+  };
+
 }
-
-
+console.log(makeSmartPerson('sam').speak());
 
 
 
@@ -140,8 +156,10 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
+
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  const car = inventory[index];
+  return `This is a ${car.car_make} ${car.car_model}`;
 }
 
 /**
