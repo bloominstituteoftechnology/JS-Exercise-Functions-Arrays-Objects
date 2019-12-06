@@ -83,7 +83,7 @@ function getName(obj) {
 function makeSmartPerson(name) {
   const smartPerson = {
     name: name,
-    sum: function add(num1, num2)  {
+    sum:  function add(num1, num2) { 
       return num1 + num2;
     },  
     speak: function speak() {
