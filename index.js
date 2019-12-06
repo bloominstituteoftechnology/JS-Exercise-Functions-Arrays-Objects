@@ -339,8 +339,18 @@ const argTimesTwo = (a) => { a * 2 };
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(/* code here */) {
+function carMaker(num) {
   /* code here */
+  const carInfo = 
+  {
+    odometer: num,
+    drive: function(distance){
+      this.odometer = num + distance;
+      return this.odometer;
+    }
+
+  };
+
 }
 
 
