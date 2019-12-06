@@ -206,7 +206,13 @@ function getCarInfoById(array, num) {
 */
 function sortCarInventory(inventory) {
 
-return inventory.sort(function(a){a.car_model;});
+return inventory.sort((a,b) =>{
+  if(a.car_model>b.car_model){
+  return 1;
+} else{
+  return -1;
+}
+});
 }
 
 /**
