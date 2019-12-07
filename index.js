@@ -49,7 +49,7 @@ function makePersonObject(id, name, email) {
   };
   /* code here */
 };
- console.log(makePersonObject(4, "Sally", "sally@email.com"));
+ 
 
 /**
  * ### Challenge `getName`
@@ -85,19 +85,21 @@ The returned object has the following characteristics:
         where `{name}` is the name passed into `makeSmartPerson`.
  *
  */
-function makeSmartPerson(name, sum, speak) {
-    name:name;
-    return {
-      name: name,
-      sum : function(a, b) {
-        return a + b;
-      },
-      
-     speak: function () {
-       return  `Hello, my name is ${name}`
-     },
+function makeSmartPerson(name) {
+  return {
+    name,
+    /**
+     * @param { number } a
+     * @param { number } b
+     */
+    sum: function(a, b) {
+      return a + b;
+    },
+    speak: function() {
+      return `Hello my name is ${name}`;
     }
-  }
+  };
+}
   
  
     
@@ -169,11 +171,10 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  const the1st = inventory.find((item, index) => {
-    return index ===0
-  })
- return `This is a ${the1st.car_make} ${the1st.car_model} `
-}
+  return `This is a ${inventory[index].car_make} ${inventory[index].car_model} `
+  }
+ 
+
 
 /**
  * ### Challenge `getLastCarInfo`
