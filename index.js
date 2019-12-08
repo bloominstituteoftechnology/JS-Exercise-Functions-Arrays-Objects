@@ -226,13 +226,11 @@ function sortCarInventory(inventory) {
 */
 
   function getModelYears(inventory) {
-
-    
-  //   const result = [];
-  //   for (let i = 0; i < inventory.length; i++) {
-  //     result.push(inventory[i].car_year);
-  //   }
-  //   return result;
+    const result = [];
+      for (let i = 0; i < inventory.length; i++) {
+      result.push(inventory[i].car_year);
+    }
+    return result;
   }
 
 
@@ -250,13 +248,18 @@ function sortCarInventory(inventory) {
  * in the same order as they appear in the original inventory.
 */
 function getOlderCars(inventory,max) {
-//   const result = [];
-//   for (let i =0; i < inventory.length; i++){
-//   if (inventory[i].car_model <= max )
-//   result.push(inventory[i]);
-//   }
-//   return result;
+  const result = [];
+  for (let i =0; i < inventory.length; i++){
+  if (inventory[i].car_model <= max )
+  result.push(inventory[i]);
+  }
+return result;
 }
+//I DONT UNDERSTAND WHY THIS ONE DOESNT WORK--- I THINK THERES A PROBLEM WITH THIS ENTRY; 
+// "car_make": "BMW"
+//            "car_model": "525"
+//            "car_year": 2005
+//            "id": 25
 
 /**
  * ### Challenge `getGermanCars`
@@ -269,8 +272,20 @@ function getOlderCars(inventory,max) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
-  /* code here */
+function getGermanCars(inventory) {
+  const result = [];
+  for (let i =0; i < inventory.length; i++){
+    const car = inventory[i];
+  if (
+    car.car_make === 'Audi' ||
+    car.car_make === 'Mercedez-Benz' ||
+    car.car_make === 'Volkswagon' ||
+    car.car_make === 'BMW'  
+    ) {
+    result.push(car);
+  }
+    return result;
+  }
 }
 
 /**
@@ -291,9 +306,9 @@ function getGermanCars(/* code here */) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (a,b) => a + b; // code here!
+const addFive = (num) => num +5; // code here!
+const argTimesTwo = (num) => num *2; // code here!
 
 /**
  * ### Challenge `carMaker`
