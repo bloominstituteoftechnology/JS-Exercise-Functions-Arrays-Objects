@@ -250,16 +250,11 @@ function sortCarInventory(inventory) {
 function getOlderCars(inventory,max) {
   const result = [];
   for (let i =0; i < inventory.length; i++){
-  if (inventory[i].car_model <= max )
+  if (inventory[i].car_year <= max )
   result.push(inventory[i]);
   }
 return result;
 }
-//I DONT UNDERSTAND WHY THIS ONE DOESNT WORK--- I THINK THERES A PROBLEM WITH THIS ENTRY; 
-// "car_make": "BMW"
-//            "car_model": "525"
-//            "car_year": 2005
-//            "id": 25
 
 /**
  * ### Challenge `getGermanCars`
@@ -273,20 +268,24 @@ return result;
  * in the same order as they appear in the original inventory.
 */
 function getGermanCars(inventory) {
-  const result = [];
+  let result = [];
   for (let i =0; i < inventory.length; i++){
-    const car = inventory[i];
-  if (
-    car.car_make === 'Audi' ||
-    car.car_make === 'Mercedez-Benz' ||
-    car.car_make === 'Volkswagon' ||
-    car.car_make === 'BMW'  
-    ) {
-    result.push(car);
+  if (inventory[i].car_make === 'Audi') {
+    result.push(inventory[i]);
   }
-    return result;
+    else if(inventory[i].car_make === 'Mercedez-Benz') {
+      result.push(inventory[i]);
+    }
+    else if (inventory[i].car_make === 'Volkswagon') {
+      result.push(inventory[i]);
+    }
+    else if (inventory[i].car_make === 'BMW') {
+      result.push(inventory[i]);
+    } 
   }
+  return result;
 }
+    
 
 /**
  * ### Challenge refactor to arrow functions
