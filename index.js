@@ -165,7 +165,7 @@ function getCarInfoByIndex(inventory, index) {
 */
 function getLastCarInfo(inventory) {
   const LastCarInfo = inventory[inventory.length-1];
-  return 'This is a ${LastCarInfo.car_make} ${getLastCarInfo.car_model}'
+  return `The car is a ${LastCarInfo.car_make} ${LastCarInfo.car_model}`
 }
 
 /**
@@ -182,7 +182,7 @@ function getLastCarInfo(inventory) {
 */
 function getCarInfoById(inventory, id) {
   const CarInfoById = inventory[0];
-  return 'This is a ${CarInfoId.car_make} ${CarInfo.car_model}'
+  return `The is a ${CarInfoById.car_make} ${CarInfoById.car_model}`
 }
 
 /**
