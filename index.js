@@ -40,11 +40,7 @@ function addNumbers(num1, num2) {
  * }
 */
 function makePersonObject(id, name, email) {
-  return {
-    id: id,
-    name: name,
-    email: email
-  };
+  return { id, name, email 
 }
 
 /**
@@ -60,10 +56,8 @@ function makePersonObject(id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(name) {
-  return {
-    name: name
-  }
+function getName(obj) {
+  return `Hello, my name is ${obj.name}`;
 }
 
 /**
@@ -79,16 +73,17 @@ function getName(name) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(name) {
-  return {
-    name: name,
-    sum: function (num1, num2) {
-      return num1 + num2;
-    },
-    speak: function () {
-      return 'Hello, my name is ' + name.name;
-    }
-  };
+  function makeSmartPerson(name) {
+    return {
+      name,
+      sum: function (number1, number2) {
+        return number1 + number2;
+      },
+      speak: function () {
+        return `Hello, my name is ${name}`;
+      }
+    };
+  }
 
 
 
@@ -165,7 +160,7 @@ function makeSmartPerson(name) {
    * it will return `This is a Lincoln Town Car`.
   */
   function getLastCarInfo(inventory) {
- return `This is a ${inventory.car_make} ${inventory.car_model}`
+    return `This is a ${inventory.car_make} ${inventory.car_model}`
   }
 
   /**
@@ -242,19 +237,19 @@ function makeSmartPerson(name) {
 
 
   //### Challenge refactor to arrow functions
-  
+
   // @instructions
   //Create arrow function versions of the following commented-out functions:
-  
+
   const sum = (a, b) => a + b;
-   
- 
-  
+
+
+
   const addFive = (num) => num + 5
-   
- 
+
+
   const argTimesTwo = (num) => num * 2; {
- 
+
     const sum = null; // code here!
     const addFive = null; // code here!
     const argTimesTwo = null; // code here!
