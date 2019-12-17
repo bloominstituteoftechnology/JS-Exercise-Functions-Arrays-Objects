@@ -40,39 +40,40 @@ function addNumbers(num1, num2) {
  * }
 */
 function makePersonObject(id, name, email) {
-  return { id, name, email 
-}
+  return {
+    id, name, email
+  }
 
-/**
- * ### Challenge `getName`
- * 
- * @instructions
- * This function takes as its only argument
- * an object containing a `name` property,
- * and return a string that reads `Hello, my name is {name}`,
- * where `{name}` is the name stored in the object.
- * 
- * For example, if we invoke `getName`
- * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
- * the returned value should look like `Hello, my name is Leia`.
-*/
-function getName(obj) {
-  return `Hello, my name is ${obj.name}`;
-}
+  /**
+   * ### Challenge `getName`
+   * 
+   * @instructions
+   * This function takes as its only argument
+   * an object containing a `name` property,
+   * and return a string that reads `Hello, my name is {name}`,
+   * where `{name}` is the name stored in the object.
+   * 
+   * For example, if we invoke `getName`
+   * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
+   * the returned value should look like `Hello, my name is Leia`.
+  */
+  function getName(obj) {
+    return `Hello, my name is ${obj.name}`;
+  }
 
-/**
- * ### Challenge `makeSmartPerson`
- * 
- * @instructions
- * This function takes a single `name` argument and returns an object.
- * The returned object has the following characteristics:
- *     It has a `name` property that contains the argument passed in.
- *     It has a `sum` method that takes two numbers as arguments
- *         and returns the result of adding them together.
- *     It has a `speak` method that takes no arguments
- *         and returns a string like `Hello, my name is {name}`.
- *         where `{name}` is the name passed into `makeSmartPerson`.
-*/
+  /**
+   * ### Challenge `makeSmartPerson`
+   * 
+   * @instructions
+   * This function takes a single `name` argument and returns an object.
+   * The returned object has the following characteristics:
+   *     It has a `name` property that contains the argument passed in.
+   *     It has a `sum` method that takes two numbers as arguments
+   *         and returns the result of adding them together.
+   *     It has a `speak` method that takes no arguments
+   *         and returns a string like `Hello, my name is {name}`.
+   *         where `{name}` is the name passed into `makeSmartPerson`.
+  */
   function makeSmartPerson(name) {
     return {
       name,
@@ -145,7 +146,8 @@ function getName(obj) {
    * it will return `This is a Lincoln Navigator`.
   */
   function getCarInfoByIndex(inventory, index) {
-    return 'This is a ' + inventory[0] + " .";
+    const theCar = inventory[index];
+    return `This is a ${theCar.car_make} ${theCar.car_model}`;
   }
 
   /**
@@ -160,7 +162,8 @@ function getName(obj) {
    * it will return `This is a Lincoln Town Car`.
   */
   function getLastCarInfo(inventory) {
-    return `This is a ${inventory.car_make} ${inventory.car_model}`
+    const anotherCar = inventory[inventory.length - 1]
+    return `This is a ${anotherCar.car_make} ${anotherCar.car_model}`
   }
 
   /**
@@ -175,8 +178,12 @@ function getName(obj) {
    * For example, if getCarInfoById is invoked with the inventory and the number 1,
    * it will return `This is a Lincoln Navigator`.
   */
-  function getCarInfoById(array, number) {
-    return `This is a ${array.car_make} ${array.car_model}`
+  function getCarInfoById(inventory, id) {
+    for (let i = 0; i < inventory.length; i++) {
+      if (inventory[i].id === id) {
+        return `This is a ${inventory[i].car_make} ${inventory[i].car_model}`;
+      }
+    }
   }
 
   /**
@@ -187,8 +194,8 @@ function getName(obj) {
    *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
    * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
   */
-  function sortCarInventory(array) {
-    return array.sort();
+  function sortCarInventory(inventory) {
+    return inventory.sort((one, two) => (one.car_model > two.car_model ? 1 : -1));
   }
 
   /**
@@ -200,8 +207,12 @@ function getName(obj) {
    *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
    * getModelYears returns an array containing all the 'car_year's in the inventory.
   */
-  function getModelYears(/* code here */) {
-    /* code here */
+  function getModelYears(inventory) {
+    const answer = [];
+    for (let i = 0; i < inventory.length; i++) {
+      answer.push(inventory[i].car_year);
+    }
+    return answer;
   }
 
   /**
@@ -216,8 +227,13 @@ function getName(obj) {
    * with a `car_year` which is at most the given desired max year,
    * in the same order as they appear in the original inventory.
   */
-  function getOlderCars(/* code here */) {
-    /* code here */
+  function getOlderCars(inventory, maxYear) {
+    const Answer = [];
+    for (let i = 0; inventory.length; i++) {
+      if (inventory[i].car_year <= maxYear) {
+        Answer.push(inventory[i]);
+      }
+    } return Answer;
   }
 
   /**
@@ -231,28 +247,34 @@ function getName(obj) {
    * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
    * in the same order as they appear in the original inventory.
   */
-  function getGermanCars(/* code here */) {
-    /* code here */
+  function getGermanCars(inventory) {
+    const answer = [];
+    for (let i = 0; i < inventory.length; i++) {
+      const gerCar = inventory[i];
+      if (gerCar.car_make == "Audi" || gerCar.car_make == "Mercedes-Benz" || gerCar.car_make == "Volkswagon" || gerCar.car_make == "BMW") {
+        answer.push(gerCar);
+      }
+    }
+    return answer;
   }
-
 
   //### Challenge refactor to arrow functions
 
   // @instructions
   //Create arrow function versions of the following commented-out functions:
 
-  const sum = (a, b) => a + b;
+  const sum = (a,b) => a + b;
 
 
 
-  const addFive = (num) => num + 5
+  const addFive = (num) => num + 5;
 
 
-  const argTimesTwo = (num) => num * 2; {
+  const argTimesTwo = (num) => num * 2; 
 
-    const sum = null; // code here!
-    const addFive = null; // code here!
-    const argTimesTwo = null; // code here!
+    // const sum = null; // code here!
+    // const addFive = null; // code here!
+    // const argTimesTwo = null; // code here!
 
     /**
      * ### Challenge `carMaker`
@@ -271,9 +293,10 @@ function getName(obj) {
       return {
         odometer: number,
         drive: function (distance) {
-          return number + distance;
+          this.odometer = this.odometer + distance;
+          return this.odometer;
         }
-      }
+      };
     }
 
     /// ////// END OF CHALLENGE /////////
@@ -300,4 +323,4 @@ function getName(obj) {
       if (argTimesTwo) { module.exports.argTimesTwo = argTimesTwo }
     }
   }
-}
+
