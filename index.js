@@ -199,14 +199,9 @@ function getCarInfoById(inventory, id) {
 
 
 function sortCarInventory(inventory) {
-  // let sortedInventory = [];
-  // for (let i = 0; i < inventory.length; i++) {
-  //   let oldInventory = inventory[i].car_model;
-  //   sortedInventory.push(oldInventory);
-  //   sortedInventory.sort();
-  // }
-  return inventory.sort(function (a, b) {
 
+  return inventory.sort(function (a, b) {
+    return ((a.car_model > b.car_model) ? 1 : (a.car_model < b.car_model) ? -1 : 0)
   });
 }
 
@@ -268,7 +263,7 @@ function getGermanCars(inventory) {
   for (let i = 0; i < inventory.length; i++) {
     if (inventory[i].car_make === 'Audi' || inventory[i].car_make === 'Mercedes-Benz' ||
       inventory[i].car_make ===
-      ' Volkswagen' || inventory[i].car_make === 'BMW') {
+      'Volkswagen' || inventory[i].car_make === 'BMW') {
       germanCars.push(inventory[i]);
 
     }
