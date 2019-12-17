@@ -39,11 +39,13 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(id: "5",  name: "Leia", email: "leia@leia.com") {
-  /* code here */
-    return makePersonObject.id;
-    return makePersonObject.name;
-    return makePersonObject.email;
+function makePersonObject(id, name, email) {
+  return {
+    id: id,
+    name: name,
+    email: email,
+  }
+  console.log(makePersonObject)
 }
 
 /**
@@ -59,9 +61,10 @@ function makePersonObject(id: "5",  name: "Leia", email: "leia@leia.com") {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(name) {
-  return "Hello, my name is".getName
+function getName(object) {
+  return `Hello, my name is ${object.name}`
 }
+console.log(getName)
 
 /**
  * ### Challenge `makeSmartPerson`
@@ -76,9 +79,19 @@ function getName(name) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
+function makeSmartPerson(name) {
+  return {
+    name: name,
+    sum: function(num1, num2){
+      return num1 + num2;
+    },
+    speak: function (){
+      return `Hello, my name is ${name}`
+    }
+  }
+ // console.log(makeSmartPerson("River"));
   /* code here */
-}
+
 
 
 
@@ -139,8 +152,7 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
-}
+  return `this is a ${inventory[index].carmake} ${inventory[index].carmodel}`
 
 /**
  * ### Challenge `getLastCarInfo`
@@ -169,8 +181,8 @@ function getLastCarInfo(/* code here */) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inventory) {
+  return `This is a ${inventory[inventory.length -1].carmake} ${inventory[inventory.length -1].carmodel}`
 }
 
 /**
