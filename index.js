@@ -38,10 +38,14 @@ function addNumbers (num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject ({ id: id, name: name, email: email }) {
-	return { id, name, email };
+function makePersonObject (id, name, email) {
+	return {
+		id    : id,
+		name  : name,
+		email : email,
+	};
 }
-console.log(makePersonObject({ id: 'NM356a', name: 'Adebola', email: 'dre@mymail.com' }));
+
 /**
  * ### Challenge `getName`
  * 
@@ -79,7 +83,7 @@ function makeSmartPerson (name) {
 			return num1 + num2;
 		},
 		speak : function () {
-			return `Hello, my name is: ${name}`;
+			return `Hello, my name is: ${this.name}`;
 		},
 	};
 }
@@ -159,8 +163,9 @@ function getCarInfoByIndex (inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo (/* code here *inventory[invetory -1]*/) {
-	/* code here */
+function getLastCarInfo (/* code here **/ inventory) {
+	/* code here */ return `This is a ${inventory[inventory.length - 1].car_make}  ${inventory[inventory.length - 1]
+		.car_model}`;
 }
 
 /**
@@ -175,8 +180,12 @@ function getLastCarInfo (/* code here *inventory[invetory -1]*/) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById (/* code here */) {
-	/* code here */
+function getCarInfoById (inventory, id) {
+	for (let i = 0; i < inventory.length; i++) {
+		if (inventory[i].id === id) {
+			return `This is a ${inventory[i].car_make} ${inventory[i].car_model}`;
+		}
+	}
 }
 
 /**
