@@ -196,17 +196,18 @@ function getCarInfoById(inventory, id) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
+
+
 function sortCarInventory(inventory) {
-  let sortedInventory = [];
-  for (let i = 0; i < inventory.length; i++) {
-    let oldInventory = inventory[i].car_model;
-    sortedInventory.push(oldInventory);
-    sortedInventory.sort();
+  // let sortedInventory = [];
+  // for (let i = 0; i < inventory.length; i++) {
+  //   let oldInventory = inventory[i].car_model;
+  //   sortedInventory.push(oldInventory);
+  //   sortedInventory.sort();
+  // }
+  return inventory.sort(function (a, b) {
 
-
-  }
-  return sortedInventory;
-
+  });
 }
 
 /**
@@ -275,27 +276,26 @@ function getGermanCars(inventory) {
 }
 
 
-/**
- * ### Challenge refactor to arrow functions
- * 
- * @instructions
- * Create arrow function versions of the following commented-out functions:
- * 
- * const sum = function (a, b) {
- *   return a + b
- * }
- * 
- * const addFive = function(num) {
-*    return num + 5
- * }
- *
- * const argTimesTwo = function (num) {
- *   return num * 2
- * }
-*/
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+
+//  * ### Challenge refactor to arrow functions
+
+//  * @instructions
+//  * Create arrow function versions of the following commented-out functions:
+
+const sum = (a, b) => { return a + b }
+
+
+const addFive = (num => {
+  return num + 5
+});
+
+const argTimesTwo = (num => {
+  return num * 2
+});
+
+// const sum = null; // code here!
+// const addFive = null; // code here!
+// const argTimesTwo = null; // code here!
 
 /**
  * ### Challenge `carMaker`
