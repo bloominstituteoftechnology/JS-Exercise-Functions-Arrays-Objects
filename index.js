@@ -62,7 +62,7 @@ function makePersonObject(id, name, email) {
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(objectName) {
-  return 'Hello, my name is' + objectName.name;
+  return 'Hello, my name is ' + objectName.name;
 }
 
 /**
@@ -147,9 +147,9 @@ function get3rdCar(inventory) {
 */
 function getCarInfoByIndex(inventory, index) {
   const CarInfoByIndex = inventory.find((item, index) => {
-    return index ===0
+    return index === 0
   })
-  return 'The car is a ${CarInfoByIndex.car_make} ${CarInfoByIndex.car_model}'
+  return `The car is a ${CarInfoByIndex.car_make} ${CarInfoByIndex.car_model}`
 }
 
 /**
@@ -315,8 +315,15 @@ const argTimesTwo = (num) => num*2;
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(/* code here */) {
-  /* code here */
+function carMaker(miles) {
+  const car = {
+    odometer: miles,
+    drive: function(distance){
+      this.odometer = distance + this.odometer
+      return car.odometer
+    }
+  }
+  return car
 }
 
 /// ////// END OF CHALLENGE /////////
