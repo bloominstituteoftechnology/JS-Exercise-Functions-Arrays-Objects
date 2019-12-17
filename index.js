@@ -18,7 +18,7 @@ function addNumbers(num1, num2) {
 
 // ⭐️ Example Challenge end ⭐️
 
-
+console.log(addNumbers(5 + 4));
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
@@ -39,10 +39,9 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
-}
-
+function makePersonObject() {
+  return makePersonObject;
+};
 /**
  * ### Challenge `getName`
  * 
@@ -56,10 +55,10 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(hussle) {
+  return "Hello, my name is" + hussle.name;
 }
-
+console.log("getName results:", getName({id: 1, name: ' Leia', email: 'leia@leia.com'}));
 /**
  * ### Challenge `makeSmartPerson`
  * 
@@ -73,11 +72,19 @@ function getName(/* code here */) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
-  /* code here */
-}
+function makeSmartPerson(name, num1, num2) {
+  return { 
+      name: nameProp,  
+      sum: function (num1, num2) {
+        return num1 + num2;
+      },
+      speak: function() {
+        return 'Hello, my name is ' + nameProp;
+    }
+  }
 
-
+};
+console.log(makeSmartPerson("Shawn", 5, 4));
 
 
 
@@ -121,7 +128,7 @@ function get3rdCar(inventory) {
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
-
+return 'the car is a ${the3rd.car_'
 
 /**
  * ### Challenge `getCarInfoByIndex`
