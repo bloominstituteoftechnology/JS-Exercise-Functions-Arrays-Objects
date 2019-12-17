@@ -228,6 +228,7 @@ function getModelYears(inventory) {
   return car_year;
 }
 
+
 /**
  * ### Challenge `getOlderCars`
  * 
@@ -244,8 +245,8 @@ function getOlderCars(inventory, number) {
   let olderCars = [];
   for (let i = 0; i < inventory.length; i++) {
     let older = inventory[i].car_year;
-    if (older === number) {
-      olderCars.push(number);
+    if (older <= number) {
+      olderCars.push(inventory[i]);
     }
   }
   return olderCars;
@@ -310,11 +311,12 @@ const argTimesTwo = (num => {
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(number) {
+function carMaker(odometer) {
   return {
-    odometer: number,
+    odometer,
     drive: function (distance) {
-      return distance + number
+      this.odometer += distance
+      return this.odometer
     }
   }
 }
