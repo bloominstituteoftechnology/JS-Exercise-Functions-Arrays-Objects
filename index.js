@@ -71,9 +71,9 @@ function getName(object){
  *         and returns the result of adding them together.
  *     It has a `speak` method that takes no arguments
  *         and returns a string like `Hello, my name is {name}`.
- *         where `{name}` is the name passed into `makeSmartPerson`.
-*/
-function makeSmartPerson(name) {
+ *         where `{name}` is the name passed into `makeSmartPerson`.*/
+ 
+  function makeSmartPerson(name) {
   return {  
    name,
     sum: (num1, num2) => num1 + num2,
@@ -82,7 +82,7 @@ function makeSmartPerson(name) {
   }
  
   return makeSmartPerson;
-  
+
 
 
 
@@ -144,7 +144,6 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
 const v = inventory[index];
 return `this is a ${v.car_make} ${v.car_model}`
 }
@@ -167,7 +166,7 @@ function getLastCarInfo(vehicle) {
 
 /**
  * ### Challenge `getCarInfoById`
- * 
+ *  
  * @instructions
  * getCarInfoById takes two arguments:
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
