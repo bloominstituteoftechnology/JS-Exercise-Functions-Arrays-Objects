@@ -62,15 +62,13 @@ function makePersonObject(/* code here */ id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
  */
-function getName(/* code here */ id, name, email) {
+function getName(/* code here */ obj) {
   /* code here */
-  let person = {
-    name: name
-  };
-  return `Hello,my name is ${person.name}`;
+  //let person = { name: name };
+  return `Hello,my name is ${obj.name}`;
 }
 
-//console.log( + getName(1, "Leia", "leia@leia.com"));
+//console.log("Hello , my name is ... " + getName(1, "Leia", "leia@leia.com"));
 
 /**
  * ### Challenge `makeSmartPerson`
@@ -158,7 +156,7 @@ function get3rdCar(inventory) {
 function getCarInfoByIndex(inventory, index) {
   /* code here */
   const theCar = inventory.find((item, index) => {
-    return this.index;
+    return index;
   });
   //return `The car is a ${the3rd.car_make} ${the3rd.car_model}`;
   return `This is a  ${theCar.car_make} ${theCar.car_model}`;
