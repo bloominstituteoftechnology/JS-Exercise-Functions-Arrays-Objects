@@ -84,21 +84,21 @@ The returned object has the following characteristics:
  */
 function makeSmartPerson(/* code here */ name) {
   /* code here */
-  let person = {
+  return {
     name: name,
     sum: function(num1, num2) {
       return num1 + num2;
     },
     speak: () => {
-      return `Hello, my name is ${person.name}!`;
+      return `Hello, my name is ${name}!`;
     }
   };
 
-  person.sum(5, 8);
-  person.speak();
+  //person.sum(5, 8);
+  //person.speak();
 }
 
-makeSmartPerson("Anunaya");
+//makeSmartPerson("Anunaya");
 
 /*
 // ⭐️ Example Test Data ⭐️
@@ -155,11 +155,9 @@ function get3rdCar(inventory) {
  */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
-  const theCar = inventory.find((item, index) => {
-    return index;
-  });
+
   //return `The car is a ${the3rd.car_make} ${the3rd.car_model}`;
-  return `This is a  ${theCar.car_make} ${theCar.car_model}`;
+  return `This is a ${inventory[index].car_make} ${inventory[index].car_model}`;
 }
 
 /**
@@ -193,14 +191,13 @@ function getLastCarInfo(/* code here */ inventory) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
  */
-function getCarInfoById(/* code here */ inventory, index) {
+function getCarInfoById(/* code here */ inventory, id) {
   /* code here */
-  //const infoId = inventory((item, index) => {
-  // return index;
-  // });
+
+  return `This is a ${inventory[id].car_make} ${inventory[id].car_model}`;
   // return `This is a ${infoId.car_make} ${infoId.car_model}`;
 }
-getCarInfoById(Array, 0);
+//getCarInfoById(Array, 0);
 /**
  * ### Challenge `sortCarInventory`
  *
@@ -228,8 +225,10 @@ function sortCarInventory(/* code here */ inventory) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
  */
-function getModelYears(/* code here */) {
-  /* code here */
+function getModelYears(/* code here */ inventory) {
+  let allYear = [];
+  inventory.forEach(a => allYear.push(a.car_year));
+  return allYear;
 }
 
 /**
