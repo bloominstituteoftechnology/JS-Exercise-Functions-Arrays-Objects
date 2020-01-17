@@ -284,7 +284,7 @@ function getGermanCars(inventory) {
  * @instructions
  * Create arrow function versions of the following commented-out functions:
  * 
- * const sum = function (a, b) {
+ * const sum = (a, b)=> {
  *   return a + b
  * }
  * 
@@ -296,9 +296,15 @@ function getGermanCars(inventory) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (a, b)=> {
+     return a + b;
+  }
+const addFive = (num)=>{
+  return num + 5;
+} // code here!
+const argTimesTwo = (num)=>{
+  return num * 2;
+} // code here!
 
 /**
  * ### Challenge `carMaker`
