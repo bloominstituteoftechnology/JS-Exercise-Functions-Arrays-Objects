@@ -322,8 +322,7 @@ function carMaker(mileage) {
     odometer: mileage,
     drive(distance) { return this.odometer = this.odometer + distance; }
   }
-  //car.drive(num);
-  return car.drive();
+  return car;
 }
 
 /// ////// END OF CHALLENGE /////////
