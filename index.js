@@ -198,16 +198,21 @@ function getCarInfoById(inventory,id) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(inventory) {
-  let carModels = [];
-  console.log();	
+function sortCarInventory(inventory,{car_model}) {
+ /* let carModels = [];
+  	
   for(let i=0; i<inventory.length; i++){
-    carModels[i] = inventory[i]["Yukon"];
+    carModels[i] = inventory.car_model;
   }
-  let sortedList= carModels.sort();
-  return (sortedList);
   
+  return (carModels);
+  
+}*/ const sorted = inventory.car_model;
+
+return (sorted[sorted.length - 1].car_model);
 }
+
+
 /**
  * ### Challenge `getModelYears`
  * 
@@ -217,17 +222,16 @@ function sortCarInventory(inventory) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(inventory) {
-  let carYears = [];
-console.log();	
+function getModelYears(inventory,car_model) {
+  let carYears = inventory.car_year;
+
 for(let i=0; i<inventory.length; i++){
-  carYears[i] = inventory[i]["car_year"];
+   carYears[i] = inventory.car_year;
+ 
+}
+return getModelYears(carYears);
 }
 
-return(carYears);
-
-
-}
 
 
 
@@ -244,9 +248,9 @@ return(carYears);
  * in the same order as they appear in the original inventory.
 */
 function getOlderCars(inventory) {
-  let oldCars =[];
+  let oldCars =inventory[car_year];
 console.log(); 	for(let i=0; i<car_year.length; i++){
-  if(car_year[i] < 2000){
+  if(car_year[i] < 1990){
        oldCars.push(car_year[i]);
   }
 }
@@ -266,16 +270,8 @@ return(oldCars.length);
  * in the same order as they appear in the original inventory.
 */
 function getGermanCars(inventory) {
-  let bmwAndAudi =[];
-	  for(let i=0; i<inventory.length; i++){
-  
-    if(inventory[8]["car_make"] == 'BMW' || inventory[8]["car_make"] == 'Audi'){
-  
-      bmwAndAudi.push(inventory[8]);  
-    }
-  }
-  
-  return(bmwAndAudi);
+  const germanCars=["Audi","Mercedess-Benz","Volkswagon", "BMW"]
+  return germanCars(inventory.car_model);
 }
 
 /**
