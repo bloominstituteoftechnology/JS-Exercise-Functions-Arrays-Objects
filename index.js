@@ -210,11 +210,10 @@ function getCarInfoById(/* code here */ inventory, id) {
 function sortCarInventory(/* code here */ inventory) {
   /* code here */
 
-  const sorted = inventory.sort((item, index) => {
-    return index === inventory.length - 1;
-  });
-
-  return inventory.car_model;
+  const sorted = inventory.sort(a => a.car_model);
+  //console.log(sorted);
+  return sorted;
+  //
 }
 
 /**
@@ -320,8 +319,14 @@ const argTimesTwo = num => num * 2;
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
  */
-function carMaker(/* code here */) {
+function carMaker(/* code here */ odometer) {
   /* code here */
+  return {
+    odometer: odometer,
+    drive: distance => distance + odometer
+  };
+  //console.log(odometer);
+  return odometer;
 }
 
 /// ////// END OF CHALLENGE /////////
