@@ -193,8 +193,9 @@ function getLastCarInfo(/* code here */ inventory) {
  */
 function getCarInfoById(/* code here */ inventory, id) {
   /* code here */
-
-  return `This is a ${inventory[id].car_make} ${inventory[id].car_model}`;
+  return `This is a${inventory.filter(a => a.id === id)}  ${
+    inventory.car_make
+  } ${inventory.car_model}`;
   // return `This is a ${infoId.car_make} ${infoId.car_model}`;
 }
 //getCarInfoById(Array, 0);
@@ -228,6 +229,7 @@ function sortCarInventory(/* code here */ inventory) {
 function getModelYears(/* code here */ inventory) {
   let allYear = [];
   inventory.forEach(a => allYear.push(a.car_year));
+  //console.log(allYear);
   return allYear;
 }
 
@@ -243,8 +245,13 @@ function getModelYears(/* code here */ inventory) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
  */
-function getOlderCars(/* code here */) {
+function getOlderCars(/* code here */ inventory, maxYear) {
   /* code here */
+  let oldCar = [];
+
+  inventory.forEach(b => oldCar.push(b.car_year) === maxYear);
+  //console.log(oldCar);
+  return oldCar;
 }
 
 /**
@@ -258,8 +265,18 @@ function getOlderCars(/* code here */) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
  */
-function getGermanCars(/* code here */) {
+function getGermanCars(/* code here */ inventory) {
   /* code here */
+  let germanCar = [];
+  inventory.forEach(b =>
+    germanCar.push(
+      inventory.includes("BMW" || "Mercedes-Benz" || "Volkswagen" || "Audi")
+    )
+  );
+
+  //germanCar.filter(a => {
+  //console.log(germanCar);
+  return germanCar;
 }
 
 /**
@@ -280,9 +297,15 @@ function getGermanCars(/* code here */) {
  *   return num * 2
  * }
  */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (a, b) => {
+  a + b;
+}; //null; // code here!
+
+const addFive = num => num + 5;
+//null; // code here!
+
+const argTimesTwo = num => num * 2;
+//null; // code here!
 
 /**
  * ### Challenge `carMaker`
