@@ -39,9 +39,12 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
-}
+function makePersonObject(x, y, z) {
+   return {
+     id:x, name:y, email: z
+   }
+ }; 
+
 
 /**
  * ### Challenge `getName`
@@ -56,9 +59,20 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+let person = {
+  id: 4, 
+  name: "Mona", 
+  email: "Mona@mona.com"
+}; 
+
+function getName (object) {
+  return ("Hello, my name is"+" "+object.name);
 }
+
+getName(person); 
+
+//!!!getName works in my repl.it, checked it with an object
+
 
 /**
  * ### Challenge `makeSmartPerson`
@@ -72,16 +86,24 @@ function getName(/* code here */) {
  *     It has a `speak` method that takes no arguments
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
-*/
-function makeSmartPerson(/* code here */) {
-  /* code here */
+
+ */
+function makeSmartPerson(name, num1, num2) {
+  let smart = {
+      name: name, 
+      sum: num1 + num2, 
+      speak: function (){
+        return ("Hello, my name is"+ " " + this.name)
+      } 
+  }; return smart; 
 }
 
+// works-ish,  how do I return the method speak? 
 
 
 
 
-/*
+
 // ⭐️ Example Test Data ⭐️
 
 var inventory = [
@@ -111,12 +133,12 @@ var inventory = [
   *
   * NOTE: This example has been completed for you.
 **/
-function get3rdCar(inventory) {
-  const the3rd = inventory.find((item, index) => {
-    return index === 2 // we use 2 because index is zero-based.
-  })
-  return `The car is a ${the3rd.car_make} ${the3rd.car_model}`
-}
+// function get3rdCar(inventory) {
+//   const the3rd = inventory.find((item, index) => {
+//     return index === 2 // we use 2 because index is zero-based.
+//   })
+//   return `The car is a ${the3rd.car_make} ${the3rd.car_model}`
+// }
 
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
@@ -135,24 +157,37 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoByIndex(inventory, index) {
-  /* code here */
+
+
+function getCarInfoByIndex(arr) {
+  return ("This is a" + " " + arr[1].car_make + " " + arr[1].car_model); 
+}
+getCarInfoByIndex (inventory); 
+
+//works on replit
+
+
+
+
+
+//   ### Challenge `getLastCarInfo`
+
+//  @instructions
+//  getLastCarInfo takes a single argument:
+//     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
+//  getLastCarInfo returns a string in the format `This is a {car_make} {car_model}
+
+ /*For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
+ it will return `This is a Lincoln Town Car`. */
+
+
+
+function getLastCarInfo(arr) {
+    let lastCar = (arr.slice(-1)[0]); 
+    return ("This is a"+ " "+ lastCar.car_make+ " "+ lastCar.car_model); 
 }
 
-/**
- * ### Challenge `getLastCarInfo`
- * 
- * @instructions
- * getLastCarInfo takes a single argument:
- *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
- * getLastCarInfo returns a string in the format `This is a {car_make} {car_model}
- * 
- * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
- * it will return `This is a Lincoln Town Car`.
-*/
-function getLastCarInfo(/* code here */) {
-  /* code here */
-}
+getLastCarInfo(inventory); 
 
 /**
  * ### Challenge `getCarInfoById`
