@@ -193,9 +193,9 @@ function getLastCarInfo(/* code here */ inventory) {
  */
 function getCarInfoById(/* code here */ inventory, id) {
   /* code here */
-  return `This is a${inventory.filter(a => a.id === id)}  ${
-    inventory.car_make
-  } ${inventory.car_model}`;
+  const idCarInfo = inventory.filter(a => a.id);
+  //id=idCarInfo;
+  return `This is a  ${inventory.car_make} ${inventory.car_model}`;
   // return `This is a ${infoId.car_make} ${infoId.car_model}`;
 }
 //getCarInfoById(Array, 0);
@@ -267,14 +267,13 @@ function getOlderCars(/* code here */ inventory, maxYear) {
 function getGermanCars(/* code here */ inventory) {
   /* code here */
   let germanCar = [];
-  inventory.forEach(b =>
-    germanCar.push(
-      inventory.includes("BMW" || "Mercedes-Benz" || "Volkswagen" || "Audi")
-    )
-  );
-
-  //germanCar.filter(a => {
-  //console.log(germanCar);
+  let arr = inventory.filter(function(a) {
+    a.car_make === "BMW" || "Mercedes-Benz" || "Volkswagen" || "Audi";
+    return a;
+  });
+  {
+    germanCar.push(arr);
+  }
   return germanCar;
 }
 
@@ -325,7 +324,7 @@ function carMaker(/* code here */ odometer) {
     odometer: odometer,
     drive: distance => distance + odometer
   };
-  //console.log(odometer);
+
   return odometer;
 }
 
