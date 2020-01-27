@@ -198,9 +198,15 @@ function getCarInfoById(exports, id) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-// function sortCarInventory() {
-
-// }
+function sortCarInventory(exports) {
+  let sortedCars = exports.sort( (a, b) => {
+    if (a.car_model > b.car_model) return 1;
+    else if (b.car_model > a.car_model) return -1;
+    else return 0;
+  } );
+  return sortedCars
+}
+console.log(sortCarInventory);
 
 // function compare(a, b) {
 //   // Use toUpperCase() to ignore character casing
@@ -233,7 +239,7 @@ function getModelYears(exports) {
   for (i=0; i<exports.length; i++) {
     years.push(exports[i].car_year);
   }
-  console.log(years);
+  return years;
 }
 
 /**
