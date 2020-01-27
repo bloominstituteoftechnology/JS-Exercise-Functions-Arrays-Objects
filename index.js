@@ -47,7 +47,7 @@ function makePersonObject(id, name, email) {
   return makePersonObject;
 };
     
-console.log(makePersonObject(5, "Leia", "leia@leia.com"))
+// console.log(makePersonObject(5, "Leia", "leia@leia.com"))
 
 /**
  * ### Challenge `getName`
@@ -94,7 +94,6 @@ function makeSmartPerson(name) {
   return smartPerson;
 }
 
-console.log(makeSmartPerson('reagan'))
 
 
 
@@ -167,8 +166,8 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
+function getLastCarInfo(exports) {
+  return "This is a " + exports[exports.length -1].car_make +  exports[exports.length -1].car_model; 
 }
 
 /**
@@ -183,8 +182,12 @@ function getLastCarInfo(/* code here */) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(exports, id) {
+  for (i=0; i<exports.length; i++) {
+    if (exports[i].id == id) {
+      return "This is a " + exports[i].car_make + exports[i].car_model
+    }
+  }
 }
 
 /**
@@ -195,9 +198,25 @@ function getCarInfoById(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
-  /* code here */
-}
+// function sortCarInventory() {
+
+// }
+
+// function compare(a, b) {
+//   // Use toUpperCase() to ignore character casing
+//   const modelA = a.car_model.toUpperCase();
+//   const modelB = b.car_model.toUpperCase();
+
+//   let comparison = 0;
+//   if (modelA > modelB) {
+//     comparison = 1;
+//   } else if (modelA < modelB) {
+//     comparison = -1;
+//   }
+//   return comparison;
+// }
+
+// exports.sort(compare);
 
 /**
  * ### Challenge `getModelYears`
@@ -208,8 +227,13 @@ function sortCarInventory(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
-  /* code here */
+
+function getModelYears(exports) {
+  let years = [];
+  for (i=0; i<exports.length; i++) {
+    years.push(exports[i].car_year);
+  }
+  console.log(years);
 }
 
 /**
