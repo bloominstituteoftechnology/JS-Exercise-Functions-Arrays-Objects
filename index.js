@@ -90,6 +90,8 @@ function makeSmartPerson(name) {
 }
 
 
+
+
 /*
 // ⭐️ Example Test Data ⭐️
 
@@ -122,7 +124,7 @@ var inventory = [
 **/
 function get3rdCar(inventory) {
   const the3rd = inventory.find((item, index) => {
-    return index === 2 // we use 2 because index is zero-based.
+    return index === 2
   })
   return `The car is a ${the3rd.car_make} ${the3rd.car_model}`
 }
@@ -243,12 +245,11 @@ function getOlderCars(inventory, maxYear)
 {
   const oldCars = [];
 
-  for(var i = 0; i < inventory.length; i++)
-  {
-    if(inventory[i].car_year < maxYear){
-      oldCars.push(inventory[i]);
+  inventory.forEach(item => {
+    if(item.car_year <= maxYear){
+      oldCars.push(item);
     }
-  }
+  })
 
   return oldCars;
 }
@@ -297,7 +298,7 @@ function getGermanCars(inventory) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
+const sum = null // code here!
 const addFive = null; // code here!
 const argTimesTwo = null; // code here!
 
@@ -314,8 +315,14 @@ const argTimesTwo = null; // code here!
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(/* code here */) {
-  /* code here */
+function carMaker(miles) {
+  return {
+    odometer: miles,
+    drive: function(miles) {
+      this.odometer = this.odometer + miles
+      return this.odometer;
+    }
+  }
 }
 
 /// ////// END OF CHALLENGE /////////
