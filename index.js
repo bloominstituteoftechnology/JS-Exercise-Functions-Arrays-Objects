@@ -239,13 +239,17 @@ function getModelYears(inventory) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(inventory, maxYear) {
+function getOlderCars(inventory, maxYear) 
+{
   const oldCars = [];
-  for(var i = 0; i < inventory.length; i++){
+
+  for(var i = 0; i < inventory.length; i++)
+  {
     if(inventory[i].car_year < maxYear){
       oldCars.push(inventory[i]);
     }
   }
+
   return oldCars;
 }
 
@@ -261,16 +265,17 @@ function getOlderCars(inventory, maxYear) {
  * in the same order as they appear in the original inventory.
 */
 function getGermanCars(inventory) {
-  const germanCars = [];
+  const germanCars = [];  
+  var counter = 0
   for(var i = 0; i < inventory.length; i++)
   {
     var carMake = inventory[i].car_make;
     if(carMake === 'Audi' || carMake === 'Mercedes-Benz' || carMake === "BMW" || carMake === 'Volkswagen')
     {
-      germanCars.push[inventory[i]];
+      germanCars[counter] = inventory[i];
+      counter++;
     }
   }
-  console.log(germanCars);
   return germanCars;
 }
 
