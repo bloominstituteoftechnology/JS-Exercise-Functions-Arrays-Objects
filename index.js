@@ -309,8 +309,8 @@ const argTimesTwo = (num) => num * 2;
  *         (2) returns the updated value of the `odometer`.
 */
 function carMaker(num) {
-  const theCar = 
-}
+ 
+    }
 
 /// ////// END OF CHALLENGE /////////
 /// ////// END OF CHALLENGE /////////
