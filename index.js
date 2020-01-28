@@ -43,7 +43,7 @@ function makePersonObject(id, name, email) {
   return {
     id: id,
     name: name,
-    email:email
+    email: email
   }
 }
 
@@ -179,9 +179,9 @@ function getLastCarInfo(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoById(inventory, selection){
-  for (var i = 0; i < inventory.length; i++) {
+  for (let i = 0; i < inventory.length; i++) {
     if (inventory[i].id === selection) {
-      var theCar = inventory[i];
+      let theCar = inventory[i];
       return `This is a ${theCar.car_make} ${theCar.car_model}`;  
     }
   }
@@ -244,13 +244,11 @@ function getModelYears(inventory) {
 function getOlderCars(inventory, maxYear) 
 {
   const oldCars = [];
-
-  inventory.forEach(item => {
-    if(item.car_year <= maxYear){
-      oldCars.push(item);
+  for(let i = 0; i< inventory.length; i++){
+    if(inventory[i].car_year <= maxYear){
+      oldCars.push(inventory[i]);
     }
-  })
-
+  }
   return oldCars;
 }
 
@@ -267,10 +265,10 @@ function getOlderCars(inventory, maxYear)
 */
 function getGermanCars(inventory) {
   const germanCars = [];  
-  var counter = 0
-  for(var i = 0; i < inventory.length; i++)
+  let counter = 0
+  for(let i = 0; i < inventory.length; i++)
   {
-    var carMake = inventory[i].car_make;
+    let carMake = inventory[i].car_make;
     if(carMake === 'Audi' || carMake === 'Mercedes-Benz' || carMake === "BMW" || carMake === 'Volkswagen')
     {
       germanCars[counter] = inventory[i];
@@ -298,9 +296,9 @@ function getGermanCars(inventory) {
  *   return num * 2
  * }
 */
-const sum = null // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (a,b) => (a + b); // code here!
+const addFive = (c) => (c + 5); // code here!
+const argTimesTwo = (d) => (d * 2); // code here!
 
 /**
  * ### Challenge `carMaker`
