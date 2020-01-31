@@ -24,6 +24,60 @@ function addNumbers(num1, num2) {
 // 👇 COMPLETE YOUR WORK BELOW 👇
 
 /**
+ * ### Challenge `sayGoodbye`
+ * 
+ * @instructions
+ * This function should take an a name as an argument,
+ * and return a string that says 'Goodbye, {name}. Have a great day.'
+ * 
+ * For example, if we invoke `sayGoodbye`
+ * passing 'Andy' as the argument,
+ * the returned value should look like: 'Goodbye, Andy. Have a great day.'
+*/
+function sayGoodbye(/* code here */) {
+  /* code here */
+}
+
+/**
+ * ### Challenge `temperatureCtoF`
+ * 
+ * @instructions
+ * This function should take an a temperature in celsius as an argument,
+ * and return the temperature in fahrenheit, rounded to the nearest whole number. 
+ * 
+ * For example, if we invoke `temperatureCtoF`
+ * passing 24 as the argument,
+ * the returned value should be: '75F'
+ * 
+ * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
+ * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
+*/
+function temperatureCtoF(/* code here */) {
+  /* code here */
+}
+
+/**
+ * ### Challenge `temperatureInF`
+ * 
+ * @instructions
+ * This function should take an a temperature and a unit (either 'F' or 'C') as arguments,
+ * and return the temperature in fahrenheit, rounded to the nearest whole number. 
+ * 
+ * For example, if we invoke `temperatureInF`
+ * passing 88, 'F' as the arguments,
+ * the returned value should be: '88F'
+ * 
+ * If we invoke `temperatureInF`
+ * passing 24, 'C' as the arguments,
+ * the returned value should be: '75F'
+ * 
+*/
+function temperatureInF(/* code here */) {
+  /* code here */
+}
+
+
+/**
  * ### Challenge `makePersonObject`
  * 
  * @instructions
@@ -60,24 +114,62 @@ function getName(/* code here */) {
   /* code here */
 }
 
+
 /**
- * ### Challenge `makeSmartPerson`
+ * ### Challenge `appleIndex`
  * 
  * @instructions
- * This function takes a single `name` argument and returns an object.
- * The returned object has the following characteristics:
- *     It has a `name` property that contains the argument passed in.
- *     It has a `sum` method that takes two numbers as arguments
- *         and returns the result of adding them together.
- *     It has a `speak` method that takes no arguments
- *         and returns a string like `Hello, my name is {name}`.
- *         where `{name}` is the name passed into `makeSmartPerson`.
+ * This function takes as its only argument an array 
+ * containing strings,
+ * and returns the index in the array of the string 'apple'.
+ * 
+ * You may assume the string 'apple' will appear exactly 
+ * once in the array.
+ * 
+ * For example, if we invoke `appleIndex`
+ * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
+ * the returned value should be: 2.
 */
-function makeSmartPerson(/* code here */) {
+function appleIndex(/* code here */) {
   /* code here */
 }
 
+/**
+ * ### Challenge `firstChar`
+ * 
+ * @instructions
+ * This function takes as its only argument an array 
+ * containing strings,
+ * and returns an array of equal length containing the first 
+ * character of each string in the original array.
+ * 
+ * 
+ * For example, if we invoke `first`
+ * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
+ * the returned value should be: [ 'o', 'g', 'a', 'b', 'm'].
+*/
+function firstChar(/* code here */) {
+  /* code here */
+}
 
+/**
+ * ### Challenge `isItAnApple`
+ * 
+ * @instructions
+ * This function takes as its only argument an array 
+ * containing strings,
+ * and returns an array of equal length containing the `true`
+ * if the corresponding entry in the original array is 'apple' 
+ * and `false` if it is anything else.
+ * 
+ * 
+ * For example, if we invoke `isItAnApple`
+ * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
+ * the returned value should be: [ false, true, false, false, true, false ].
+*/
+function isItAnApple(/* code here */) {
+  /* code here */
+}
 
 
 
@@ -106,16 +198,14 @@ var inventory = [
   * ### Example Array Challenge:
   * 
   * @instructions
-  * get3rdCar() should return the string `The car is a Land Rover Defender Ice Edition`
+  * get3rdCar() should return the string `The is a Land Rover Defender Ice Edition`
   * 
   *
   * NOTE: This example has been completed for you.
 **/
 function get3rdCar(inventory) {
-  const the3rd = inventory.find((item, index) => {
-    return index === 2 // we use 2 because index is zero-based.
-  })
-  return `The car is a ${the3rd.car_make} ${the3rd.car_model}`
+  const the3rd = inventory[2];
+  return `The is a ${the3rd.car_make} ${the3rd.car_model}`
 }
 
 // 👇 COMPLETE YOUR WORK BELOW 👇
@@ -155,7 +245,22 @@ function getLastCarInfo(/* code here */) {
 }
 
 /**
+ * ### Challenge `getModelYears`
+ * 
+ * @instructions
+ * We need the years from every car in the inventory!
+ * getModelYears takes a single argument:
+ *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
+ * getModelYears returns an array containing all the 'car_year's in the inventory.
+*/
+function getModelYears(/* code here */) {
+  /* code here */
+}
+
+/**
  * ### Challenge `getCarInfoById`
+ *  * * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
+ * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
  * 
  * @instructions
  * getCarInfoById takes two arguments:
@@ -171,32 +276,9 @@ function getCarInfoById(/* code here */) {
 }
 
 /**
- * ### Challenge `sortCarInventory`
- * 
- * @instructions
- * sortCarInventory takes a single argument:
- *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
- * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
-*/
-function sortCarInventory(/* code here */) {
-  /* code here */
-}
-
-/**
- * ### Challenge `getModelYears`
- * 
- * @instructions
- * We need the years from every car in the inventory!
- * getModelYears takes a single argument:
- *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
- * getModelYears returns an array containing all the 'car_year's in the inventory.
-*/
-function getModelYears(/* code here */) {
-  /* code here */
-}
-
-/**
  * ### Challenge `getOlderCars`
+ * * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
+ * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
  * 
  * @instructions
  * We need a utility to find older cars!
@@ -213,6 +295,8 @@ function getOlderCars(/* code here */) {
 
 /**
  * ### Challenge `getGermanCars`
+ * * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
+ * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
  * 
  * @instructions
  * We need a utility to find German cars!
@@ -225,28 +309,6 @@ function getOlderCars(/* code here */) {
 function getGermanCars(/* code here */) {
   /* code here */
 }
-
-/**
- * ### Challenge refactor to arrow functions
- * 
- * @instructions
- * Create arrow function versions of the following commented-out functions:
- * 
- * const sum = function (a, b) {
- *   return a + b
- * }
- * 
- * const addFive = function(num) {
-*    return num + 5
- * }
- *
- * const argTimesTwo = function (num) {
- *   return num * 2
- * }
-*/
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
 
 /**
  * ### Challenge `carMaker`
@@ -273,18 +335,24 @@ if (typeof exports !== 'undefined') {
   // For Node/Non-browser test env
   module.exports = module.exports || {}
   if (addNumbers) { module.exports.addNumbers = addNumbers }
+  if (sayGoodbye) { module.exports.sayGoodbye = sayGoodbye }
+  if (temperatureCtoF) { module.exports.temperatureCtoF = temperatureCtoF }
+  if (temperatureInF) { module.exports.temperatureInF = temperatureInF }
   if (makePersonObject) { module.exports.makePersonObject = makePersonObject }
   if (getName) { module.exports.getName = getName }
-  if (makeSmartPerson) { module.exports.makeSmartPerson = makeSmartPerson }
+  if (appleIndex) { module.exports.appleIndex = appleIndex }
+  if (firstChar) { module.exports.firstChar = firstChar }
+  if (isItAnApple) { module.exports.isItAnApple = isItAnApple }
+  
+
+  
   if (carMaker) { module.exports.carMaker = carMaker }
   if (getCarInfoByIndex) { module.exports.getCarInfoByIndex = getCarInfoByIndex }
   if (getLastCarInfo) { module.exports.getLastCarInfo = getLastCarInfo }
   if (getCarInfoById) { module.exports.getCarInfoById = getCarInfoById }
-  if (sortCarInventory) { module.exports.sortCarInventory = sortCarInventory }
+
   if (getModelYears) { module.exports.getModelYears = getModelYears }
   if (getOlderCars) { module.exports.getOlderCars = getOlderCars }
   if (getGermanCars) { module.exports.getGermanCars = getGermanCars }
-  if (sum) { module.exports.sum = sum }
-  if (addFive) { module.exports.addFive = addFive }
-  if (argTimesTwo) { module.exports.argTimesTwo = argTimesTwo }
+ 
 }
