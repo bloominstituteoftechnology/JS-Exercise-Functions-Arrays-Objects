@@ -84,7 +84,7 @@ function getName(object) {
 function makeSmartPerson(name) {
   const object = {
     name: name,
-    sum(num1, num2) {
+    sum: function(num1, num2) {    //don't use variable declaration before (i.e. const sum: func...)
       return num1 + num2;
     },
     speak() {
@@ -154,7 +154,7 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  return `This is a ${inventory[index].car_make} ${inventory[index].car_model}`;
 }
 
 /**
