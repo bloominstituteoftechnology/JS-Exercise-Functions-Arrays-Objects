@@ -269,18 +269,25 @@ function getGermanCars(/* code here */) {
  * 
  * @instructions
  * Create arrow function versions of the following commented-out functions:
- */ 
+ * 
+const sum = (a, b) => {
+  return a + b
+ * }
+ * 
+ * const addFive = function(num) {
+*    return num + 5
+ * }
+ *
+ * const argTimesTwo = function (num) {
+ *   return num * 2
+ * }
+*/
 const sum = (a, b) => a + b;
 
 const addFive = num => num + 5;
 
 const argTimesTwo = num => num * 2;
 
-/*
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
-*/
 /**
  * ### Challenge `carMaker`
  * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
