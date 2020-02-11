@@ -243,7 +243,10 @@ function getOlderCars(inventory, desiredMaxYear) {
   for (let i = 0; i < inventory.length; i++) {
     if (inventory[i].car_year <= desiredMaxYear) {
       matchedCars.push(inventory[i]);
+    }
   }
+
+  return matchedCars;  //wouldn't work becasue I forgot to return the array!
 }
 
 /**
