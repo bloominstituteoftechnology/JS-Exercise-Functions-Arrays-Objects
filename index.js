@@ -202,9 +202,10 @@ function getCarInfoById(inventory, id) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
-  /* code here */
+function sortCarInventory(/*inventory*/) {
+  //return inventory.sort(inventory.car_model);
 }
+
 
 /**
  * ### Challenge `getModelYears`
@@ -215,8 +216,13 @@ function sortCarInventory(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
-  /* code here */
+function getModelYears(inventory) {
+  const modelYear = [];
+
+  for (let i = 0; i < inventory.length; i++) {
+    modelYear.push(inventory[i].car_year);  //wasn't working at first because instead of car_year, you had model_year (that's what modelYear was originally named)
+  }
+  return modelYear;
 }
 
 /**
@@ -231,8 +237,13 @@ function getModelYears(/* code here */) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
-  /* code here */
+function getOlderCars(inventory, desiredMaxYear) {
+  const matchedCars = [];
+
+  for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].car_year <= desiredMaxYear) {
+      matchedCars.push(inventory[i]);
+  }
 }
 
 /**
