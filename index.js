@@ -202,10 +202,29 @@ function getCarInfoById(inventory, id) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/*inventory*/) {
-  //return inventory.sort(inventory.car_model);
-}
+function sortCarInventory(inventory) {
+  function compareValues(key, order = 'asc') {
+      return function innerSort(a, b) {
+          if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
+              return 0;
+          }
 
+          const varA = (typeof a[key] === 'string') ? a[key].toUpperCase() : a[key];
+          const varB = (typeof b[key] === 'string') ? b[key].toUpperCase() : b[key];
+
+          let comparison = 0;
+          if (varA > varB) {
+              comparison = 1;
+          } else if (varA < varB) {
+              comparison = -1;
+          }
+          return (
+              (order === 'desc') ? (comparison * -1) : comparison
+          );
+      };
+  }
+  return inventory.sort(compareValues('car_model'));
+}
 
 /**
  * ### Challenge `getModelYears`
@@ -291,7 +310,7 @@ const sum = (a, b) => {
  *   return num * 2
  * }
 */
-const sum = (a, b) => a + b;
+const sum = (a, b) => a + b;  //implicit returns
 
 const addFive = num => num + 5;
 
@@ -337,3 +356,41 @@ if (typeof exports !== 'undefined') {
   if (addFive) { module.exports.addFive = addFive }
   if (argTimesTwo) { module.exports.argTimesTwo = argTimesTwo }
 }
+
+
+
+/* previous attempts at sortCarInventory
+
+for (let i = 0; i < inventory.length; i++) {
+    function compare (inventory[i].car_model, inventory[i+1].car_model) {
+      const carModelA = inventory[i].car_model.toUpperCase();
+      const carModelB = inventory[i+1].car_model.toUpperCase();
+
+      let comparison = 0;
+
+      if (carModelA > carModelB) {
+        comparison = 1;
+      } else if (carModelB > carModelA) {
+        comparison = -1;
+      }
+      return comparison
+    }
+  }
+
+  inventory.sort(compare);
+
+  function compare (a, b) {
+    const carModelA = a.car_model.toUpperCase();
+    const carModelB = b.car_model.toUpperCase();
+
+    let comparison = 0;
+    if (carModelA > carModelB) {
+      comparison = 1;
+    } else if (carModelA < carModelB){
+      comparison = -1;
+    }
+    return comparison;
+  }
+  inventory.sort(compare);
+
+*/
