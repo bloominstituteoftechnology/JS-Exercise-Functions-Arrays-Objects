@@ -77,8 +77,16 @@ function getName(obj) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
-  /* code here */
+function makeSmartPerson(name) {
+  return {
+    name,
+    sum: (x, y) => {
+      return x + y;
+    },
+    speak: () => {
+      return `Hello, my name is ${this.name}`
+    }
+  }
 }
 
 
@@ -140,7 +148,8 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  let item = inventory[index];
+  return `This is a ${item.car_make} ${item.car_model}`;
 }
 
 /**
