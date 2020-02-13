@@ -196,13 +196,14 @@ console.log(getCarInfoByIndex(carStuff, 3));
 */
 function getLastCarInfo(inventory) {
   /* code here */
- 
-  const carID = inventory[13]
+    let x = Object.keys(inventory).length;
+    let carID= inventory[x-1];
   
   return `This is a ${carID.car_make} ${carID.car_model}`
 }
 
 console.log(getLastCarInfo(carStuff));
+
 /**
  * ### Challenge `getCarInfoById`
  * 
