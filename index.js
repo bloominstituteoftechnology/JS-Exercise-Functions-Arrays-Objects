@@ -81,7 +81,16 @@ function getName({name}) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
+function makeSmartPerson (name) {
+  return {
+    name: name,
+    sum: function (a, b) {
+      return a + b;
+    },
+    speak: function(){
+      return "Hello, my name is " + name;
+    }
+  }
   /* code here */
 }
 
@@ -144,6 +153,7 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
+  return "This is a " + inventory[index].car_make + " " + inventory[index].car_model;
   /* code here */
 }
 
@@ -158,7 +168,8 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
+function getLastCarInfo(inventory) {
+  return `This is a ${inventory[inventory.length - 1].car_make} ${inventory[inventory.length - 1].car_model}` 
   /* code here */
 }
 
@@ -186,9 +197,8 @@ function getCarInfoById(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
+function sortCarInventory(){}
   /* code here */
-}
 
 /**
  * ### Challenge `getModelYears`
