@@ -12,6 +12,7 @@
  *
  * NOTE: This example has been completed for you.
 */
+
 function addNumbers(num1, num2) {
   return num1 + num2;
 }
@@ -39,11 +40,11 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+
+function makePersonObject(id, name, email) {
+  return { id, name, email };
 }
 
-/**
  * ### Challenge `getName`
  * 
  * @instructions
@@ -56,11 +57,14 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
+
+function getName(myObject) {
   /* code here */
+  return `Hello, my name is ${myObject.name}`;
 }
 
-/**
+
+
  * ### Challenge `makeSmartPerson`
  * 
  * @instructions
