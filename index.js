@@ -47,8 +47,12 @@ function makePersonObject(id, name, email) {
 }
   return PersonObject;
 }
-makePersonObject(7, "Theresa M Lennon", "oddyseyt@gmail.com");
-console.log(makePersonObject);
+const num1=7;
+const studentName="Theresa M Lennon";
+const studenteMail="oddyseyt@gmail.com";
+
+console.log(makePersonObject(num1, studentName, studenteMail));
+
 
 
 /**
@@ -66,18 +70,11 @@ console.log(makePersonObject);
 */
 function getName(name) {
   /* code here */
-  let Obj = {nameObj: "Hello, my name is " +name}
-  return (Obj['nameObj']);
+  return "Hello, my name is " +name;
 }
 
-const person = {id: 7,
-  studentName: "Theresa M Lennon",
-  email:"oddyseyt@gmail.com"
-}
-
-console.log(getName(person.studentName));
-
-/**
+console.log(getName(studentName));
+/** 
  * ### Challenge `makeSmartPerson`
  * 
  * @instructions
@@ -280,7 +277,7 @@ function getOlderCars(inventory, maxYear) {
   let newArray = [];
   for (let i=0; i < x; i ++) {
     if (inventory[i].car_year <= maxYear){
-      newArray.push(inventory[i].car_make);
+      newArray.push(inventory[i]);
   }
 }
   return newArray;
@@ -304,16 +301,16 @@ function getGermanCars(inventory) {
   let newArray = [];
   for (let i=0; i < x; i ++) {
     if (inventory[i].car_make === "Audi"){
-      newArray.push(inventory[i].car_model);
+      newArray.push(inventory[i]);
     }
     else if (inventory[i].car_make === "Mercedes-Benz"){
-      newArray.push(inventory[i].car_model);
+      newArray.push(inventory[i]);
     }
     else if (inventory[i].car_make === "BMW"){
-      newArray.push(inventory[i].car_model);
+      newArray.push(inventory[i]);
     }
     else if (inventory[i].car_make === "Volkswagen"){
-      newArray.push(inventory[i].car_model);
+      newArray.push(inventory[i]);
     }
   }
   return newArray;
