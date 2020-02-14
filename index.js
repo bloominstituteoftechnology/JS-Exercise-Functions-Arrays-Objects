@@ -273,10 +273,20 @@ console.log(getModelYears(carStuff));
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
-  /* code here */
-}
+function getOlderCars(inventory, maxYear) {
 
+  /* code here */
+  let x = Object.keys(inventory).length;
+  let newArray = [];
+  for (let i=0; i < x; i ++) {
+    if (inventory[i].car_year <= maxYear){
+      newArray.push(inventory[i].car_make);
+  }
+}
+  return newArray;
+
+}
+console.log(getOlderCars(carStuff, 2010));
 /**
  * ### Challenge `getGermanCars`
  * 
@@ -288,10 +298,27 @@ function getOlderCars(/* code here */) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
+function getGermanCars(inventory) {
   /* code here */
+  let x = Object.keys(inventory).length;
+  let newArray = [];
+  for (let i=0; i < x; i ++) {
+    if (inventory[i].car_make === "Audi"){
+      newArray.push(inventory[i].car_model);
+    }
+    else if (inventory[i].car_make === "Mercedes-Benz"){
+      newArray.push(inventory[i].car_model);
+    }
+    else if (inventory[i].car_make === "BMW"){
+      newArray.push(inventory[i].car_model);
+    }
+    else if (inventory[i].car_make === "Volkswagen"){
+      newArray.push(inventory[i].car_model);
+    }
+  }
+  return newArray;
 }
-
+console.log(getGermanCars(carStuff));
 /**
  * ### Challenge refactor to arrow functions
  * 
@@ -310,9 +337,23 @@ function getGermanCars(/* code here */) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (a,b) =>
+{
+  return a + b;
+} 
+console.log(sum(2,4)); // code here!
+const addFive = (a) =>
+{
+  return a + 5;
+}
+console.log(addFive(10));
+// code here!
+const argTimesTwo = (a) =>
+{ 
+  return a * 2
+}
+
+console.log(argTimesTwo(10));// code here!
 
 /**
  * ### Challenge `carMaker`
