@@ -1,359 +1,367 @@
-// ⭐️ Example Challenge start ⭐️
+// ⭐️ Example Challenge START ⭐️
 
 /**
- * ### Challenge `addNumbers`
+ * ### Challenge `processFirstItem`
  * 
  * @instructions
- * This function should be able to take two numbers as arguments
- * and return the result of adding them together.
+ * Implement a higher-order function called `processFirstItem`.
+ * It takes two arguments:
+ * @param stringList an array of strings.
+ * @param callback function that takes a string as its argument.
+ * @returns the result of invoking `callback` with the FIRST element in `stringList`.
  * 
- * For example, if we invoke `addNumbers` passing 5 and 3,
- * the returned value should be 8.
+ * Example of usage of this higher-order function:
+ * Invoking `processFirstItem` passing `['foo', 'bar']` and `(str) => str + str`,
+ * should return 'foofoo'.
+*/
+function processFirstItem(stringList, callback) {
+  return callback(stringList[0])
+}
+
+// ⭐️ Example Challenge END ⭐️
+
+
+// 👇 COMPLETE YOUR WORK BELOW 👇
+// 👇 COMPLETE YOUR WORK BELOW 👇
+// 👇 COMPLETE YOUR WORK BELOW 👇
+
+/////////////// CALLBACKS AND HIGHER-ORDER FUNCTIONS ///////////////
+/////////////// CALLBACKS AND HIGHER-ORDER FUNCTIONS ///////////////
+
+/**
+ * ### Challenge `processLength`
+ * 
+ * @instructions
+ * PLEASE STUDY THE EXAMPLE CHALLENGE THOROUGHLY BEFORE PROCEEDING!
+ * PLEASE STUDY THE EXAMPLE CHALLENGE THOROUGHLY BEFORE PROCEEDING!
+ * 
+ * Implement a higher-order function called `processLength`.
+ * It takes two arguments:
+ * @param list an array with elements of any type.
+ * @param callback function that takes a number as its argument.
+ * @returns the result of invoking `callback` passing the LENGTH of `list`.
+ * 
+ * Examples of usage of this higher-order function:
+ * [1] Invoking `processLength` passing `['foo', 'bar']` and `(num) => num + 1000`,
+ * should return 1002.
+ * 
+ * [2] Invoking `processLength` passing `[]` and `(num) => "There are " + num`,
+ * should return "There are 0".
+*/
+function processLength(list, callback) {
+  return callback(list.length);
+}
+
+/**
+ * ### Challenge `processLastItem`
+ * 
+ * @instructions
+ * Implement a higher-order function called `processLastItem`.
+ * It takes two arguments:
+ * @param stringList array of strings.
+ * @param callback function that takes a string as its argument.
+ * @returns the result of invoking `callback` with the LAST element in `stringList`.
+ * 
+ * Example of usage of this higher-order function:
+ * Invoking `processLastItem` passing `['foo', 'bar']` and `(str) => str + str`,
+ * should return 'barbar'.
+*/
+function processLastItem(stringList, callback) {
+  return callback(stringList[stringList.length -1]);
+}
+
+/**
+ * ### Challenge `processSum`
+ * 
+ * @instructions
+ * Implement a higher-order function called `processSum`.
+* It takes two arguments:
+ * @param numberList array of numbers.
+ * @param callback function that takes a number as its argument.
+ * @returns the result of invoking `callback` passing the SUM of all elements in `numberList`.
+ * 
+ * Examples of usage of this higher-order function:
+ * [1] Invoking `processSum` passing `[10, 20, 30]` and `(num) => num + " is a big number!"`,
+ * should return "60 is a big number!".
+ * 
+ * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
+ * should return 1000.
+ * 
+ * 
+ *  * The reducer function takes four arguments:
+
+Accumulator (acc)
+Current Value (cur)
+Current Index (idx)
+Source Array (src)
+
+The reduce() method reduces the array to a single value
+*/
+
+function processSum(numberList, callback) {
+  return callback(numberList.reduce((accumulate,currentValue) => accumulate + currentValue, 0))/* set at the index of 0 */
+}
+
+/**
+ * ### Challenge `processProduct`
+ * 
+ * @instructions
+ * Implement a higher-order function called `processProduct`.
+ * It takes three arguments:
+ * @param num1 a number.
+ * @param num2 a number.
+ * @param callback function that takes a number as its argument.
+ * @returns the result of invoking `callback` passing the PRODUCT of `num1` and `num2`.
+ * 
+ * Examples of usage of this higher-order function:
+ * [1] Invoking `processProduct` passing 2 and 7 and `(num) => num + " is a big number!"`,
+ * should return "14 is a big number!".
+ * 
+ * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
+ * should return 1000.
+*/
+function processProduct(num1, num2, callback) {
+  return callback (num1 * num2);
+}
+
+/**
+ * ### Challenge `processContains`
+ * 
+ * @instructions
+ * Implement a higher-order function called `processContains`.
+ * It takes three arguments:
+ * @param item of any kind.
+ * @param list array of elements of any kind.
+ * @param callback function that takes a boolean as its argument.
+ * @returns the result of invoking `callback` passing true if `item` exists in `list`, false otherwise.
+ * 
+ * Examples of usage of this higher-order function:
+ * [1] Invoking `processContains` passing
+ * "foo" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`
+ * should return "nice!".
+ * 
+ * [2] Invoking `processContains` passing
+ * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
+ * should return "sad".
+*/
+function processContains(item, list, callback) {
+  return callback(list.includes(item) ? true : false);  /*The condition is evaluated: if "item" is included in the list it will return true, if else then it returns false */
+}
+/*The so-called “conditional” or “question mark” operator lets us do that in a shorter and simpler way.
+
+The operator is represented by a question mark ?. Sometimes it’s called “ternary”, because the operator has three operands. It is actually the one and only operator in JavaScript which has that many. */
+
+
+
+/**
+ * ### Challenge `processDuplicateFree`
+ * THIS IS A STRETCH PROBLEM! ATTEMPT ONLY AFTER COMPLETING ALL NON-STRETCH CHALLENGES!
+ * THIS IS A STRETCH PROBLEM! ATTEMPT ONLY AFTER COMPLETING ALL NON-STRETCH CHALLENGES!
+ * 
+ * @instructions
+ * Implement a higher-order function called `processDuplicateFree`.
+ * It takes two arguments:
+ * @param list array of elements of any kind.
+ * @param callback function that takes an array as its argument.
+ * @returns the result of invoking `callback` passing a de-duped version of `list`.
+ * 
+ * Examples of usage of this higher-order function:
+ * [1] Invoking `processDuplicateFree` passing `[1,1,1,2]` and `(arr) => arr`,
+ * should return `[1,2]`.
+ * 
+ * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
+ * should return 3.
+ * \
+ * 
+ * 
+ * An arrow function expression is a syntactically compact alternative to a regular function expression
+*/
+function processDuplicateFree(list, callback) {
+  return callback(list.filter((item, index) => {
+    return list.indexOf(item) === index;
+  }))
+}
+
+/////////////// HIGHER-ORDER ARRAY METHODS ///////////////
+/////////////// HIGHER-ORDER ARRAY METHODS ///////////////
+
+// A local community center is holding a fund raising 5k fun run and has invited
+// 50 small businesses to make a small donation on their behalf for some much needed
+// updates to their facilities. Each business has assigned a representative
+// to attend the event along with a small donation.
+
+/**
+ * ### Challenge `getFullNames`
+ * 
+ * @instructions
+ * Implement this function using forEach().
+ * 
+ * @param runners array of runners like the one inside the /data/runners.js file.
+ * @returns an array with all the runners' full names in the following format: "Smith, John".
+ * The full names appear in the array in the same order the runners appear in the `runners` array.
+*/
+function getFullNames(runners) {
+  let runnerList = []; /* Created an empty array*/
+  runners.forEach(function(runners) { /* The forEach() method executes a provided function once for each array element. */
+    let fullName = `${runners.last_name}, ${runners.first_name}`;
+    runnerList.push(fullName);
+    return fullName;
+  });
+  return runnerList; /* Will return with the list of runners names in an array */
+}
+
+
+/**
+ * ### Challenge `firstNamesAllCaps`
+ * 
+ * @instructions
+ * The event director needs to have all the runners' first names 
+ * in uppercase because the director BECAME DRUNK WITH POWER.
+ * Implement this function using map().
+ * 
+ * @param runners array of runners like the one inside the /data/runners.js file.
+ * @returns an array with all the runners' first names in ALL CAPS.
+ * The first names appear in the array in the same order the runners appear in the `runners` array.
+ * 
+ * 
+ * The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
+ * Since map builds a new array, using it when you aren't using the returned array is an anti-pattern; use forEach or for-of instead.
+
+You shouldn't be using map if:
+
+you're not using the array it returns; and/or
+you're not returning a value from the callback.
+*/
+function firstNamesAllCaps(runners) {
+  return runners.map (runners => {
+    return runners.first_name.toUpperCase();
+  });
+ 
+}
+
+/**
+ * ### Challenge `getRunnersByTShirtSize`
+ * 
+ * @instructions
+ * The event director needs a way to find the runners that need
+ * a specific t-shirt size, so they can place the orders easily.
+ * Implement this function using filter().
+ * 
+ * @param runners array of runners like the one inside the /data/runners.js file.
+ * @param tShirtSize string (possible values are "S", "M", "L", "XL", "2XL", "3XL").
+ * @returns an array containing only the runners that use the given `tShirtSize`.
+ * The runners in the array appear in the same order they appear in the `runners` array.
+*/
+function getRunnersByTShirtSize(runners, tShirtSize) {
+   return runners.filter(runner => {
+    return runner.shirt_size === tShirtSize;
+  });
+}
+/**
+ * ### Challenge `tallyUpDonations`
+ * 
+ * @instructions
+ * The donations need to be tallied up and reported for tax purposes.
+ * Implement this function using reduce().
+ * 
+ * @param runners array of runners like the one inside the /data/runners.js file.
+ * @returns a number which is the sum of the donations by all runners.
+ * 
+ * 
+ * The reducer function takes four arguments:
+
+Accumulator (acc)
+Current Value (cur)
+Current Index (idx)
+Source Array (src)
+
+The reduce() method reduces the array to a single value
+*/
+function tallyUpDonations(runners) {
+  
+  return runners.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.donation;
+  }, 0); /*<----This is for the index to start at 0*/
+}
+
+
+/////////////// CLOSURES ///////////////
+/////////////// CLOSURES ///////////////
+
+/**
+ * ### Challenge `counterMaker`
+ * 
+ * @instructions
+ * Fix this function so a counter produced with it will increment correctly!
+ * Usage is as follows:
+ * 
+ * const counter = counterMaker()
+ * counter() // should return 0
+ * counter() // should return 1
+ * counter() // should return 2
+ * etc
  *
- * NOTE: This example has been completed for you.
 */
-function addNumbers(num1, num2) {
-  return num1 + num2;
-}
-
-// ⭐️ Example Challenge end ⭐️
-
-
-// 👇 COMPLETE YOUR WORK BELOW 👇
-// 👇 COMPLETE YOUR WORK BELOW 👇
-// 👇 COMPLETE YOUR WORK BELOW 👇
-
-/**
- * ### Challenge `makePersonObject`
- * 
- * @instructions
- * This function should take an id, a name and an email as arguments,
- * and return an object with `id`, `name` and `email` properties.
- * 
- * For example, if we invoke `makePersonObject`
- * passing 5, 'Leia' and 'leia@leia.com' as arguments,
- * the returned value should look like:
- * {
- *   id: 5,
- *   name: "Leia",
- *   email: "leia@leia.com",
- * }
-*/
-function makePersonObject(idNumber, name, email) {
-  const object = {
-    id: idNumber,
-    name: name,
-    email: email
+function counterMaker() {
+  // BROKEN CODE STARTS
+  let count = 0;
+  function counter() {
+    return count++ /* swapped the counter to count up */
   }
-  return object;
+  return counter; /*added the missing return statement */
+  // BROKEN CODE ENDS
 }
-
 /**
- * ### Challenge `getName`
+ * ### Challenge `counterMakerWithLimit`
  * 
  * @instructions
- * This function takes as its only argument
- * an object containing a `name` property,
- * and return a string that reads `Hello, my name is {name}`,
- * where `{name}` is the name stored in the object.
+ * Implement a counter maker that takes a max value for the count.
+ * A counter created with it will reset itself after reaching the max value.
+ * Usage is as follows:
  * 
- * For example, if we invoke `getName`
- * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
- * the returned value should look like `Hello, my name is Leia`.
+ * const counter = counterMakerWithLimit(3)
+ * counter() // should return 0
+ * counter() // should return 1
+ * counter() // should return 2
+ * counter() // should return 3
+ * counter() // should return 0
+ * counter() // should return 1
+ * counter() // should return 2
+ * counter() // should return 3
+ * counter() // should return 0
+ * etc
 */
-function getName(object) {
-  const name = object.name;
-
-  return `Hello, my name is ${name}`;
-}
-
-/**
- * ### Challenge `makeSmartPerson`
- * 
- * @instructions
- * This function takes a single `name` argument and returns an object.
- * The returned object has the following characteristics:
- *     It has a `name` property that contains the argument passed in.
- *     It has a `sum` method that takes two numbers as arguments
- *         and returns the result of adding them together.
- *     It has a `speak` method that takes no arguments
- *         and returns a string like `Hello, my name is {name}`.
- *         where `{name}` is the name passed into `makeSmartPerson`.
-*/
-function makeSmartPerson(name) {
-  const object = {
-    name: name,
-    sum: function(num1, num2) {  
-    },
-    speak() {
-      return `Hello, my name is ${name}`
+function counterMakerWithLimit(maxValue) {
+  let count = 0;
+  function counter(){
+    if(count <= maxValue){
+      return count ++;
+    }else{
+      count = 0;
+      return count++;
     }
   }
-
-  return object;
+  return counter;
 }
+/////////////// END OF CHALLENGE ///////////////
+/////////////// END OF CHALLENGE ///////////////
+/////////////// END OF CHALLENGE ///////////////
 
-
-
-/*
-// ⭐️ Example Test Data ⭐️
-var inventory = [
-  { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
-  { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
-  { id: 3, car_make: "Land Rover", car_model: "Defender Ice Edition", car_year: 2010 },
-  { id: 4, car_make: "Honda", car_model: "Accord", car_year: 1983 },
-  { id: 5, car_make: "Mitsubishi", car_model: "Galant", car_year: 1990 },
-  { id: 6, car_make: "Honda", car_model: "Accord", car_year: 1995 },
-  { id: 7, car_make: "Smart", car_model: "Fortwo", car_year: 2009 },
-  { id: 8, car_make: "Audi", car_model: "4000CS Quattro", car_year: 1987 },
-  { id: 9, car_make: "Ford", car_model: "Windstar", car_year: 1996 },
-  { id: 10, car_make: "Mercedes-Benz", car_model: "E-Class", car_year: 2000 },
-  { id: 11, car_make: "Infiniti", car_model: "G35", car_year: 2004 },
-  { id: 12, car_make: "Lotus", car_model: "Esprit", car_year: 2004 },
-  { id: 13, car_make: "Chevrolet", car_model: "Cavalier", car_year: 1997 },
-  { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }
-  /// ... Truncated
-]
-*/
-/**
-  * ### Example Array Challenge:
-  * 
-  * @instructions
-  * get3rdCar() should return the string `The car is a Land Rover Defender Ice Edition`
-  * 
-  *
-  * NOTE: This example has been completed for you.
-**/
-function get3rdCar(inventory) {
-  const the3rd = inventory.find((item, index) => {
-    return index === 2 
-  })
-  return `The car is a ${the3rd.car_make} ${the3rd.car_model}`
-}
-
-// 👇 COMPLETE YOUR WORK BELOW 👇
-// 👇 COMPLETE YOUR WORK BELOW 👇
-// 👇 COMPLETE YOUR WORK BELOW 👇
-
-
-/**
- * ### Challenge `getCarInfoByIndex`
- * 
- * @instructions
- * getCarInfoByIndex takes two arguments:
- *     (1) an array which is an inventory of cars like the preview above (see ⭐️ Preview Test Data ⭐️)
- *     (2) a number which is the desired index in the array.
- * getCarInfoByIndex returns a string in the format `This is a {car_make} {car_model}`
- * 
- * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
- * it will return `This is a Lincoln Navigator`.
-*/
-function getCarInfoByIndex(inventory, index) {
-  return `This is a ${inventory[index].car_make} ${inventory[index].car_model}`;
-}
-
-/**
- * ### Challenge `getLastCarInfo`
- * 
- * @instructions
- * getLastCarInfo takes a single argument:
- *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
- * getLastCarInfo returns a string in the format `This is a {car_make} {car_model}
- * 
- * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
- * it will return `This is a Lincoln Town Car`.
-*/
-function getLastCarInfo(inventory) {
-  const invLength = inventory.length -1;
-
-  return `This is a ${inventory[invLength].car_make} ${inventory[invLength].car_model}`;
-}
-
-/**
- * ### Challenge `getCarInfoById`
- * 
- * @instructions
- * getCarInfoById takes two arguments:
- *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
- *     (2) a number which is the desired car id (see how each car has its own unique id).
- * getCarInfoById returns a string in the format `This is a {car_make} {car_model}
- * 
- * For example, if getCarInfoById is invoked with the inventory and the number 1,
- * it will return `This is a Lincoln Navigator`.
-*/
-function getCarInfoById(inventory, id) {
-  for (let i = 0; i < inventory.length; i++) {
-    if (inventory[i].id === id) {
-      return `This is a ${inventory[i].car_make} ${inventory[i].car_model}`
-    }
-  }
-}
-
-/**
- * ### Challenge `sortCarInventory`
- * 
- * @instructions
- * sortCarInventory takes a single argument:
- *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
- * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
-*/
-function sortCarInventory(inventory) {
-  function compareValues(key, order = 'asc') {
-      return function innerSort(a, b) {
-          if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
-              return 0;
-          }
-
-          const varA = (typeof a[key] === 'string') ? a[key].toUpperCase() : a[key];
-          const varB = (typeof b[key] === 'string') ? b[key].toUpperCase() : b[key];
-
-          let comparison = 0;
-          if (varA > varB) {
-              comparison = 1;
-          } else if (varA < varB) {
-              comparison = -1;
-          }
-          return (
-              (order === 'desc') ? (comparison * -1) : comparison
-          );
-      };
-  }
-  return inventory.sort(compareValues('car_model'));
-}
-
-/**
- * ### Challenge `getModelYears`
- * 
- * @instructions
- * We need the years from every car in the inventory!
- * getModelYears takes a single argument:
- *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
- * getModelYears returns an array containing all the 'car_year's in the inventory.
-*/
-function getModelYears(inventory) {
-  const modelYear = [];
-
-  for (let i = 0; i < inventory.length; i++) {
-    modelYear.push(inventory[i].car_year);  
-  }
-  return modelYear;
-}
-
-/**
- * ### Challenge `getOlderCars`
- * 
- * @instructions
- * We need a utility to find older cars!
- * getOlderCars takes two arguments:
- *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
- *     (2) a number which is the desired max year.
- * getOlderCars returns an array containing all the cars
- * with a `car_year` which is at most the given desired max year,
- * in the same order as they appear in the original inventory.
-*/
-function getOlderCars(inventory, desiredMaxYear) {
-  const matchedCars = [];
-
-  for (let i = 0; i < inventory.length; i++) {
-    if (inventory[i].car_year <= desiredMaxYear) {
-      matchedCars.push(inventory[i]);
-    }
-  }
-
-  return matchedCars; 
-
-/**
- * ### Challenge `getGermanCars`
- * 
- * @instructions
- * We need a utility to find German cars!
- * getGermanCars takes a single argument:
- *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
- * getGermanCars returns an array containing all the cars
- * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
- * in the same order as they appear in the original inventory.
-*/
-function getGermanCars(inventory) {
-  const germanCars = [];
-
-  for (let i = 0; i < inventory.length; i++) {
-    const inventoryIterator = inventory[i].car_make;
-
-    if (inventoryIterator === "Audi" || inventoryIterator === "Mercedes-Benz" || inventoryIterator === "Volkswagen" || inventoryIterator === "BMW") {
-      germanCars.push(inventory[i]);
-    }
-  }
-  return germanCars;
-}
-
-/**
- * ### Challenge refactor to arrow functions
- * 
- * @instructions
- * Create arrow function versions of the following commented-out functions:
- * 
-const sum = (a, b) => {
-  return a + b
- * }
- * 
- * const addFive = function(num) {
-*    return num + 5
- * }
- *
- * const argTimesTwo = function (num) {
- *   return num * 2
- * }
-*/
-const sum = (a, b) => a + b; 
-
-const addFive = num => num + 5;
-
-const argTimesTwo = num => num * 2;
-
-/**
- * ### Challenge `carMaker`
- * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
- * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
- * 
- * @instructions
- * This function takes a single odometer argument (a number) and returns an object.
- * The returned object has the following characteristics:
- *     it has an `odometer` property that contains the argument passed in.
- *     it has a `drive` method that takes a distance as its argument, and
- *         (1) causes the odometer in the object to be increased by the distance,
- *         (2) returns the updated value of the `odometer`.
-*/
-
-function carMaker(odometerArgument) {
-  const mileage = {
-    odometer: odometerArgument,
-    drive: function(distance) {
-      return this.odometer += distance;
-    }
-  }
-  return mileage;
-}
-console.log(carMaker(1000));
-
-/// ////// END OF CHALLENGE /////////
-/// ////// END OF CHALLENGE /////////
-/// ////// END OF CHALLENGE /////////
 if (typeof exports !== 'undefined') {
   // IGNORE: Test/Env Detected
   // For Node/Non-browser test env
   module.exports = module.exports || {}
-  if (addNumbers) { module.exports.addNumbers = addNumbers }
-  if (makePersonObject) { module.exports.makePersonObject = makePersonObject }
-  if (getName) { module.exports.getName = getName }
-  if (makeSmartPerson) { module.exports.makeSmartPerson = makeSmartPerson }
-  if (carMaker) { module.exports.carMaker = carMaker }
-  if (getCarInfoByIndex) { module.exports.getCarInfoByIndex = getCarInfoByIndex }
-  if (getLastCarInfo) { module.exports.getLastCarInfo = getLastCarInfo }
-  if (getCarInfoById) { module.exports.getCarInfoById = getCarInfoById }
-  if (sortCarInventory) { module.exports.sortCarInventory = sortCarInventory }
-  if (getModelYears) { module.exports.getModelYears = getModelYears }
-  if (getOlderCars) { module.exports.getOlderCars = getOlderCars }
-  if (getGermanCars) { module.exports.getGermanCars = getGermanCars }
-  if (sum) { module.exports.sum = sum }
-  if (addFive) { module.exports.addFive = addFive }
-  if (argTimesTwo) { module.exports.argTimesTwo = argTimesTwo }
+  if (processFirstItem) { module.exports.processFirstItem = processFirstItem }
+  if (processLength) { module.exports.processLength = processLength }
+  if (processLastItem) { module.exports.processLastItem = processLastItem }
+  if (processSum) { module.exports.processSum = processSum }
+  if (processProduct) { module.exports.processProduct = processProduct }
+  if (processContains) { module.exports.processContains = processContains }
+  if (processDuplicateFree) { module.exports.processDuplicateFree = processDuplicateFree }
+  if (getFullNames) { module.exports.getFullNames = getFullNames }
+  if (firstNamesAllCaps) { module.exports.firstNamesAllCaps = firstNamesAllCaps }
+  if (getRunnersByTShirtSize) { module.exports.getRunnersByTShirtSize = getRunnersByTShirtSize }
+  if (tallyUpDonations) { module.exports.tallyUpDonations = tallyUpDonations }
+  if (counterMaker) { module.exports.counterMaker = counterMaker }
+  if (counterMakerWithLimit) { module.exports.counterMakerWithLimit = counterMakerWithLimit }
+}
