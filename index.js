@@ -47,7 +47,7 @@ function sayGoodbye(/* code here */) {
  * 
  * For example, if we invoke `temperatureCtoF`
  * passing 24 as the argument,
- * the returned value should be: '75F'
+ * the returned value should be: 75
  * 
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
