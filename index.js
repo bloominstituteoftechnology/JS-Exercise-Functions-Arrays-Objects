@@ -137,24 +137,6 @@ function appleIndex(/* code here */) {
 }
 
 /**
- * ### Challenge `firstChar`
- * 
- * @instructions
- * This function takes as its only argument an array 
- * containing strings,
- * and returns an array of equal length containing the first 
- * character of each string in the original array.
- * 
- * 
- * For example, if we invoke `first`
- * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
- * the returned value should be: [ 'o', 'g', 'a', 'b', 'm'].
-*/
-function firstChar(/* code here */) {
-  /* code here */
-}
-
-/**
  * ### Challenge `isItAnApple`
  * 
  * @instructions
@@ -343,7 +325,7 @@ if (typeof exports !== 'undefined') {
   if (makePersonObject) { module.exports.makePersonObject = makePersonObject }
   if (getName) { module.exports.getName = getName }
   if (appleIndex) { module.exports.appleIndex = appleIndex }
-  if (firstChar) { module.exports.firstChar = firstChar }
+
   if (isItAnApple) { module.exports.isItAnApple = isItAnApple }
   
 

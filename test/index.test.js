@@ -74,7 +74,6 @@ if (typeof exports !== "undefined") {
     makePersonObject,
     getName,
     appleIndex,
-    firstChar,
     isItAnApple,
     getCarInfoByIndex,
     getLastCarInfo,
@@ -141,18 +140,6 @@ xdescribe('appleIndex()', () => {
     expect(appleIndex(['orange', 'apple', 'banana'])).to.eql(1);
   });
 });
-
-const teas = [ 'black', 'oolong', 'green', 'white'];
-
-xdescribe('firstChar', () => {
-  it('should return a new array of equal length', () => {
-    expect(firstChar(teas).length).to.eql(teas.length);
-  });
-
-  it('should extract the first char of each string', () => {
-    expect(firstChar(teas)).to.eql(['b', 'o', 'g', 'w']);
-  });
-})
 
 xdescribe('isItAnApple', () => {
   it('should correctly identify apple in the array', () => {
