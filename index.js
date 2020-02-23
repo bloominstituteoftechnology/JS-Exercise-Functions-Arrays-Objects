@@ -33,6 +33,8 @@ function addNumbers(num1, num2) {
  * For example, if we invoke `sayGoodbye`
  * passing 'Andy' as the argument,
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
+ * 
+ * Reminder: Comment in the test for this function in `tests/index.test.js`
 */
 function sayGoodbye(/* code here */) {
   /* code here */

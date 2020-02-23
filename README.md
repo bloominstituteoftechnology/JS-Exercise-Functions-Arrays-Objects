@@ -15,7 +15,7 @@ If you run into trouble while coding, fight the good fight for 20 minutes and th
 
 ## Instructions
 
-Find the file `index.js` and complete the tasks until all of your tests pass. Do not use any of the forbidden methods!
+Find the file `index.js` and complete the tasks until all of your tests pass. Comment in each test in `test/index.test.js` as you code to check your work. Do not use any of the forbidden methods!
 
 ## Get Started
 
