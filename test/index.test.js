@@ -102,22 +102,23 @@ xdescribe("sayGoodbye()", () => {
   })
 });
 
+
 xdescribe('temperatureCtoF()', () => {
   it('should convert temperature', () => {
     expect(temperatureCtoF(40)).to.eql(104);
-    expect(temperatureCtoF(15).to.eql(59));
+    expect(temperatureCtoF(12)).to.eql(54);
   })
 })
 
 xdescribe('temperatureInF()', () => {
   it('should return temperature in F', () => {
     expect(temperatureInF(66, 'F')).to.eql('66F');
-    expect(temperatureCtoF(8, 'F')).to.eql('8F');
+    expect(temperatureInF(8, 'F')).to.eql('8F');
   });
 
   it('should convert from C', () => {
-    expect(temperatureCtoF(40, 'C')).to.eql('104F');
-    expect(temperatureCtoF(15, 'C').to.eql('59F'));
+    expect(temperatureInF(40, 'C')).to.eql('104F');
+    expect(temperatureInF(12, 'C')).to.eql('54F');
   });
 })
 
