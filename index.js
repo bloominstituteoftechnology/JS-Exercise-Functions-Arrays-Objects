@@ -142,8 +142,8 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
  */
-function getCarInfoByIndex(inventory, index) {
-    /* code here */
+function getCarInfoByIndex(array, index) {
+    return `This is a ${array[index].car_make} ${array[index].car_model}`;
 }
 
 /**
