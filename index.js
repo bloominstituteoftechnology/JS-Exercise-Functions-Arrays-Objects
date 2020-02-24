@@ -174,8 +174,9 @@ function getLastCarInfo(array) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
  */
-function getCarInfoById(/* code here */) {
-    /* code here */
+function getCarInfoById(array, idNum) {
+    --idNum;
+    return `This is a ${array[idNum].car_make} ${array[idNum].car_model}`;
 }
 
 /**
