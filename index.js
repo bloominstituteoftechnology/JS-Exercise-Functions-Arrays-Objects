@@ -40,7 +40,7 @@ function addNumbers(num1, num2) {
  * }
 */
 function makePersonObject(/* code here */) {
-  let makePersonObject {
+  let makePersonObjects {
     id: 5,
     name: "Leila",
     email: "leila@leila.com"
