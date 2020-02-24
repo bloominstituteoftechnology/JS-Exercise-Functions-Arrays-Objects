@@ -211,8 +211,10 @@ function sortCarInventory(array) {
  */
 function getModelYears(array) {
     const yearsArray = [];
-    yearsArray.push(array.car_year);
-    console.log(yearsArray);
+    for (let i = 0; i < array.length; i++) {
+        yearsArray.push(array[i].car_year);
+    }
+    return yearsArray;
 }
 
 /**
