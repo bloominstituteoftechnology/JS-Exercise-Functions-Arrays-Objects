@@ -273,8 +273,27 @@ function getOlderCars(inventory, maxYear) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
-  /* code here */
+function getGermanCars(inventory) {
+  // return new array where car_make is equal to germanCarFilter
+  const germanCars = [];
+
+  for (let i = 0; i < inventory.length; i++) {
+    switch(inventory[i].car_make){
+      case "Audi":
+        germanCars.push(inventory[i]);
+        break;
+      case "Mercedes-Benz":
+        germanCars.push(inventory[i]);
+        break;
+      case "Volkswagen":
+        germanCars.push(inventory[i]);
+        break;
+      case "BMW":
+        germanCars.push(inventory[i]);
+        break;
+    }
+  }
+  return germanCars;
 }
 
 /**
