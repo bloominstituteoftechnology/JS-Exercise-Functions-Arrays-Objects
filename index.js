@@ -187,8 +187,17 @@ function getCarInfoById(array, idNum) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
  */
-function sortCarInventory(/* code here */) {
-    /* code here */
+function sortCarInventory(array) {
+    array.sort(function(a, b) {
+        if (a.car_model > b.car_model) {
+            return 1;
+        }
+        if (a.car_model < b.car_model) {
+            return -1;
+        }
+        return 0;
+    });
+    return array;
 }
 
 /**
