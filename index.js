@@ -16,6 +16,8 @@ function addNumbers(num1, num2) {
   return num1 + num2;
 }
 
+//console.log (addNumbers(7,7));
+
 // ⭐️ Example Challenge end ⭐️
 
 
@@ -26,7 +28,7 @@ function addNumbers(num1, num2) {
 /**
  * ### Challenge `makePersonObject`
  * 
- * @instructions
+ * instructions
  * This function should take an id, a name and an email as arguments,
  * and return an object with `id`, `name` and `email` properties.
  * 
@@ -39,8 +41,19 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+
+function makePersonObject(idnum, personname, emailaddress){
+    let person = {
+    id: idnum,
+    name: personname,
+    email: emailaddress
+  }
+  return person
+}
+
+console.log (makePersonObject( 5 ,'Leia', 'leia@leia.com'));
+
+  /* code here *
 }
 
 /**
@@ -56,9 +69,11 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(name) {
+  return `Hello, my name is ${name} `
 }
+
+console.log(getName("Leia"));
 
 /**
  * ### Challenge `makeSmartPerson`
@@ -73,9 +88,15 @@ function getName(/* code here */) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
-  /* code here */
+function makeSmartPerson(name, num1, num2) {
+  let smart = {
+    name: name,
+    sum: num1 + num2
+  }  
+  return `Hello my name is ${name}. ${num1 + num2}`
 }
+
+console.log (makeSmartPerson("Leia", 1, 2));
 
 
 
@@ -100,8 +121,7 @@ var inventory = [
   { id: 13, car_make: "Chevrolet", car_model: "Cavalier", car_year: 1997 },
   { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }
   /// ... Truncated
-]
-*/
+]/*
 /**
   * ### Example Array Challenge:
   * 
@@ -117,6 +137,10 @@ function get3rdCar(inventory) {
   })
   return `The car is a ${the3rd.car_make} ${the3rd.car_model}`
 }
+
+//console.log(inventory[0]); 
+
+//console.log(get3rdCar());
 
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
@@ -136,8 +160,10 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  return `This is a ${inventory[index].car_make} ${inventory[index].car_model}`
 }
+
+console.log (getCarInfoById(inventory[index], 0));
 
 /**
  * ### Challenge `getLastCarInfo`
