@@ -169,21 +169,21 @@ function getCarInfoByIndex(inventory, index) {
   return `This is a ${inventory[index].car_make} ${inventory[index].car_model}`
 }
 
-console.log (getCarInfoById(inventory, 0));
+//console.log (getCarInfoById(inventory, 0));
 
 /**
  * ### Challenge `getLastCarInfo`
  * 
  * @instructions
- * getLastCarInfo takes a single argument:
+ * getLastCarInfo takes a single argument:x
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getLastCarInfo returns a string in the format `This is a {car_make} {car_model}
  * 
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
+function getLastCarInfo(inventory) {
+  return `This is a ${inventory[inventory.length - 1].car_make} ${inventory[inventory.length - 1].car_model}`;
 }
 
 /**
