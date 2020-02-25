@@ -1,3 +1,4 @@
+
 // ⭐️ Example Challenge start ⭐️
 
 /**
@@ -69,8 +70,8 @@ console.log (makePersonObject( 5 ,'Leia', 'leia@leia.com'));
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(name) {
-  return `Hello, my name is ${name} `
+function getName(object) {
+  return `Hello, my name is ${object.name} `;
 }
 
 console.log(getName("Leia"));
@@ -88,15 +89,20 @@ console.log(getName("Leia"));
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(name, num1, num2) {
+function makeSmartPerson(name) {
   let smart = {
     name: name,
-    sum: num1 + num2
+    sum : function (num1, num2){
+      return num1 + num2;
+    },
+    speak: function (){
+      return `Hello, my name is ${name}`;
+    }
   }  
-  return `Hello my name is ${name}. ${num1 + num2}`
+  return smart;
 }
 
-console.log (makeSmartPerson("Leia", 1, 2));
+console.log (makeSmartPerson("Leia"));
 
 
 
@@ -138,7 +144,7 @@ function get3rdCar(inventory) {
   return `The car is a ${the3rd.car_make} ${the3rd.car_model}`
 }
 
-//console.log(inventory[0]); 
+//console.log(inventory);
 
 //console.log(get3rdCar());
 
@@ -163,7 +169,7 @@ function getCarInfoByIndex(inventory, index) {
   return `This is a ${inventory[index].car_make} ${inventory[index].car_model}`
 }
 
-console.log (getCarInfoById(inventory[index], 0));
+console.log (getCarInfoById(inventory, 0));
 
 /**
  * ### Challenge `getLastCarInfo`
