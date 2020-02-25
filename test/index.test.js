@@ -77,9 +77,9 @@ if (typeof exports !== "undefined") {
     getModelYears,
     getOlderCars,
     getGermanCars,
-    sum,
-    addFive,
-    argTimesTwo
+ //   sum,
+  //  addFive,
+ //   argTimesTwo
   } = require("../index.js");
 }
 var expect = chai.expect;
