@@ -1,10 +1,8 @@
-/**
- * You will need to comment in each test as you complete each function from index.js.
- * 
- * Tests begin on line 90
- * 
- * IMPORTANT: DO NOT ALTER THIS FILE IN ANY OTHER WAY
- */
+////// STUDENTS: DO NOT MODIFY THIS FILE //////
+////// STUDENTS: DO NOT MODIFY THIS FILE //////
+////// STUDENTS: DO NOT MODIFY THIS FILE //////
+////// STUDENTS: DO NOT MODIFY THIS FILE //////
+////// STUDENTS: DO NOT MODIFY THIS FILE //////
 
 var inventory = [
   { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
@@ -86,7 +84,6 @@ if (typeof exports !== "undefined") {
 }
 var expect = chai.expect;
 
-// TESTS BEGIN HERE
 
 describe("addNumbers()", () => {
   it("can add two numbers", () => {
@@ -94,22 +91,22 @@ describe("addNumbers()", () => {
   });
 });
 
-// comment in each test by changing `xdescribe` to `describe`
-xdescribe("sayGoodbye()", () => {
+
+describe("sayGoodbye()", () => {
   it('can say goodbye', () => {
     expect(sayGoodbye('Hannah')).to.eql('Goodbye, Hannah. Have a great day.');
   })
 });
 
 
-xdescribe('temperatureCtoF()', () => {
+describe('temperatureCtoF()', () => {
   it('should convert temperature', () => {
     expect(temperatureCtoF(40)).to.eql(104);
     expect(temperatureCtoF(12)).to.eql(54);
   })
 })
 
-xdescribe('temperatureInF()', () => {
+describe('temperatureInF()', () => {
   it('should return temperature in F', () => {
     expect(temperatureInF(66, 'F')).to.eql('66F');
     expect(temperatureInF(8, 'F')).to.eql('8F');
@@ -123,25 +120,25 @@ xdescribe('temperatureInF()', () => {
 
 var person = { id: 1, name: "Luke", email: "luke@luke.com" };
 
-xdescribe("makePersonObject()", () => {
+describe("makePersonObject()", () => {
   it("makes an object of the right shape", () => {
     expect(makePersonObject(1, "Luke", "luke@luke.com")).to.eql(person);
   });
 });
 
-xdescribe("getName()", () => {
+describe("getName()", () => {
   it("makes an object of the right shape", () => {
     expect(getName(person)).to.include("my name is Luke");
   });
 });
 
-xdescribe('appleIndex()', () => {
+describe('appleIndex()', () => {
   it("should find the index of 'apple'", () => {
     expect(appleIndex(['orange', 'apple', 'banana'])).to.eql(1);
   });
 });
 
-xdescribe('isItAnApple', () => {
+describe('isItAnApple', () => {
   it('should correctly identify apple in the array', () => {
     expect(isItAnApple([ 'apple', 'orange', 'apple', 'banana', 'mango' ])).to.eql([ true, false, true, false, false]);
   });
@@ -151,7 +148,7 @@ xdescribe('isItAnApple', () => {
   })
 });
 
-xdescribe("getCarInfoByIndex()", () => {
+describe("getCarInfoByIndex()", () => {
   it("returns a string containing the car_make", () => {
     expect(getCarInfoByIndex(inventory, 0)).to.include(inventory[0].car_make);
   });
@@ -160,7 +157,7 @@ xdescribe("getCarInfoByIndex()", () => {
   });
 });
 
-xdescribe("getLastCarInfo()", () => {
+describe("getLastCarInfo()", () => {
   it("returns a string containing the car_make", () => {
     expect(getLastCarInfo(inventory)).to.include(
       inventory[inventory.length - 1].car_make
@@ -174,7 +171,7 @@ xdescribe("getLastCarInfo()", () => {
 });
 
 
-xdescribe("getModelYears()", () => {
+describe("getModelYears()", () => {
   it("returns an array of car years", () => {
     const carYears = inventory.map(c => c.car_year);
     expect(getModelYears(inventory)).to.eql(carYears);
@@ -182,7 +179,7 @@ xdescribe("getModelYears()", () => {
 });
 
 
-xdescribe("STRETCH: getCarInfoById()", () => {
+describe("STRETCH: getCarInfoById()", () => {
   it("returns a string containing the car_make", () => {
     expect(getCarInfoById(inventory, 1)).to.include(inventory[0].car_make);
   });
@@ -191,7 +188,7 @@ xdescribe("STRETCH: getCarInfoById()", () => {
   });
 });
 
-xdescribe("STRETCH: getOlderCars()", () => {
+describe("STRETCH: getOlderCars()", () => {
   it("returns an empty array for a very low max year", () => {
     const cars = inventory.filter(c => c.car_year <= 0);
     expect(getOlderCars(inventory, 0)).to.eql(cars);
@@ -206,7 +203,7 @@ xdescribe("STRETCH: getOlderCars()", () => {
   });
 });
 
-xdescribe("STRETCH: getGermanCars()", () => {
+describe("STRETCH: getGermanCars()", () => {
   it("returns an array with the correct cars", () => {
     const makes = ["Audi", "Mercedes-Benz", "Volkswagen", "BMW"];
     const cars = inventory.filter(c => makes.includes(c.car_make));
@@ -214,7 +211,7 @@ xdescribe("STRETCH: getGermanCars()", () => {
   });
 });
 
-xdescribe("STRETCH: carMaker()", () => {
+describe("STRETCH: carMaker()", () => {
   it("makes a car with an odometer set to the correct value", () => {
     expect(carMaker(123).odometer).to.eql(123);
   });
