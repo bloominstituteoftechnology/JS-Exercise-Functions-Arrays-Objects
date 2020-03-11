@@ -74,9 +74,15 @@ function temperatureCtoF(cel) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(num, unit) {
+  if (unit === 'C'){
+    return temperatureCtoF(num) + "F";
+  }
+  else{
+    return num + unit;
+  }
 }
+
 
 
 /**
@@ -95,8 +101,13 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(ID, Name, Email) {
+  const person = {
+    id: ID,
+    name: Name,
+    email: Email
+  };
+  return person;
 }
 
 /**
@@ -112,8 +123,8 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(obj) {
+  return 'Hello, my name is ' + obj.name;
 }
 
 
@@ -132,8 +143,13 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(arr) {
+  var i;
+  for(i=0; i<arr.length; i++){
+    if(arr[i]==='apple'){
+      return i;
+    }
+  }
 }
 
 /**
@@ -151,12 +167,24 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(arr) {
+  var i;
+  var newArr = [];
+
+  for(i = 0; i < arr.length; i++){
+    if(arr[i]==='apple'){
+      newArr.push(true);
+    }
+    else{
+      newArr[i] = false;
+    }
+  } 
+  return newArr;
 }
 
 
 
+/*
 /*
 // ⭐️ Example Test Data ⭐️
 
