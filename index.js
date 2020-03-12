@@ -153,10 +153,11 @@ function getName({name}) {
  * the returned value should be: 2.
 */
 function appleIndex(array) {
-  const conditions = (array) => `${array}` === 'apple';
+  const conditions = array =>`${array}` === 'apple';
 
   return array.findIndex(conditions);
 }
+
 
 /**
  * ### Challenge `isItAnApple`
@@ -174,14 +175,17 @@ function appleIndex(array) {
  * the returned value should be: [ false, true, false, false, true, false ].
 */
 function isItAnApple(array) {
-    if(`${array}` === 'apple') {
-      array.push(true);
+  let booleanArray = [];
+  for( let i = 0; i < array.length; i++) {
+    if(array[i] === 'apple') {
+      booleanArray.push(true);
     } else {
-      array.push(false);
+      booleanArray.push(false);
     }
-    return array;
   }
-
+    return booleanArray;
+}
+ 
 
 
 /*
@@ -237,7 +241,8 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  const theCar = inventory[index];
+  return `${theCar.car_make} ${theCar.car_model}`;
 }
 
 /**
@@ -251,8 +256,9 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
+function getLastCarInfo(inventory) {
+  const lastCar = inventory[inventory.length-1];
+  return `this is a ${lastCar.car_make} ${lastCar.car_model}`;
 }
 
 /**
@@ -264,8 +270,13 @@ function getLastCarInfo(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
-  /* code here */
+function getModelYears(inventory) {
+
+  const carYears = [];
+  for(let i = 0; i < inventory.length; i++) {
+    carYears.push(inventory[i].car_year);
+  }
+  return carYears;
 }
 
 /**
