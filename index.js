@@ -291,8 +291,18 @@ function getModelYears(inv) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inv, ID) {
+  var index;
+  for(var i = 0; i<inv.length; i++ ){
+    if(inv[i].id == ID)
+    {
+      index = i;
+    }
+  }
+  if(index === undefined){
+    return "Not found";
+  }
+  return `This is a ${inv[index].car_make} ${inv[index].car_model}`;
 }
 
 /**
@@ -309,8 +319,15 @@ function getCarInfoById(/* code here */) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
-  /* code here */
+function getOlderCars(inv, max) {
+  const years = [];
+  for(var i = 0; i < inv.length; i++){
+    if(inv[i].car_year <= max)
+    {
+      years.push(inv[i]);
+    }
+  }
+  return years;
 }
 
 /**
@@ -326,8 +343,15 @@ function getOlderCars(/* code here */) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
-  /* code here */
+function getGermanCars(inv) {
+  const german = [];
+  for(var i = 0; i < inv.length; i++){
+    if(inv[i].car_make == "Audi" || inv[i].car_make == "Mercedes-Benz" || inv[i].car_make == "Volkswagen" || inv[i].car_make == "BMW")
+    {
+      german.push(inv[i]);
+    }
+  }
+  return german;
 }
 
 /**
@@ -343,8 +367,15 @@ function getGermanCars(/* code here */) {
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(/* code here */) {
-  /* code here */
+function carMaker(num) {
+  var obj = {
+    odometer: num,
+    drive: function(dist){
+      this.odometer += dist;
+      return this.odometer;
+    }
+  }
+  return obj;
 }
 
 /// ////// END OF CHALLENGE /////////
