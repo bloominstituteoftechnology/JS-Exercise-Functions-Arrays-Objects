@@ -35,8 +35,9 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(/* code here */) {
+function sayGoodbye(name) {
   /* code here */
+  return `Goodbye, ${name}. Have a great day.`
 }
 
 /**
@@ -130,6 +131,8 @@ function makePersonObject(id, name, email) {
 */
 function getName(object) {
   /* code here */
+  return "my name is " + object.name
+  
 }
 
 
@@ -148,10 +151,18 @@ function getName(object) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex() {
+function appleIndex(array) {
   /* code here */
 
+  for(let i = 0; i<array.length; i++){
+    let number = array.indexOf("apple");
+    return number;
+  }
+   
+
 }
+
+appleIndex(["apple", "orange"]);
 
 /**
  * ### Challenge `isItAnApple`
@@ -238,8 +249,8 @@ function get3rdCar(inventory) {
 */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
-  let deal=inventory[index];
-  return `The is a ${deal.car_make} ${deal.car_model}`
+  let deal = inventory[index];
+  return `This is a ${deal.car_make} ${deal.car_model}`
   
 
 }
@@ -255,8 +266,11 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
+function getLastCarInfo(lastCarrArr) {
   /* code here */
+ let lastIndex =lastCarrArr.length -1;
+ let lastCar = lastCarrArr [lastIndex];
+ return `this is a ${lastCar.car_make} ${lastCar.car_model}`;
 }
 
 /**
