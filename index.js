@@ -192,7 +192,7 @@ function get3rdCar(inventory) {
   return `The is a ${the3rd.car_make} ${the3rd.car_model}`
 }
 
-// 👇 COMPLETE YOUR WORK BELOW 👇
+// 👇 not sure what to put  👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 
