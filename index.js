@@ -53,11 +53,11 @@ function sayGoodbye(name) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(t) {
-  Math.round(t);
-  return t * 9 / 5 + 32;
+function temperatureCtoF(result) {
+  const t = result * 9 / 5 + 32;
+  return Math.round(t);
 }
-temperatureCtoF(24);
+
 /**
  * ### Challenge `temperatureInF`
  * 
@@ -75,8 +75,12 @@ temperatureCtoF(24);
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(temp,unit) {
+  if (unit === 'C'){
+    return Math.round(temp*9/5 +32)+ "F";
+  } else {
+    return temp + "F";
+  }
 }
 
 
@@ -166,8 +170,16 @@ function appleIndex(x) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(app) {
-  
+function isItAnApple(fruits) {
+  let TorF = [];
+  for(let i=0; i<fruits.length; i++){
+   if(fruits[i]==="apple"){
+     TorF.push(true)
+     } else {
+       TorF.push(false)
+     }
+   }
+  return TorF;
 }
 
 
@@ -225,7 +237,8 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  let vehicle =  inventory[index];
+  return `This is a ${vehicle.car_make } ${vehicle.car_model}`;
 }
 
 /**
@@ -239,8 +252,10 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
+function getLastCarInfo(inventory) {
+  let lastcar = inventory[inventory.length - 1]
+  return `This is a ${lastcar.car_make}${lastcar.car_model}`;
+
 }
 
 /**
@@ -252,8 +267,12 @@ function getLastCarInfo(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
-  /* code here */
+function getModelYears(inventory) {
+  const year = [];
+  for(i=0; i<inventory.length; i++){
+    year.push(inventory[i].car_year);
+  }
+  return year;
 }
 
 /**
@@ -270,8 +289,9 @@ function getModelYears(/* code here */) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inventory, id) {
+  const car =inventory[id-1];
+  return `This is a ${car.car_make} ${car.car_model}`;
 }
 
 /**
