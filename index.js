@@ -25,18 +25,24 @@ function addNumbers(num1, num2) {
 
 /**
  * ### Challenge `sayGoodbye`
- * 
- * @instructions
- * This function should take an a name as an argument,
- * and return a string that says 'Goodbye, {name}. Have a great day.'
- * 
- * For example, if we invoke `sayGoodbye`
- * passing 'Andy' as the argument,
- * the returned value should look like: 'Goodbye, Andy. Have a great day.'
- * 
+ * @instructions This function should take an a name as an argument,
+and return a string that says 'Goodbye, {name}. Have a great day.'
+
+For example, if we invoke `sayGoodbye`
+passing 'Andy' as the argument,
+the returned value should look like: 'Goodbye, Andy. Have a great day.'
 */
-function sayGoodbye(/* code here */) {
-  /* code here */
+var greeting = function(name){
+  greeting(Andy)
+}
+ console.log("Goodbye," name "Have a great day.")
+
+ }
+ {
+/**
+ * /function sayGoodbye(Goodbye, name, Have a great day.)
+ return fuction;
+
 }
 
 /**
@@ -187,6 +193,7 @@ var inventory = [
   *
   * NOTE: This example has been completed for you.
 **/
+// @ts-ignore
 function get3rdCar(inventory) {
   const the3rd = inventory[2];
   return `The is a ${the3rd.car_make} ${the3rd.car_model}`
@@ -209,6 +216,7 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
+// @ts-ignore
 function getCarInfoByIndex(inventory, index) {
   /* code here */
 }
