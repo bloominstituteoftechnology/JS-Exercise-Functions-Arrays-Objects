@@ -284,8 +284,15 @@ function getModelYears(inventory) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
  */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inventory, id) {
+  let index;
+  for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].id === id) {
+      index = i;
+    }
+  }
+
+  return `This is a ${inventory[index].car_make} ${inventory[index].car_model}`;
 }
 
 /**
@@ -302,8 +309,15 @@ function getCarInfoById(/* code here */) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
  */
-function getOlderCars(/* code here */) {
+function getOlderCars(inventory, year) {
   /* code here */
+  let newArray = [];
+  for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].car_year <= year) {
+      newArray.push(inventory[i]);
+    }
+  }
+  return newArray;
 }
 
 /**
@@ -319,8 +333,20 @@ function getOlderCars(/* code here */) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
  */
-function getGermanCars(/* code here */) {
+function getGermanCars(inventory) {
   /* code here */
+  let newArr = [];
+  for (let i = 0; i < inventory.length; i++) {
+    if (
+      inventory[i].car_make === "Audi" ||
+      inventory[i].car_make === "Mercedes-Benz" ||
+      inventory[i].car_make === "Volkswagen" ||
+      inventory[i].car_make === "BMW"
+    ) {
+      newArr.push(inventory[i]);
+    }
+  }
+  return newArr;
 }
 
 /**
@@ -336,8 +362,16 @@ function getGermanCars(/* code here */) {
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
  */
-function carMaker(/* code here */) {
+function carMaker(odometer) {
   /* code here */
+  const car = {
+    odometer: odometer,
+    drive: function(distance) {
+      this.odometer += distance;
+      return this.odometer;
+    }
+  };
+  return car;
 }
 
 /// ////// END OF CHALLENGE /////////
