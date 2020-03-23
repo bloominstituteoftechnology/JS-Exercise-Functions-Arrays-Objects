@@ -286,8 +286,16 @@ function getModelYears(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoById(inventory, number) {
-  const id = inventory[number - 1];
-  return "This is a " + id.car_make + id.car_model;
+let string = 'This is a ';
+  for (let i = 0; i < inventory.length; i++) {
+    const index = inventory[i];
+    if (index.id === number) {
+      string = string + index.car_make + index.car_model;
+    }
+  }
+  return string;
+  // const id = inventory[number - 1];
+  // return "This is a " + id.car_make + id.car_model;
 }
 
 /**
