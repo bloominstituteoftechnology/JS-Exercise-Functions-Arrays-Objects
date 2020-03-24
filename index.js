@@ -25,18 +25,30 @@ function addNumbers(num1, num2) {
 
 /**
  * ### Challenge `sayGoodbye`
- * 
- * @instructions
- * This function should take an a name as an argument,
- * and return a string that says 'Goodbye, {name}. Have a great day.'
- * 
- * For example, if we invoke `sayGoodbye`
- * passing 'Andy' as the argument,
- * the returned value should look like: 'Goodbye, Andy. Have a great day.'
- * 
+ * @instructions This function should take an a name as an argument,
+and return a string that says 'Goodbye, {name}. Have a great day.'
+
+For example, if we invoke `sayGoodbye`
+passing 'Andy' as the argument,
+the returned value should look like: 'Goodbye, Andy. Have a great day.'
 */
-function sayGoodbye(/* code here */) {
-  /* code here */
+function sayGoodbye(name) {
+  const obj = {};
+  obj.name = name;
+  obj.greeting = function () {
+    alert("Goodbye," + obj.name + "Have a great day.");
+  };
+  return obj;
+}
+const Andy = sayGoodbye("Andy");{
+Andy.name;
+Andy.greeting();
+ }
+ 
+/**
+ * /function sayGoodbye(Goodbye, name, Have a great day.)
+ return fuction;
+
 }
 
 /**
@@ -53,8 +65,16 @@ function sayGoodbye(/* code here */) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(/* code here */) {
-  /* code here */
+function convert(degree) {
+  var x;
+  if (degree == "C") {
+    x = temperatureCtoF("c").value * 9 / 5 + 32;
+
+  }
+}
+console.log tempratureCtoF(degree == 24);
+}
+
 }
 
 /**
@@ -187,6 +207,7 @@ var inventory = [
   *
   * NOTE: This example has been completed for you.
 **/
+// @ts-ignore
 function get3rdCar(inventory) {
   const the3rd = inventory[2];
   return `The is a ${the3rd.car_make} ${the3rd.car_model}`
@@ -209,6 +230,7 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
+// @ts-ignore
 function getCarInfoByIndex(inventory, index) {
   /* code here */
 }
