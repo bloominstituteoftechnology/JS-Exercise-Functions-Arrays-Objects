@@ -36,9 +36,9 @@ function addNumbers(num1, num2) {
  * 
 */
 function sayGoodbye(name) {
-  console.log('Goodbye, ' ${name} '.' 'Have a great day.')
+  return `Goodbye, ${name}. Have a great day.`
 }
-sayGoodbye(Kevin);
+
 
 /**
  * ### Challenge `temperatureCtoF`
@@ -55,7 +55,7 @@ sayGoodbye(Kevin);
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
 function temperatureCtoF(celsius) {
-return math.round(celsius * 9/5 + 32);
+return Math.round(celsius * 9/5 + 32);
   /* code here */
 }
 console.log(temperatureCtoF(42));
@@ -76,10 +76,17 @@ console.log(temperatureCtoF(42));
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
-}
+function temperatureInF(temp, unit) {
+  if(unit==='C'){
+    return temperatureCtoF(temp) + 'F'
+  }
 
+  else{ 
+    return temp + unit
+
+  }
+}
+temperatureInF(88, 'F');
 
 /**
  * ### Challenge `makePersonObject`
@@ -135,8 +142,11 @@ function getName(name) {
  * the returned value should be: 2.
 */
 function appleIndex(index) {
-  appleIndex.indexOf('apple');
-  return appleIndex
+  for (let i=0; i<index.length; i++){
+    if( index[i]==='apple'){
+      return i;
+    }
+  }
 }
 
 /**
@@ -154,9 +164,19 @@ function appleIndex(index) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  console.log(isItAnApple.includes('apple'));
+function isItAnApple(apple) {
+  let array=[]
+
+  for (let i=0; i<apple.length; i++)
+  if(apple[i]==='apple'){
+    array.push(true); 
+  }
+  else{
+    array.push(false);
+  }
+ return array
 }
+
 
 
 
@@ -231,7 +251,8 @@ var inventory = [
 ]
 
  function getCarInfoByIndex(inventory, index) {
-  console.log `This is a ${car_make} ${car_model}`
+
+  return `This is a ${car_make} ${car_model}`
 }
 
 /**
@@ -245,8 +266,10 @@ var inventory = [
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */){
-  /* code here */
+function getLastCarInfo(inventory)
+{
+  const lastCar= inventory[inventory.length -1]
+  return `This is a ${car_make} ${car_model}`
 }
 
 /**
