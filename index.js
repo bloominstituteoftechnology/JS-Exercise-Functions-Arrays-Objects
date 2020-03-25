@@ -104,9 +104,13 @@ temperatureInF(88, 'F');
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email) {
+  id: id;
+  personName:name;
+  email:email;
+  return makePersonObject
 }
+
 
 /**
  * ### Challenge `getName`
@@ -121,8 +125,9 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(name) {
-  console.log `hello, my name is ${name}.`;
+function getName() {
+  name:name;
+ 
 }
 
 
@@ -281,9 +286,7 @@ function getLastCarInfo(inventory)
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
-  /* code here */
-}
+
 
 /**
  * ### Challenge `getCarInfoById`
