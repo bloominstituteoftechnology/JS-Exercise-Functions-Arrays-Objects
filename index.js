@@ -100,8 +100,11 @@ function temperatureInF(degrees, unit) {
  * }
 */
 function makePersonObject(id, name, email) {
-  Object.create(person);
-  return person;
+  let person = new Object();
+    person.id = id;
+    person.name = name;
+    person.email = email;
+  return person; 
 }
 
 /**
@@ -118,7 +121,7 @@ function makePersonObject(id, name, email) {
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(person) {
-  return 'Hello, my name is ' + person.name + '.' 
+  return 'Hello, my name is ' + person.name + '.' ;
 }
 
 
@@ -138,8 +141,8 @@ function getName(person) {
  * the returned value should be: 2.
 */
 function appleIndex(fruits) {
-  const apple = fruits.indexOf('apple');
-  return apple;
+  const applePosition = fruits.indexOf('apple');
+  return applePosition;
 }
 
 /**
@@ -157,8 +160,12 @@ function appleIndex(fruits) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(fruits) {
+  // var applePosition = fruits.indexOf('apple');
+  // return applePosition;
+  // if (applePosition > -1);
+  // return true;
+
 }
 
 
