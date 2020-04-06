@@ -8,25 +8,35 @@ Commit often! **Plan to commit & push every time you get a new test passing**. T
 
 If you run into trouble while coding, fight the good fight for 20 minutes and then get on the help channel. __Remember to formulate your help request in a professional manner__ - like you would at the job - by including error messages, screenshots, and any other pertinent information about the problem, as well as what things you have attempted already while trying to solve it.
 
-##### Index
-
-* [Instructions](#instructions)
-* [Get Started](#get-started)
-
 ## Instructions
 
-Find the file `index.js` and complete the tasks until all of your tests pass. Do not use any of the forbidden methods!
+### Task 1 - Set up Project
 
-## Get Started
+- [ ] Create a forked copy of this project
+- [ ] Add your team lead as collaborator on Github
+- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [ ] Push commits: git push origin `<firstName-lastName>`
 
-<summary><strong>Using VSCode and a Command Line:</strong></summary>
+### Task 2 - MVP
 
-1. Fork repo and add TL as collaborator on Github.
-1. Clone _your_ fork (not Lambda's repo by mistake!).
-1. `cd` into your newly cloned repository.
-1. Create a new branch by typing `git checkout -b <firstName-lastName>`.
-1. Install dependencies by typing `npm install`.
-1. Run tests by typing `npm run test:watch`.
-1. Work on your branch, push commits and create PR as usual.
+Find the file `index.js` and complete the tasks until your returns look like the expected returns. Do not use any of the forbidden methods!
 
-<img alt='instructions screenshot' src='./instructions.png'>
+### Task 3 - Stretch
+
+There are several stretch goals inside `index.js`. You may work on these once you have finished MVP requirements for the day! 
+
+## Resources
+
+🤝[W3 Schools - JavaScript Arrays](https://www.w3schools.com/js/js_arrays.asp)
+
+📚 [MDM - Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+
+## Submission format
+
+Follow these steps for completing your project.
+
+- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
+- [ ] Add your team lead as a reviewer on the pull-request
+- [ ] Your team lead will count the project as complete by merging the branch back into master

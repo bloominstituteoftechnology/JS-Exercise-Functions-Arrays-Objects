@@ -23,6 +23,7 @@ function addNumbers(num1, num2) {
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 
+
 /**
  * ### Challenge `sayGoodbye`
  * 
@@ -178,6 +179,10 @@ var inventory = [
   /// ... Truncated
 ]
 */
+
+// Data from file 
+var data = require('data./inventory.js'); 
+
 /**
   * ### Example Array Challenge:
   * 
@@ -311,32 +316,3 @@ function carMaker(/* code here */) {
   /* code here */
 }
 
-/// ////// END OF CHALLENGE /////////
-/// ////// END OF CHALLENGE /////////
-/// ////// END OF CHALLENGE /////////
-if (typeof exports !== 'undefined') {
-  // IGNORE: Test/Env Detected
-  // For Node/Non-browser test env
-  module.exports = module.exports || {}
-  if (addNumbers) { module.exports.addNumbers = addNumbers }
-  if (sayGoodbye) { module.exports.sayGoodbye = sayGoodbye }
-  if (temperatureCtoF) { module.exports.temperatureCtoF = temperatureCtoF }
-  if (temperatureInF) { module.exports.temperatureInF = temperatureInF }
-  if (makePersonObject) { module.exports.makePersonObject = makePersonObject }
-  if (getName) { module.exports.getName = getName }
-  if (appleIndex) { module.exports.appleIndex = appleIndex }
-
-  if (isItAnApple) { module.exports.isItAnApple = isItAnApple }
-  
-
-  
-  if (carMaker) { module.exports.carMaker = carMaker }
-  if (getCarInfoByIndex) { module.exports.getCarInfoByIndex = getCarInfoByIndex }
-  if (getLastCarInfo) { module.exports.getLastCarInfo = getLastCarInfo }
-  if (getCarInfoById) { module.exports.getCarInfoById = getCarInfoById }
-
-  if (getModelYears) { module.exports.getModelYears = getModelYears }
-  if (getOlderCars) { module.exports.getOlderCars = getOlderCars }
-  if (getGermanCars) { module.exports.getGermanCars = getGermanCars }
- 
-}
