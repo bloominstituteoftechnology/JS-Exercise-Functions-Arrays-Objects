@@ -160,14 +160,19 @@ function appleIndex(fruits) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
+
 function isItAnApple(fruits) {
-  // var applePosition = fruits.indexOf('apple');
-  // return applePosition;
-  // if (applePosition > -1);
-  // return true;
-
-}
-
+  var appleList = [];
+  
+  for (let i = 0; i < fruits.length; i++){
+    if (fruits[i] === 'apple'){
+      appleList.push(true);
+    } else {
+      appleList.push(false);
+      }
+    } return appleList;
+  }
+  
 
 
 /*
