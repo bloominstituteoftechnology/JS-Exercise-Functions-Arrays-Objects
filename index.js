@@ -163,7 +163,7 @@ function appleIndex(fruits) {
 
 function isItAnApple(fruits) {
   var appleList = [];
-  
+
   for (let i = 0; i < fruits.length; i++){
     if (fruits[i] === 'apple'){
       appleList.push(true);
@@ -228,7 +228,8 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  var makeModel = inventory[index];
+  return `This is a ${makeModel.car_make} ${makeModel.car_model}`
 }
 
 /**
