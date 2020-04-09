@@ -327,8 +327,27 @@ function getOlderCars(inventory, age) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
-  /* code here */
+function getGermanCars(inventory) {
+  var imports = [];
+  
+  for (let i = 0; i < inventory.length; i++){
+    var carInfo = Object.values(inventory[i]);
+    if (carInfo[1] === 'Audi'){
+     imports.push(inventory[i]); 
+    }
+    else
+      if (carInfo[1] === 'Mercedes-Benz'){
+      imports.push(inventory[i]); 
+     }
+     else
+      if (carInfo[1] === 'Volkswagen'){
+     imports.push(inventory[i]); 
+    }
+    else
+      if (carInfo[1] === 'BMW'){
+   imports.push(inventory[i]); 
+  }
+  }return imports;
 }
 
 /**
@@ -344,8 +363,13 @@ function getGermanCars(/* code here */) {
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(/* code here */) {
-  /* code here */
+function carMaker(miles) {
+  let car = new Object()
+  car.odometer = miles;
+  return car;
+
+  car.drive() = car.odometer = x;
+
 }
 
 /// ////// END OF CHALLENGE /////////
