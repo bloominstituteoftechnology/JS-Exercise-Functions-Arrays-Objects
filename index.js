@@ -278,12 +278,15 @@ function getModelYears(inventory) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  *     (2) a number which is the desired car id (see how each car has its own unique id).
  * getCarInfoById returns a string in the format `This is a {car_make} {car_model}
- * 
+ *
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inventory, id) {
+  var carNumber = (id - 1)
+  var selectedIndex = inventory[carNumber];
+  return `This is a ${selectedIndex.car_make} ${selectedIndex.car_model}`;
+
 }
 
 /**
@@ -300,8 +303,15 @@ function getCarInfoById(/* code here */) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
-  /* code here */
+function getOlderCars(inventory, age) {
+  var carAges = [];
+  
+  for (let i = 0; i < inventory.length; i++){
+    var carInfo = Object.values(inventory[i]);
+    if (carInfo[3] <= age){
+     carAges.push(inventory[i]); 
+    } 
+  }return carAges;
 }
 
 /**
