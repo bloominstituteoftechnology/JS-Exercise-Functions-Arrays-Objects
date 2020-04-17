@@ -2,7 +2,7 @@
 
 This challenge focuses on functions, objects and arrays. You'll convert "traditional" functions into functions that use the ES6 arrow syntax. You'll also manipulate objects and traverse arrays.
 
-__THE USE OF _MOST_ HIGHER-ORDER ARRAY METHODS IS FORBIDDEN!__ These would be array methods that take callbacks as arguments and save you from having to loop manually, such as `map`, `filter`, `reduce`, `some`, `every` etc. **You'll have to make do with good old loops!** 
+__THE USE OF _MOST_ HIGHER-ORDER ARRAY METHODS IS FORBIDDEN!__ These would be array methods that take callbacks as arguments and save you from having to loop manually, such as `map`, `filter`, `reduce`,`forEach` etc. **You'll have to make do with good old loops!** 
 
 Commit often! **Plan to commit & push every time you get a new test passing**. This makes it SO much easier to figure out "what broke my code", and helps your TL keep track of how you're doing.
 
