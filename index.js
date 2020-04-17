@@ -11,9 +11,9 @@
  * the returned value should be 8.
  *
  * NOTE: This example has been completed for you.
-*/
+ */
 function addNumbers(num1, num2) {
-  return num1 + num2;
+    return num1 + num2;
 }
 
 // ⭐️ Example Challenge end ⭐️
@@ -34,9 +34,9 @@ function addNumbers(num1, num2) {
  * passing 'Andy' as the argument,
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
-*/
-function sayGoodbye(/* code here */) {
-  /* code here */
+ */
+function sayGoodbye(name) {
+    return ('Goodbye, ' + name + '.' + ' Have a great day.');
 }
 
 /**
@@ -52,9 +52,10 @@ function sayGoodbye(/* code here */) {
  * 
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
-*/
-function temperatureCtoF(/* code here */) {
-  /* code here */
+ */
+function temperatureCtoF(degree) {
+    let tempC = degree * 9 / 5 + 32
+    return Math.round(tempC)
 }
 
 /**
@@ -73,11 +74,14 @@ function temperatureCtoF(/* code here */) {
  * the returned value should be: '75F'
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
-*/
-function temperatureInF(/* code here */) {
-  /* code here */
+ */
+function temperatureInF(arg, unit) {
+    if (unit === 'F') {
+        return `${arg}F`;
+    } else {
+        return `${temperatureCtoF(arg)}F`;
+    }
 }
-
 
 /**
  * ### Challenge `makePersonObject`
@@ -94,9 +98,9 @@ function temperatureInF(/* code here */) {
  *   name: "Leia",
  *   email: "leia@leia.com",
  * }
-*/
-function makePersonObject(/* code here */) {
-  /* code here */
+ */
+function makePersonObject(id, name, email) {
+    return { id, name, email };
 }
 
 /**
@@ -111,9 +115,9 @@ function makePersonObject(/* code here */) {
  * For example, if we invoke `getName`
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
-*/
-function getName(/* code here */) {
-  /* code here */
+ */
+function getName({ id, name, email }) {
+    return `Hello, my name is ${name}`;
 }
 
 
@@ -131,9 +135,13 @@ function getName(/* code here */) {
  * For example, if we invoke `appleIndex`
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
-*/
-function appleIndex(/* code here */) {
-  /* code here */
+ */
+function appleIndex(fruits) {
+    for (i = 0; i < fruits.length; i++) {
+        if (fruits[i] === `apple`) {
+            return i;
+        }
+    }
 }
 
 /**
@@ -150,9 +158,13 @@ function appleIndex(/* code here */) {
  * For example, if we invoke `isItAnApple`
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
-*/
-function isItAnApple(/* code here */) {
-  /* code here */
+ */
+function isItAnApple(fruits) {
+    const maybeApple = [];
+    for (i = 0; i < fruits.length; i++) {
+        maybeApple.push(fruits[i] === 'apple');
+    }
+    return maybeApple;
 }
 
 
@@ -179,19 +191,19 @@ var inventory = [
 ]
 */
 /**
-  * ### Example Array Challenge:
-  * 
-  * @instructions
-  * get3rdCar() should return the string `The is a Land Rover Defender Ice Edition`
-  * 
-  *
-  * NOTE: This example has been completed for you.
-**/
+ * ### Example Array Challenge:
+ * 
+ * @instructions
+ * get3rdCar() should return the string `The is a Land Rover Defender Ice Edition`
+ * 
+ *
+ * NOTE: This example has been completed for you.
+ **/
 function get3rdCar(inventory) {
-  const the3rd = inventory[2];
-  return `The is a ${the3rd.car_make} ${the3rd.car_model}`
+    const the3rd = inventory[2];
+    return `The is a ${the3rd.car_make} ${the3rd.car_model}`
 }
-
+// object name and key name 
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
@@ -208,9 +220,9 @@ function get3rdCar(inventory) {
  * 
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
-*/
+ */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+    return `This is a ${inventory[index].car_make} ${inventory[index].car_model}`;
 }
 
 /**
@@ -223,9 +235,9 @@ function getCarInfoByIndex(inventory, index) {
  * 
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
-*/
-function getLastCarInfo(/* code here */) {
-  /* code here */
+ */
+function getLastCarInfo(inventory) {
+    return `This is a ${inventory[inventory.length-1].car_make} ${inventory[inventory.length-1].car_model}`;
 }
 
 /**
@@ -236,9 +248,13 @@ function getLastCarInfo(/* code here */) {
  * getModelYears takes a single argument:
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
-*/
-function getModelYears(/* code here */) {
-  /* code here */
+ */
+function getModelYears(inventory) {
+    const getYears = [];
+    for (let i = 0; i < inventory.length; i++) {
+        getYears.push(inventory[i].car_year)
+    }
+    return getYears;
 }
 
 /**
@@ -254,9 +270,9 @@ function getModelYears(/* code here */) {
  * 
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
-*/
-function getCarInfoById(/* code here */) {
-  /* code here */
+ */
+function getCarInfoById( /* code here */ ) {
+    /* code here */
 }
 
 /**
@@ -272,9 +288,9 @@ function getCarInfoById(/* code here */) {
  * getOlderCars returns an array containing all the cars
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
-*/
-function getOlderCars(/* code here */) {
-  /* code here */
+ */
+function getOlderCars( /* code here */ ) {
+    /* code here */
 }
 
 /**
@@ -289,9 +305,9 @@ function getOlderCars(/* code here */) {
  * getGermanCars returns an array containing all the cars
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
-*/
-function getGermanCars(/* code here */) {
-  /* code here */
+ */
+function getGermanCars( /* code here */ ) {
+    /* code here */
 }
 
 /**
@@ -306,37 +322,37 @@ function getGermanCars(/* code here */) {
  *     it has a `drive` method that takes a distance as its argument, and
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
-*/
-function carMaker(/* code here */) {
-  /* code here */
+ */
+function carMaker( /* code here */ ) {
+    /* code here */
 }
 
 /// ////// END OF CHALLENGE /////////
 /// ////// END OF CHALLENGE /////////
 /// ////// END OF CHALLENGE /////////
 if (typeof exports !== 'undefined') {
-  // IGNORE: Test/Env Detected
-  // For Node/Non-browser test env
-  module.exports = module.exports || {}
-  if (addNumbers) { module.exports.addNumbers = addNumbers }
-  if (sayGoodbye) { module.exports.sayGoodbye = sayGoodbye }
-  if (temperatureCtoF) { module.exports.temperatureCtoF = temperatureCtoF }
-  if (temperatureInF) { module.exports.temperatureInF = temperatureInF }
-  if (makePersonObject) { module.exports.makePersonObject = makePersonObject }
-  if (getName) { module.exports.getName = getName }
-  if (appleIndex) { module.exports.appleIndex = appleIndex }
+    // IGNORE: Test/Env Detected
+    // For Node/Non-browser test env
+    module.exports = module.exports || {}
+    if (addNumbers) { module.exports.addNumbers = addNumbers }
+    if (sayGoodbye) { module.exports.sayGoodbye = sayGoodbye }
+    if (temperatureCtoF) { module.exports.temperatureCtoF = temperatureCtoF }
+    if (temperatureInF) { module.exports.temperatureInF = temperatureInF }
+    if (makePersonObject) { module.exports.makePersonObject = makePersonObject }
+    if (getName) { module.exports.getName = getName }
+    if (appleIndex) { module.exports.appleIndex = appleIndex }
 
-  if (isItAnApple) { module.exports.isItAnApple = isItAnApple }
-  
+    if (isItAnApple) { module.exports.isItAnApple = isItAnApple }
 
-  
-  if (carMaker) { module.exports.carMaker = carMaker }
-  if (getCarInfoByIndex) { module.exports.getCarInfoByIndex = getCarInfoByIndex }
-  if (getLastCarInfo) { module.exports.getLastCarInfo = getLastCarInfo }
-  if (getCarInfoById) { module.exports.getCarInfoById = getCarInfoById }
 
-  if (getModelYears) { module.exports.getModelYears = getModelYears }
-  if (getOlderCars) { module.exports.getOlderCars = getOlderCars }
-  if (getGermanCars) { module.exports.getGermanCars = getGermanCars }
- 
+
+    if (carMaker) { module.exports.carMaker = carMaker }
+    if (getCarInfoByIndex) { module.exports.getCarInfoByIndex = getCarInfoByIndex }
+    if (getLastCarInfo) { module.exports.getLastCarInfo = getLastCarInfo }
+    if (getCarInfoById) { module.exports.getCarInfoById = getCarInfoById }
+
+    if (getModelYears) { module.exports.getModelYears = getModelYears }
+    if (getOlderCars) { module.exports.getOlderCars = getOlderCars }
+    if (getGermanCars) { module.exports.getGermanCars = getGermanCars }
+
 }
