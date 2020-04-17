@@ -11,7 +11,7 @@ If you run into trouble while coding, fight the good fight for 20 minutes and th
 ##### Index
 
 * [Instructions](#instructions)
-* [Get Started](#get-started)
+* [Get Started](#get-started) 
 
 ## Instructions
 
