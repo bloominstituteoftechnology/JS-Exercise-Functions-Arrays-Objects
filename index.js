@@ -165,8 +165,8 @@ function appleIndex(arrayWithApple) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(fruits) {
+  return fruits.map(x => x == "apple");
 }
 
 
