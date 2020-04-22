@@ -144,10 +144,12 @@ getName ( {id: 1, name: 'Leia', email: 'leia@leia.com' });
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(myArr) {
+var fruits = myArr;
+  var app = fruits.indexOf('apple');
+  return app;
 }
-
+appleIndex(['orange', 'grape', 'apple', 'banana', 'mango'])
 /**
  * ### Challenge `isItAnApple`
  * 
