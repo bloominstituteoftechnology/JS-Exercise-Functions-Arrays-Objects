@@ -53,7 +53,7 @@ function sayGoodbye(name) {
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how.
  */
 function temperatureCtoF(temperature) {
-  return Math.round((temperature * 9) / 5 + 32);
+  return Math.round(temperature * 9 / 5 + 32);
 }
 
 /**
@@ -74,10 +74,10 @@ function temperatureCtoF(temperature) {
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
  */
 function temperatureInF(temperature, cOrF) {
-  if (cOrF == "C" || "c") {
+  if (cOrF === "C") {
     return temperatureCtoF(temperature) + "F";
   } else {
-    return temperature + "F";
+    return temperature + cOrF;
   }
 }
 
@@ -97,8 +97,13 @@ function temperatureInF(temperature, cOrF) {
  *   email: "leia@leia.com",
  * }
  */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email) {
+  let personInfo = {
+    id: id,
+    name: name,
+    email: email,
+  };
+  return personInfo;
 }
 
 /**
@@ -114,8 +119,8 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
  */
-function getName(/* code here */) {
-  /* code here */
+function getName(object) {
+  return `Hello, my name is ${object.name}`;
 }
 
 /**
@@ -133,8 +138,10 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
  */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(fruit arr) {
+  if (fruit arr == apple) {
+    appleIndex
+  }
 }
 
 /**
