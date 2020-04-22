@@ -367,9 +367,6 @@ function carMaker(miles) {
   let car = new Object()
   car.odometer = miles;
   return car;
-
-  car.drive() = car.odometer = x;
-
 }
 
 /// ////// END OF CHALLENGE /////////
