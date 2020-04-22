@@ -165,8 +165,18 @@ appleIndex(['orange', 'grape', 'apple', 'banana', 'mango'])
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(arrayBool) {
+  const newArr = [];
+  for ( let i = 0 ; i < arrayBool.length ; i++ ) {
+    if (arrayBool[i] === 'apple'){
+      newArr.push (true);
+    }
+    else{
+      newArr.push (false);
+    }
+    
+  } 
+return(newArr);
 }
 
 
@@ -224,7 +234,9 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  const theCar = inventory[index];
+
+  return `The is a ${theCar.car_make} ${theCar.car_model}`
 }
 
 /**
