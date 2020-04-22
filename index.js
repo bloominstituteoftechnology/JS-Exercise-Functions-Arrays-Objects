@@ -142,8 +142,12 @@ function getName(object) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(arrayWithApple) {
+  for(let i=0;i<arrayWithApple.length;i++){
+    if(arrayWithApple[i] == "apple"){
+      return i;
+    }
+  }
 }
 
 /**
