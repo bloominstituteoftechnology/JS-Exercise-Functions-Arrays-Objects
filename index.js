@@ -75,8 +75,13 @@ function temperatureCtoF(tempC) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(temp, format) {
+  if(format == "F"){
+    return `${Math.round(temp)}F`;
+  }
+  else if(format == "C"){
+    return `${temperatureCtoF(temp)}F`;
+  }
 }
 
 
