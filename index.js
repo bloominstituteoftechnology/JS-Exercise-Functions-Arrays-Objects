@@ -139,10 +139,8 @@ function getName(object) {
  * the returned value should be: 2.
  */
 function appleIndex(fruitArray) {
-  let index;
-  for (i = 0; i < fruitArray.length; i++ +) {
-    return index;
-  } if ()
+  let index = fruitArray.indexOf('apple');
+  return index;
 }
 
 
