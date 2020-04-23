@@ -76,14 +76,12 @@ function temperatureCtoF(celsius) {
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
 function temperatureInF(temperature, unit) {
-  if(unit === `F` || `f`){
-    return `${temperature}F` 
+  if(unit === `F`){
+    return `${temperature}F`;
   }
-  else if (unit === `C` || `c`){
-    let newTemp = temperatureCtoF(temperature);
-    return `${newTemp}F`
-  }
-    
+  else {
+    return `${temperatureCtoF(temperature)}F`;
+  }  
 }
 
 
