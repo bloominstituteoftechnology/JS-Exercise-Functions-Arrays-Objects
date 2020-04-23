@@ -138,11 +138,13 @@ function getName(object) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
  */
-function appleIndex(fruit arr) {
-  if (fruit arr == apple) {
-    appleIndex
-  }
+function appleIndex(fruitArray) {
+  let index;
+  for (i = 0; i < fruitArray.length; i++ +) {
+    return index;
+  } if ()
 }
+
 
 /**
  * ### Challenge `isItAnApple`
