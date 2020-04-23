@@ -35,9 +35,10 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(/* code here */) {
-  /* code here */
-}
+function sayGoodbye(name) {
+  return `Goodbye, ${name}. Have a great day.`;
+  }
+sayGoodbye('Andy');
 
 /**
  * ### Challenge `temperatureCtoF`
@@ -53,9 +54,12 @@ function sayGoodbye(/* code here */) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(/* code here */) {
-  /* code here */
+
+function temperatureCtoF(tempctof) {
+  let tempf = (Math.round((tempctof*1.8)+32));
+  return tempf;
 }
+temperatureCtoF(24);
 
 /**
  * ### Challenge `temperatureInF`
@@ -74,9 +78,21 @@ function temperatureCtoF(/* code here */) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(tempVal, Tunit) {
+let tempf;
+  if (Tunit == 'F')
+    {
+    return tempVal+'F';
+    }else if(Tunit == 'C')
+    {
+    tempf = (Math.round((tempVal*1.8)+32));
+    return tempf+'F';
+    }
 }
+temperatureInF(66,'F');
+temperatureInF(104,'C');
+
+
 
 
 /**
@@ -95,8 +111,13 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email) {
+  let madeObj ={
+    id:id,
+    name:name,
+    email:email
+  };
+  return madeObj;
 }
 
 /**
@@ -112,8 +133,8 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName({ name }) {
+  return `Hello, my name is ${name}` ;
 }
 
 
@@ -132,8 +153,19 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
+function appleIndex(arrFruit) {
+  let searchVal='apple';
+  let searchIndex=0;
+  for (let i=0;i<=arrFruit.length-1;i++){
+    if(searchVal == arrFruit[i]){
+      searchIndex=i;
+      return searchIndex;
+    }else
+      return 0;
+
+  }
   /* code here */
+  
 }
 
 /**
