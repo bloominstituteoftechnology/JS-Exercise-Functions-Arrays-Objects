@@ -163,20 +163,17 @@ function appleIndex(array) {
  * the returned value should be: [ false, true, false, false, true, false ].
 */
 function isItAnApple(array) {
-  // const results = [];
-  // for (i=0; i < array.length; i++)
-  // {
-  //   for(i=0; i < array[i].length; i++){
-  //     if(array[i] === `apple`){
-  //       let true = `true`;  
-  //       results.push(true);
-  //     }
-  //     else
-  //     let false = `false`;
-  //     results.push(false)
-  //   }
-  // }
-  // return results;
+  const results = [];
+  for (i=0; i < array.length; i++)
+  {
+      if(array[i] === `apple`){
+        results.push(true);
+      }
+      else{
+      results.push(false)}
+      
+    }
+  return results;
 }
 
 
@@ -303,7 +300,7 @@ function getCarInfoById(/* code here */) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
+function getOlderCars(array,maxYear) {
   /* code here */
 }
 
