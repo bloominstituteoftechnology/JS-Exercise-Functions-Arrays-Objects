@@ -178,13 +178,15 @@ function appleIndex(arrFruit) {
 */
 function isItAnApple(arrFruit) {
   let newArr = [];
+  //let firstVal = true;
+  //let secondVal = false;
   for(let i = 0; i<=arrFruit.length-1; i++){
-    if(arrFruit[i] === 'apple'){
-      newArr.push('true');
+    if(arrFruit[i] === "apple"){
+      newArr.push(true);
     }else{
-      newArr.push('false');
+      newArr.push(false);
     }
-  }
+  };
   return newArr;
 }
 
