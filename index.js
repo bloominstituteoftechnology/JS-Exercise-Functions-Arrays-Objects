@@ -154,6 +154,7 @@ function getName({ name }) {
  * the returned value should be: 2.
 */
 function appleIndex(arrFruit) {
+  //let apple;
   for(let i = 0; i<= arrFruit.length-1;i++){
     if(arrFruit[i] === 'apple'){
       return i;
@@ -302,10 +303,11 @@ function getModelYears(inventory) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(inventory , carId) {
+//function getCarInfoById(inventory , carId) {
+  function getCarInfoById(inventory , Id) {
   for(let i=0; i <= inventory.length-1;i++){
     //if -1 is not used the arr starts at 0 so it will cause error
-    if(i === (carId-1)){
+    if(i === (Id-1)){
       return `This is a ${inventory[i].car_make} ${inventory[i].car_model}`;
     }
   }
