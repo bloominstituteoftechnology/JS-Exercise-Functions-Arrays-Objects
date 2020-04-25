@@ -353,13 +353,13 @@ function getGermanCars(arr){
  *         (2) returns the updated value of the `odometer`.
 */
 function carMaker(number) {
-//   const car = {
-//     odometer: number,
-//   drive: function(distance){
-//     const newDistance = car.odometer + distance;
-//     return newDistance;
-//   }
-//  return `${car}`;
+  const car = {
+    odometer: number,
+    drive: function(distance){
+    this.odometer +=distance;
+    return this.odometer;}
+  }
+ return car;
 }
 
 /// ////// END OF CHALLENGE /////////
