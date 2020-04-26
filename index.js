@@ -162,8 +162,17 @@ function appleIndex(arrayOfStrings) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(arrayOfStrings) {
+  let typeArray = [];
+  for(let i=0; i<arrayOfStrings.length; i++) {
+    if(arrayOfStrings[i] === 'apple') {
+      typeArray.push(true);
+    } else {
+      typeArray.push(false);
+    }
+  }
+
+  return typeArray;
 }
 
 
