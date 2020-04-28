@@ -197,7 +197,7 @@ var inventory = [
   * ### Example Array Challenge:
   * 
   * @instructions
-  * get3rdCar() should return the string `The is a Land Rover Defender Ice Edition`
+  * get3rdCar() should return the string `The is a Land Rover Defenders Ice Edition`
   * 
   *
   * NOTE: This example has been completed for you.
@@ -326,7 +326,7 @@ return foundRetro;
 function getGermanCars(inventory) {
   let getCar = [];
   for(let i = 0; i <= inventory.length-1; i++) {
-    if(inventroy[i].car_make === 'Audi' || inventory[i].car_make === 'Mercedes-Benz' || inventory[i].car._make === 'Volkswagen' || inventory[i].car_make === 'BMW'){
+    if(inventroy[i] car.make === 'Audi' || inventory[i].car_make === 'Mercedes-Benz' || inventory[i].car._make === 'Volkswagen' || inventory[i].car_make === 'BMW'){
       getCar.push(inventory[i]);
     }
   }
