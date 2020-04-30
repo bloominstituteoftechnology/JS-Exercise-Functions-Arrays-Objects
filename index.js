@@ -295,7 +295,7 @@ function get3rdCar(inventory) {
 */
 function getCarInfoByIndex(inventory, index) {
   var carObj = inventory[index];
-  return `The is a ${carObj.car_make} ${carObj.car_model}.`;
+  return `This is a ${carObj.car_make} ${carObj.car_model}.`;
 }
 
 // var inventory = [
