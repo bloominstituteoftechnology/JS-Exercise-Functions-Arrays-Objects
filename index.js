@@ -35,9 +35,15 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(/* code here */) {
-  /* code here */
+function sayGoodbye(name) {
+  return `Goodbye, ${name}. Have a great day.`;
 }
+
+// var output = sayGoodbye('Noah');
+
+// console.log(output);
+
+
 
 /**
  * ### Challenge `temperatureCtoF`
@@ -53,9 +59,17 @@ function sayGoodbye(/* code here */) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(/* code here */) {
-  /* code here */
+function temperatureCtoF(tempCelsius) {
+  var conversion = tempCelsius * (9 / 5) + 32;
+  
+  return Math.round(conversion);
 }
+
+// var output1 = temperatureCtoF(24);
+
+// console.log(output1);
+
+
 
 /**
  * ### Challenge `temperatureInF`
@@ -74,9 +88,30 @@ function temperatureCtoF(/* code here */) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(temp, str) {
+  if (str.toUpperCase() === 'F') {
+    return temp + str.toUpperCase();
+
+  } else if (str.toUpperCase() === 'C') {
+    var conversion = temp * (9 / 5) + 32;
+    var roundedConversion = Math.round(conversion);
+
+    return roundedConversion + 'F';
+  } else {
+    var invalidUnit = str.toUpperCase();
+    return '\'' + invalidUnit + '\' is not a valid unit. Please use \'F\' or \'C\'.';
+  }
 }
+
+// var output1 = temperatureInF(88, 'f');
+// var output2 = temperatureInF(24, 'c');
+// var output3 = temperatureInF(24, 'b');
+
+// console.log(output1);
+// console.log(output2);
+// console.log(output3);
+
+
 
 
 /**
@@ -95,9 +130,21 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email) {
+  var newObj = {};
+
+  newObj.id = id;
+  newObj.name = name;
+  newObj.email = email;
+
+  return newObj;
 }
+
+// var output = makePersonObject(5, 'Leia', 'leia@leia.com');
+
+// console.log(output);
+
+
 
 /**
  * ### Challenge `getName`
@@ -112,9 +159,21 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(obj) {
+  return `Hello, my name is ${obj.name}.`;
 }
+
+// var personObj = {
+//   id: 1,
+//   name: 'Leia',
+//   email: 'leia@leia.com',
+// };
+
+// var output = getName(personObj);
+
+// console.log(output);
+
+
 
 
 /**
@@ -132,9 +191,16 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(arr) {
+  return arr.indexOf('apple');
 }
+
+// var input = [ 'orange', 'grape', 'apple', 'banana', 'mango' ];
+// var output = appleIndex(input);
+
+// console.log(output);
+
+
 
 /**
  * ### Challenge `isItAnApple`
@@ -151,9 +217,27 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(arr) {
+  var newArr = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    var currentFruit = arr[i];
+    if (currentFruit === 'apple') {
+      currentFruit = true;
+      newArr.push(currentFruit);
+    } else {
+      currentFruit = false;
+      newArr.push(currentFruit);
+    }
+  }
+
+  return newArr;
 }
+
+// var input = [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ];
+// var output = isItAnApple(input);
+
+// console.log(output);
 
 
 
@@ -210,8 +294,33 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  var carObj = inventory[index];
+  return `The is a ${carObj.car_make} ${carObj.car_model}.`;
 }
+
+// var inventory = [
+//   { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
+//   { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
+//   { id: 3, car_make: "Land Rover", car_model: "Defender Ice Edition", car_year: 2010 },
+//   { id: 4, car_make: "Honda", car_model: "Accord", car_year: 1983 },
+//   { id: 5, car_make: "Mitsubishi", car_model: "Galant", car_year: 1990 },
+//   { id: 6, car_make: "Honda", car_model: "Accord", car_year: 1995 },
+//   { id: 7, car_make: "Smart", car_model: "Fortwo", car_year: 2009 },
+//   { id: 8, car_make: "Audi", car_model: "4000CS Quattro", car_year: 1987 },
+//   { id: 9, car_make: "Ford", car_model: "Windstar", car_year: 1996 },
+//   { id: 10, car_make: "Mercedes-Benz", car_model: "E-Class", car_year: 2000 },
+//   { id: 11, car_make: "Infiniti", car_model: "G35", car_year: 2004 },
+//   { id: 12, car_make: "Lotus", car_model: "Esprit", car_year: 2004 },
+//   { id: 13, car_make: "Chevrolet", car_model: "Cavalier", car_year: 1997 },
+//   { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }
+//   /// ... Truncated
+// ]
+
+// var output = getCarInfoByIndex(inventory, 0);
+
+// console.log(output);
+
+
 
 /**
  * ### Challenge `getLastCarInfo`
