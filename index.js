@@ -333,8 +333,9 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
+function getLastCarInfo(arr) {
+  var lastCar = arr.pop();
+  return `This is a ${lastCar.car_make} ${lastCar.car_model}.`;
 }
 
 /**
@@ -346,8 +347,15 @@ function getLastCarInfo(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
-  /* code here */
+function getModelYears(arr) {
+  var newArr = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    var currentCar = arr[i];
+    newArr.push(currentCar.car_year);
+  }
+
+  return newArr;
 }
 
 /**
@@ -364,8 +372,10 @@ function getModelYears(/* code here */) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inventory, num) {
+  var id = num - 1;
+  var targetCar = inventory[id];
+  return `This is a ${targetCar.car_make} ${targetCar.car_model}.`;
 }
 
 /**
@@ -382,8 +392,17 @@ function getCarInfoById(/* code here */) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
-  /* code here */
+function getOlderCars(arr, maxYear) {
+  var newArr = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    var currentCar = arr[i];
+    if (currentCar.car_year <= maxYear) {
+      newArr.push(currentCar);
+    }
+  }
+
+  return newArr;
 }
 
 /**
@@ -399,8 +418,17 @@ function getOlderCars(/* code here */) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
-  /* code here */
+function getGermanCars(arr) {
+  var newArr = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    var currentCar = arr[i];
+    if (currentCar.car_make === 'Audi' || currentCar.car_make === 'Mercedes-Benz' || currentCar.car_make === 'Volkswagen' || currentCar.car_make === 'BMW') {
+      newArr.push(currentCar);
+    }
+  }
+
+  return newArr;
 }
 
 /**
