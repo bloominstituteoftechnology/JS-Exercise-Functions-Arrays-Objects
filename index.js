@@ -165,16 +165,21 @@ function makePersonObject(id, name, email) {
      * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
      * the returned value should be: [ false, true, false, false, true, false ].
      */
-    function isItAnApple( /* code here */ ) {
-        /* code here */
+
+    var fruits = ['orange', 'apple', 'banana', 'apples', 'apple', 'mango'];
+
+    function isItAnApple(fruits) {
+        if (fruits = "apple") {
+            return true;
+        } else(fruits != "apple") {
+            return false;
+        }
     }
 
 
 
 
-    ⭐️
-    Example Test Data⭐️
-
+    /// ⭐️ Example Test Data ⭐️
     var inventory = [
         { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
         { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
@@ -192,6 +197,7 @@ function makePersonObject(id, name, email) {
         { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }
         /// ... Truncated
     ]
+
 
     /**
      * ### Example Array Challenge:
@@ -256,8 +262,12 @@ function makePersonObject(id, name, email) {
      *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
      * getModelYears returns an array containing all the 'car_year's in the inventory.
      */
-    function getModelYears( /* code here */ ) {
-        /* code here */
+    function getModelYears(inventory) {
+        let years = [];
+        for (let i = 0; i < inventory.length; i++) {
+            years.push(inventory[i].car_year)
+        }
+        return years;
     }
 
     /**
