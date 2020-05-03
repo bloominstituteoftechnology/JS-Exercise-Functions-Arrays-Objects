@@ -105,13 +105,13 @@ function temperatureInF(degree,unit) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject (a,b,c) {
+function makePersonObject (a, b, c) {
   let person = {
     id: a, 
     name: b, 
     email: c
   };
-  return person.id + person.name + person.email;
+  return person;
 }
 
 /**
@@ -127,8 +127,13 @@ function makePersonObject (a,b,c) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName (a,b,c) {
+  let person = {
+    id: a, 
+    name: b, 
+    email: c
+  };
+  return `Hello, my name is ${person.name}.`;
 }
 
 
@@ -147,8 +152,11 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(a,b,c,d,e) {
+
+  let fruit = [a,b,c,d,e];
+
+  return fruit.indexOf(c)
 }
 
 /**
@@ -165,10 +173,20 @@ function appleIndex(/* code here */) {
  * For example, if we invoke `isItAnApple`
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
-*/
-function isItAnApple(/* code here */) {
-  /* code here */
-}
+ */
+let fruit = [a,b,c,d,e,f];
+function isItAnApple(fruit) {
+
+    for (i = fruit.indexOf[0]; i < fruit.length; i++) {
+
+    if (fruit.indexOf[i]===`apple`) {
+   return `true`;
+   }
+    else {
+    return `false`;
+    }
+  }
+ }
 
 
 
