@@ -181,7 +181,7 @@ var inventory = [
 */
 
 // Data from file 
-var data = require('data./inventory.js'); 
+var data = require('data/inventory.js'); 
 
 /**
   * ### Example Array Challenge:
