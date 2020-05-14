@@ -142,9 +142,12 @@ console.log(makePersonObject(5,"Cameron","cameron@email.com"));
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
  */
-function getName( /* code here */ ) {
-  /* code here */
+function getName(name) {
+ name={id:1,name:"Cameron",email:"cameron@email.com"};
+ return `Hello, my name is ${name.name}`;
 }
+
+console.log(getName())
 
 
 /**
