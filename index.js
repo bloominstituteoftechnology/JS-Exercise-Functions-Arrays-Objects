@@ -11,7 +11,7 @@
  * the returned value should be 8.
  *
  * NOTE: This example has been completed for you.
-*/
+ */
 function addNumbers(num1, num2) {
   return num1 + num2;
 }
@@ -35,11 +35,10 @@ function addNumbers(num1, num2) {
  * passing 'Andy' as the argument,
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
-*/
+ */
 function sayGoodbye(name) {
   /* code here */
-   console.log(`Goodbye, ${name}. Have a great day.`)
-
+  console.log(`Goodbye, ${name}. Have a great day.`)
 }
 
 sayGoodbye("Cameron")
@@ -57,10 +56,17 @@ sayGoodbye("Cameron")
  * 
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
-*/
-function temperatureCtoF(/* code here */) {
+ */
+function temperatureCtoF(celsius) {
   /* code here */
+
+  let convert = celsius * 9 / 5 + 32;
+  return Math.round(convert);
+
 }
+
+console.log(temperatureCtoF(24))
+
 
 /**
  * ### Challenge `temperatureInF`
@@ -78,8 +84,8 @@ function temperatureCtoF(/* code here */) {
  * the returned value should be: '75F'
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
-*/
-function temperatureInF(/* code here */) {
+ */
+function temperatureInF( /* code here */ ) {
   /* code here */
 }
 
@@ -99,8 +105,8 @@ function temperatureInF(/* code here */) {
  *   name: "Leia",
  *   email: "leia@leia.com",
  * }
-*/
-function makePersonObject(/* code here */) {
+ */
+function makePersonObject( /* code here */ ) {
   /* code here */
 }
 
@@ -116,8 +122,8 @@ function makePersonObject(/* code here */) {
  * For example, if we invoke `getName`
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
-*/
-function getName(/* code here */) {
+ */
+function getName( /* code here */ ) {
   /* code here */
 }
 
@@ -136,8 +142,8 @@ function getName(/* code here */) {
  * For example, if we invoke `appleIndex`
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
-*/
-function appleIndex(/* code here */) {
+ */
+function appleIndex( /* code here */ ) {
   /* code here */
 }
 
@@ -155,8 +161,8 @@ function appleIndex(/* code here */) {
  * For example, if we invoke `isItAnApple`
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
-*/
-function isItAnApple(/* code here */) {
+ */
+function isItAnApple( /* code here */ ) {
   /* code here */
 }
 
@@ -165,32 +171,101 @@ function isItAnApple(/* code here */) {
 
 // ⭐️ Example Test Data ⭐️
 
-var inventory = [
-  { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
-  { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
-  { id: 3, car_make: "Land Rover", car_model: "Defender Ice Edition", car_year: 2010 },
-  { id: 4, car_make: "Honda", car_model: "Accord", car_year: 1983 },
-  { id: 5, car_make: "Mitsubishi", car_model: "Galant", car_year: 1990 },
-  { id: 6, car_make: "Honda", car_model: "Accord", car_year: 1995 },
-  { id: 7, car_make: "Smart", car_model: "Fortwo", car_year: 2009 },
-  { id: 8, car_make: "Audi", car_model: "4000CS Quattro", car_year: 1987 },
-  { id: 9, car_make: "Ford", car_model: "Windstar", car_year: 1996 },
-  { id: 10, car_make: "Mercedes-Benz", car_model: "E-Class", car_year: 2000 },
-  { id: 11, car_make: "Infiniti", car_model: "G35", car_year: 2004 },
-  { id: 12, car_make: "Lotus", car_model: "Esprit", car_year: 2004 },
-  { id: 13, car_make: "Chevrolet", car_model: "Cavalier", car_year: 1997 },
-  { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }
+var inventory = [{
+    id: 1,
+    car_make: "Lincoln",
+    car_model: "Navigator",
+    car_year: 2009
+  },
+  {
+    id: 2,
+    car_make: "Mazda",
+    car_model: "Miata MX-5",
+    car_year: 2001
+  },
+  {
+    id: 3,
+    car_make: "Land Rover",
+    car_model: "Defender Ice Edition",
+    car_year: 2010
+  },
+  {
+    id: 4,
+    car_make: "Honda",
+    car_model: "Accord",
+    car_year: 1983
+  },
+  {
+    id: 5,
+    car_make: "Mitsubishi",
+    car_model: "Galant",
+    car_year: 1990
+  },
+  {
+    id: 6,
+    car_make: "Honda",
+    car_model: "Accord",
+    car_year: 1995
+  },
+  {
+    id: 7,
+    car_make: "Smart",
+    car_model: "Fortwo",
+    car_year: 2009
+  },
+  {
+    id: 8,
+    car_make: "Audi",
+    car_model: "4000CS Quattro",
+    car_year: 1987
+  },
+  {
+    id: 9,
+    car_make: "Ford",
+    car_model: "Windstar",
+    car_year: 1996
+  },
+  {
+    id: 10,
+    car_make: "Mercedes-Benz",
+    car_model: "E-Class",
+    car_year: 2000
+  },
+  {
+    id: 11,
+    car_make: "Infiniti",
+    car_model: "G35",
+    car_year: 2004
+  },
+  {
+    id: 12,
+    car_make: "Lotus",
+    car_model: "Esprit",
+    car_year: 2004
+  },
+  {
+    id: 13,
+    car_make: "Chevrolet",
+    car_model: "Cavalier",
+    car_year: 1997
+  },
+  {
+    id: 14,
+    car_make: "Dodge",
+    car_model: "Ram Van 1500",
+    car_year: 1999
+  }
 ]
 
 /**
-  * ### Example Array Challenge:
-  * 
-  * @instructions
-  * get3rdCar() should return the string `The is a Land Rover Defender Ice Edition`
-  * 
-  *
-  * NOTE: This example has been completed for you.
-**/
+ * ### Example Array Challenge:
+ * 
+ * @instructions
+ * get3rdCar() should return the string `The is a Land Rover Defender Ice Edition`
+ * 
+ *
+ * NOTE: This example has been completed for you.
+ **/
 function get3rdCar(inventory) {
   const the3rd = inventory[2];
   return `The is a ${the3rd.car_make} ${the3rd.car_model}`
@@ -212,7 +287,7 @@ function get3rdCar(inventory) {
  * 
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
-*/
+ */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
 }
@@ -227,8 +302,8 @@ function getCarInfoByIndex(inventory, index) {
  * 
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
-*/
-function getLastCarInfo(/* code here */) {
+ */
+function getLastCarInfo( /* code here */ ) {
   /* code here */
 }
 
@@ -240,8 +315,8 @@ function getLastCarInfo(/* code here */) {
  * getModelYears takes a single argument:
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
-*/
-function getModelYears(/* code here */) {
+ */
+function getModelYears( /* code here */ ) {
   /* code here */
 }
 
@@ -258,8 +333,8 @@ function getModelYears(/* code here */) {
  * 
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
-*/
-function getCarInfoById(/* code here */) {
+ */
+function getCarInfoById( /* code here */ ) {
   /* code here */
 }
 
@@ -276,8 +351,8 @@ function getCarInfoById(/* code here */) {
  * getOlderCars returns an array containing all the cars
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
-*/
-function getOlderCars(/* code here */) {
+ */
+function getOlderCars( /* code here */ ) {
   /* code here */
 }
 
@@ -293,8 +368,8 @@ function getOlderCars(/* code here */) {
  * getGermanCars returns an array containing all the cars
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
-*/
-function getGermanCars(/* code here */) {
+ */
+function getGermanCars( /* code here */ ) {
   /* code here */
 }
 
@@ -310,8 +385,7 @@ function getGermanCars(/* code here */) {
  *     it has a `drive` method that takes a distance as its argument, and
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
-*/
-function carMaker(/* code here */) {
+ */
+function carMaker( /* code here */ ) {
   /* code here */
 }
-
