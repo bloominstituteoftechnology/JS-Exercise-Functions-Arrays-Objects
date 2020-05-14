@@ -165,9 +165,13 @@ console.log(getName())
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
  */
-function appleIndex( /* code here */ ) {
+function appleIndex( arr ) {
   /* code here */
+  const fruits= [ 'orange', 'grape', 'apple', 'banana', 'mango' ];
+  return fruits.indexOf(arr)
 }
+
+console.log(appleIndex('apple'));
 
 /**
  * ### Challenge `isItAnApple`
