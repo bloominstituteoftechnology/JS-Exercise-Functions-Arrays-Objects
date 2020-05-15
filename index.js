@@ -423,9 +423,12 @@ const data=[
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
  */
-function getLastCarInfo( /* code here */ ) {
+function getLastCarInfo(inv) {
   /* code here */
+
+  console.log(`This is a ${data[49].car_make},${data[49].car_model}`)
 }
+getLastCarInfo()
 
 /**
  * ### Challenge `getModelYears`
@@ -436,9 +439,22 @@ function getLastCarInfo( /* code here */ ) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
  */
-function getModelYears( /* code here */ ) {
+
+ 
+function getModelYears(inv) {
   /* code here */
+
+  const years=[];
+
+  for(let i=0; i<inv.length; i++){
+    years.push(inv[i].car_year)
+  }
+
+return years;
 }
+
+console.log(getModelYears(data));
+
 
 /**
  * ### Challenge `getCarInfoById`
