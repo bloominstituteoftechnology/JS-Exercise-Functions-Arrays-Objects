@@ -730,7 +730,7 @@ function getCarInfoById(make, model) {
   return `This is a ${MAKE} ${MODEL}`
 }
 
-console.log(getCarInfoById(1, 1));
+console.log(getCarInfoById(0, 0));
 
 /**
  * ### Challenge `getOlderCars`
