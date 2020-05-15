@@ -426,9 +426,11 @@ const data=[
 function getLastCarInfo(inv) {
   /* code here */
 
-  console.log(`This is a ${data[49].car_make},${data[49].car_model}`)
+
+   console.log(`This is a ${data[inv.length-1].car_make},${data[inv.length-1].car_model}`)
+   
 }
-getLastCarInfo()
+getLastCarInfo(data)
 
 /**
  * ### Challenge `getModelYears`
