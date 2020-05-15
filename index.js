@@ -472,9 +472,16 @@ console.log(getModelYears(data));
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
  */
-function getCarInfoById( /* code here */ ) {
+function getCarInfoById(make,model) {
   /* code here */
+
+const MAKE=Object.values(data)[make].car_make;
+const MODEL= Object.values(data)[model].car_model;
+
+return `This is a ${MAKE} ${MODEL}`
 }
+
+console.log(getCarInfoById(1,1));
 
 /**
  * ### Challenge `getOlderCars`
@@ -490,9 +497,17 @@ function getCarInfoById( /* code here */ ) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
  */
-function getOlderCars( /* code here */ ) {
-  /* code here */
+function getOlderCars(cars,years ) {
+  
+  let newCars=[];
+  for(let i=0; i<cars.length;i++){
+    if(cars[i]<years.length-1){
+      newCars.push(cars[i].car_year);
+    }
+  } 
+   return newCars;
 }
+console.log(getOlderCars(data,2000));
 
 /**
  * ### Challenge `getGermanCars`
