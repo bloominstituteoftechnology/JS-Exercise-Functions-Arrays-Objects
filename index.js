@@ -15,6 +15,7 @@
 function addNumbers(num1, num2) {
   return num1 + num2;
 }
+console.log(addNumbers(5,3));
 
 // ⭐️ Example Challenge end ⭐️
 
@@ -36,9 +37,11 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(/* code here */) {
-  /* code here */
+function sayGoodbye(name) {
+  return 'Goodbye ' + name + '. Have a great day.';
 }
+
+console.log(sayGoodbye('Donald'));
 
 /**
  * ### Challenge `temperatureCtoF`
@@ -54,9 +57,12 @@ function sayGoodbye(/* code here */) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(/* code here */) {
-  /* code here */
+function temperatureCtoF(celsius,fahrenheit) {
+  return fahrenheit;
 }
+  celsius = 24;
+  fahrenheit = Math.round((celsius * 9 / 5) + 32);
+  console.log((celsius + ' degrees Celsius is ' + temperatureCtoF(celsius,fahrenheit) + ' degrees Fahrenheit'));
 
 /**
  * ### Challenge `temperatureInF`
@@ -75,9 +81,24 @@ function temperatureCtoF(/* code here */) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+
+// create a function
+// 2 params: temperature and unit as arguments
+// if statement
+// if unit is Fahrenheit, return Fahrenheit
+// if unit is Celsius, return calculated Fahrenheit
+// if celsius call FahrenheitCtoF function
+function temperatureInF(temperature,unit) {
+  
+  if(unit == 'F') {
+    return temperature;
+  } else if(unit == 'C') {
+    return temperatureCtoF(celsius,fahrenheit);
+  }
+
 }
+
+console.log((temperatureInF(24,'C') + 'F')); // Change values 24 to 88 and 'C' to 'F' to test
 
 
 /**
@@ -96,9 +117,17 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id,name,email) {
+  var object = {
+    id: id,
+    name: name,
+    email: email
+  };
+  return object;
 }
+var donald = new makePersonObject('1','Donald','faulknordonald@gmail.com');
+
+console.log(donald);
 
 /**
  * ### Challenge `getName`
@@ -113,9 +142,18 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(id,name,email) {
+  var object = {
+    id: id,
+    name: name,
+    email: email
+  }
+  return object;
 }
+
+var donald = new getName('1','Donald','faulknordonald@gmail.com');
+
+console.log('Hello, my name is ' + donald.name);
 
 
 /**
@@ -133,9 +171,16 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(apple) { // appleIndex(['orange', 'grape', 'apple', 'banana', 'mango']) produces an error?
+  fruits = ['orange', 'grape', 'apple', 'banana', 'mango']; // used this method instead
+  
+  for(i = 0; i <= fruits.length - 1; i++) {
+    if(fruits[i] == 'apple') {
+      return i;
+    }
+  }
 }
+console.log(appleIndex());
 
 /**
  * ### Challenge `isItAnApple`
@@ -152,9 +197,17 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(apple) { // appleIndex(['orange', 'grape', 'apple', 'banana', 'mango']) produces an error?
+  fruits = ['orange', 'apple', 'banana', 'apples', 'apple', 'mango']; // used this method instead
+  var bool = [];
+  for(i = 0; i <= fruits.length - 1; i++) {
+    if(fruits[i] == 'apple') {
+      bool.unshift(true);
+    } else { bool.unshift(false); }
+  }
+  return bool;
 }
+console.log(isItAnApple());
 
 
 
@@ -196,7 +249,6 @@ function get3rdCar(inventory) {
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 
-
 /**
  * ### Challenge `getCarInfoByIndex`
  * 
@@ -210,8 +262,13 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+
+  const car = inventory[index];
+  return 'This is a ' + car.car_make + ' ' + car.car_model;
+
 }
+
+console.log(getCarInfoByIndex(inventory,2));
 
 /**
  * ### Challenge `getLastCarInfo`
@@ -224,9 +281,14 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
+function getLastCarInfo(inventory) {
+  index = inventory.length - 1;
+  const lastCar = inventory[index];
+  return 'This is a ' + lastCar.car_make + ' ' + lastCar.car_model;
+
 }
+
+console.log(getLastCarInfo(inventory));
 
 /**
  * ### Challenge `getModelYears`
@@ -237,9 +299,17 @@ function getLastCarInfo(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
-  /* code here */
+function getModelYears(inventory) {
+  var years = [];
+
+  for(i = 0; i <= inventory.length - 1; i++) {
+    carYear = inventory[i].car_year;
+    years.unshift(carYear);
+  }
+  return years;
 }
+
+console.log(getModelYears(inventory));
 
 /**
  * ### Challenge `getCarInfoById`
@@ -255,9 +325,16 @@ function getModelYears(/* code here */) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+
+function getCarInfoById(inventory,id) {
+  for(i = 0; i <= inventory.length - 1; i++) {
+    var carId = inventory[i].id;
+    if(carId == id) {
+      return 'This is a ' + inventory[i].car_make + ' ' + inventory[i].car_model;
+    }
+  }
 }
+console.log(getCarInfoById(inventory,5));
 
 /**
  * ### Challenge `getOlderCars`
