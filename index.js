@@ -101,9 +101,12 @@ temperatureInF(24,`C`);
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id,name,email) {
+  console.log(`id: ${id},`);
+  console.log(`name: ${name},`);
+  console.log(`email: ${email},`);
 }
+makePersonObject(`5`,`Leia`,`leia@leia.com`);
 
 /**
  * ### Challenge `getName`
