@@ -15,13 +15,9 @@
 function addNumbers(num1, num2) {
   return num1 + num2;
 }
+addNumbers(7,5);
 
-// ⭐️ Example Challenge end ⭐️
 
-
-// 👇 COMPLETE YOUR WORK BELOW 👇
-// 👇 COMPLETE YOUR WORK BELOW 👇
-// 👇 COMPLETE YOUR WORK BELOW 👇
 
 
 /**
@@ -36,9 +32,11 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(/* code here */) {
-  /* code here */
+function sayGoodbye(name) {
+  console.log(`Goodbye, ${name}. Have a great day.`); /* code here */
 }
+
+sayGoodbye('Andy');
 
 /**
  * ### Challenge `temperatureCtoF`
