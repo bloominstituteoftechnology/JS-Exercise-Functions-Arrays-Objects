@@ -109,8 +109,9 @@ console.log(temperatureCtoF(24));
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
+function makePersonObject(id, name, email/* code here */) {
   /* code here */
+  const = 
 }
 
 /**
