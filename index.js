@@ -127,9 +127,14 @@ console.log(makePersonObject(5,"Leia","leia@leia.com"))
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(/* code here */) {
-  /* code here */
+  return (`Hello, my name is ${personal.name}`)
 }
-
+  const personal = {
+    id : 5,
+    name : "Leia",
+    email : "leia@leia.com",
+  };
+console.log(getName(personal))
 
 /**
  * ### Challenge `appleIndex`
@@ -146,9 +151,11 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(fruitArray) {
+  var fruitOfChoice = fruitArray.indexOf("apple");
+  return fruitOfChoice;
 }
+console.log(appleIndex(['orange', 'grape', 'apple', 'banana', 'mango']))
 
 /**
  * ### Challenge `isItAnApple`
