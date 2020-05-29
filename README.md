@@ -2,7 +2,7 @@
 
 This challenge focuses on functions, objects and arrays. You'll convert "traditional" functions into functions that use the ES6 arrow syntax. You'll also manipulate objects and traverse arrays.
 
-__THE USE OF _MOST_ HIGHER-ORDER ARRAY METHODS IS FORBIDDEN!__ These would be array methods that take callbacks as arguments and save you from having to loop manually, such as `map`, `filter`, `reduce`,`forEach` etc. **You'll have to make do with good old loops!** 
+__THE USE OF _MOST_ HIGHER-ORDER ARRAY METHODS IS FORBIDDEN!__ These would be array methods that take callbacks as arguments and save you from having to loop manually, such as `map`, `filter`, `reduce`,`forEach` etc. **You'll have to make do with good old loops!**
 
 Commit often! **Plan to commit & push every time you get a new test passing**. This makes it SO much easier to figure out "what broke my code", and helps your TL keep track of how you're doing.
 
@@ -12,12 +12,12 @@ If you run into trouble while coding, fight the good fight for 20 minutes and th
 
 ### Task 1 - Set up Project
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: git push origin `<firstName-lastName>`
+- [X] Create a forked copy of this project
+- [X] Add your team lead as collaborator on Github
+- [X] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [X] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [X] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [X] Push commits: git push origin `<firstName-lastName>`
 
 ### Task 2 - MVP
 
@@ -25,7 +25,7 @@ Find the file `index.js` and complete the tasks until your returns look like the
 
 ### Task 3 - Stretch
 
-There are several stretch goals inside `index.js`. You may work on these once you have finished MVP requirements for the day! 
+There are several stretch goals inside `index.js`. You may work on these once you have finished MVP requirements for the day!
 
 ## Resources
 
