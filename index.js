@@ -36,11 +36,10 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  *
 */
-function sayGoodbye() {
-  const names = ['Adam', 'Joshua', 'Peter', 'John'];
-  console.log(`Goodbye, ${names[3]}. Have a great day.`);
+function sayGoodbye(name) {
+  return `Goodbye, ${name}. Have a great day.`;
 }
-sayGoodbye('Adam', 'Joshua', 'Peter', 'John');
+console.log(sayGoodbye("Joshua"));
 
 /**
  * ### Challenge `temperatureCtoF`
@@ -56,13 +55,10 @@ sayGoodbye('Adam', 'Joshua', 'Peter', 'John');
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how.
 */
-function temperatureCtoF() {
-  const t = 24;
-  let temp = t * (9 / 5) + 32;
-  var roundedDegrees = Math.round(temp);
-  console.log(`${roundedDegrees}`);
+function temperatureCtoF(temp) {
+  return Math.round(temp * (9 / 5) + 32);
 }
-temperatureCtoF();
+console.log(temperatureCtoF(24));
 
 /**
  * ### Challenge `temperatureInF`
@@ -81,10 +77,10 @@ temperatureCtoF();
  *
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
-}
+function temperatureInF() {
 
+}
+temperatureInF();
 
 /**
  * ### Challenge `makePersonObject`
@@ -244,75 +240,5 @@ function getLastCarInfo(/* code here */) {
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
 function getModelYears(/* code here */) {
-  /* code here */
-}
-
-/**
- * ### Challenge `getCarInfoById`
- *  * * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
- * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
- *
- * instructions
- * getCarInfoById takes two arguments:
- *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
- *     (2) a number which is the desired car id (see how each car has its own unique id).
- * getCarInfoById returns a string in the format `This is a {car_make} {car_model}
- *
- * For example, if getCarInfoById is invoked with the inventory and the number 1,
- * it will return `This is a Lincoln Navigator`.
-*/
-function getCarInfoById(/* code here */) {
-  /* code here */
-}
-
-/**
- * ### Challenge `getOlderCars`
- * * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
- * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
- *
- * instructions
- * We need a utility to find older cars!
- * getOlderCars takes two arguments:
- *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
- *     (2) a number which is the desired max year.
- * getOlderCars returns an array containing all the cars
- * with a `car_year` which is at most the given desired max year,
- * in the same order as they appear in the original inventory.
-*/
-function getOlderCars(/* code here */) {
-  /* code here */
-}
-
-/**
- * ### Challenge `getGermanCars`
- * * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
- * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
- *
- * instructions
- * We need a utility to find German cars!
- * getGermanCars takes a single argument:
- *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
- * getGermanCars returns an array containing all the cars
- * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
- * in the same order as they appear in the original inventory.
-*/
-function getGermanCars(/* code here */) {
-  /* code here */
-}
-
-/**
- * ### Challenge `carMaker`
- * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
- * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
- *
- * instructions
- * This function takes a single odometer argument (a number) and returns an object.
- * The returned object has the following characteristics:
- *     it has an `odometer` property that contains the argument passed in.
- *     it has a `drive` method that takes a distance as its argument, and
- *         (1) causes the odometer in the object to be increased by the distance,
- *         (2) returns the updated value of the `odometer`.
-*/
-function carMaker(/* code here */) {
   /* code here */
 }
