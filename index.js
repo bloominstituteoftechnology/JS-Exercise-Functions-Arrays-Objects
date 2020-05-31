@@ -122,9 +122,15 @@ makePersonObject(`5`,`Leia`,`leia@leia.com`);
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(/* code here */) {
-  /* code here */
+  const namObj={
+    id:57197,
+    name: `Shenandoah`,
+    email: `Shenandoahjeroline@email.com`,
+  };
+  return(`Hello, my name is `+namObj.name)
 }
 
+console.log(getName());
 
 /**
  * ### Challenge `appleIndex`
@@ -138,13 +144,19 @@ function getName(/* code here */) {
  * once in the array.
  * 
  * For example, if we invoke `appleIndex`
- * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
- * the returned value should be: 2.
+ * passing in  'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
+ * the returned value should be: 2.[
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex() {
+  let fruit =[`orange`, `grape`,`apple`, `bananan`, `mango`]
+  return(fruit.indexOf(`apple`))
 }
 
+function appleIndex() {
+  let fruit =[`orange`, `grape`,`apple`, `banana`, `mango`]
+  return(fruit.indexOf(`apple`))
+}
+console.log(fruit[2]);
 /**
  * ### Challenge `isItAnApple`
  * 
@@ -160,8 +172,14 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(array) {
+  const fruit2 = [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ]
+  for (i=0; i<fruits.length; i++)
+  {if (fruits[i]==='apple')
+  {console.log (true);}
+  else{console.log(false);}
+}
+  
 }
 
 
@@ -192,13 +210,9 @@ var inventory = [
   * @instructions
   * get3rdCar() should return the string `The is a Land Rover Defender Ice Edition`
   * 
-  *
   * NOTE: This example has been completed for you.
 **/
-function get3rdCar(inventory) {
-  const the3rd = inventory[2];
-  return `The is a ${the3rd.car_make} ${the3rd.car_model}`
-}
+
 
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
@@ -216,10 +230,14 @@ function get3rdCar(inventory) {
  * 
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
+
+
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  console.log(`This is a ${car-make}${car_model}`);
 }
+getCarInfoByIndex(inventory, index);
+
 
 /**
  * ### Challenge `getLastCarInfo`
@@ -234,6 +252,13 @@ function getCarInfoByIndex(inventory, index) {
 */
 function getLastCarInfo(/* code here */) {
   /* code here */
+}function getModelYears(arr) {
+  let cars_year=[];
+  /* code here */
+  for(let i=0; i<arr.length; i++){
+    cars_year.push(arr[i].car_year);
+  }
+  return cars_year;
 }
 
 /**
@@ -246,8 +271,7 @@ function getLastCarInfo(/* code here */) {
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
 function getModelYears(/* code here */) {
-  /* code here */
-}
+
 
 /**
  * ### Challenge `getCarInfoById`
