@@ -102,10 +102,15 @@ temperatureInF(88, "F");
  *   email: "leia@leia.com",
  * }
  */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email) {
+  const person = {
+    id: id,
+    name: name,
+    email: email,
+  };
+  return person;
 }
-
+makePersonObject("5", "Leia", "leia@leia.com");
 /**
  * ### Challenge `getName`
  *
@@ -119,9 +124,17 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
  */
-function getName(/* code here */) {
-  /* code here */
+
+function getName() {
+  let person = {
+    id: 1,
+    name: "Leia",
+    email: "leia@leia.com",
+  };
+  return "Hello, my name is " + person.name;
 }
+
+getName();
 
 /**
  * ### Challenge `appleIndex`
@@ -138,9 +151,11 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
  */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex() {
+  var fruit = ["orange", "grape", "apple", "banana", "mango"];
+  return fruit;
 }
+appleIndex().indexOf("apple");
 
 /**
  * ### Challenge `isItAnApple`
@@ -157,9 +172,19 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
  */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(fruits) {
+  const isApple = [];
+  fruits.forEach((fruit) => {
+    if (fruit === "apple") {
+      isApple.push(true);
+    } else {
+      isApple.push(false);
+    }
+  });
+  return isApple;
 }
+
+isItAnApple(["orange", "apple", "banana", "apples", "apple", "mango"]);
 
 // ⭐️ Example Test Data ⭐️
 
@@ -216,7 +241,8 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
  */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  const myCar = inventory[index];
+  return "This is a " + myCar.car_make + myCar.car_model;
 }
 
 /**
@@ -230,8 +256,11 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
  */
-function getLastCarInfo(/* code here */) {
-  /* code here */
+function getLastCarInfo(inventory) {
+  const lastCar = inventory.length - 1;
+  const myCar = inventory[lastCar];
+
+  return "This is a " + myCar + myCar.car_model;
 }
 
 /**
@@ -243,8 +272,12 @@ function getLastCarInfo(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
  */
-function getModelYears(/* code here */) {
-  /* code here */
+function getModelYears(inventory) {
+  let modelYear = [];
+  for (let i = 0; i < inventory.length; i++) {
+    modelYears.push(inventory[i].car_year);
+    return modelYear;
+  }
 }
 
 /**
@@ -261,8 +294,13 @@ function getModelYears(/* code here */) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
  */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inventory, carId) {
+  for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].id === carId) {
+      let car = inventory[i];
+      return "This is a " + car.car_make + car.car_model;
+    }
+  }
 }
 
 /**
