@@ -16,6 +16,7 @@ function addNumbers(num1, num2) {
   return num1 + num2;
 }
 addNumbers(7,5);
+console.log(addNumbers(7,5));
 
 
 
@@ -57,6 +58,7 @@ function temperatureCtoF(celsius) {
   return Math.round(farenheit) ;
 }
 temperatureCtoF(24);
+console.log(temperatureCtoF(24));
 /**
  * ### Challenge `temperatureInF`
  * 
@@ -135,8 +137,8 @@ console.log(getName());
 /**
  * ### Challenge `appleIndex`
  * 
- * @instructions
- * This function takes as its only argument an array 
+ *@instructions
+  This function takes as its only argument an array 
  * containing strings,
  * and returns the index in the array of the string 'apple'.
  * 
@@ -147,17 +149,15 @@ console.log(getName());
  * passing in  'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.[
 */
-function appleIndex() {
-  let fruit =[`orange`, `grape`,`apple`, `bananan`, `mango`]
-  return(fruit.indexOf(`apple`))
-}
 
-function appleIndex() {
+
+function appleIndex(cb) {
   let fruit =[`orange`, `grape`,`apple`, `banana`, `mango`]
-  return(fruit.indexOf(`apple`))
+  return fruit.indexOf (cb)
 }
-console.log(fruit[2]);
-/**
+appleIndex(`apple`);
+console.log(appleIndex(`apple`));
+/*
  * ### Challenge `isItAnApple`
  * 
  * @instructions
@@ -172,15 +172,20 @@ console.log(fruit[2]);
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(array) {
-  const fruit2 = [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ]
-  for (i=0; i<fruits.length; i++)
-  {if (fruits[i]==='apple')
-  {console.log (true);}
-  else{console.log(false);}
+function isItAnApple(fruits) {
+  const fruit2 = [];
+  fruits.forEach((fruit) => {
+    if (fruit === "apple") {
+      fruit2.push(true);
+    } else {
+      fruit2.push(false);
+    }
+  });
+  return fruit2;
 }
-  
-}
+
+isItAnApple(["orange", "apple", "banana", "apples", "apple", "mango"]);
+console.log(isItAnApple(["orange", "apple", "banana", "apples", "apple", "mango"]));
 
 
 
@@ -219,7 +224,7 @@ var inventory = [
 // 👇 COMPLETE YOUR WORK BELOW 👇
 
 
-/**
+/*
  * ### Challenge `getCarInfoByIndex`
  * 
  * @instructions
@@ -230,16 +235,20 @@ var inventory = [
  * 
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
-
-
 */
+
+
 function getCarInfoByIndex(inventory, index) {
-  console.log(`This is a ${car-make}${car_model}`);
+  const whatCar = inventory[index];
+  console.log(`This is a ${whatCar.car_make} ${whatCar.car_model}`);
+  return(`This is a ${whatCar.car_make}${whatCar.car_model}`);
 }
-getCarInfoByIndex(inventory, index);
+getCarInfoByIndex(inventory, 3);
 
 
-/**
+
+
+/*
  * ### Challenge `getLastCarInfo`
  * 
  * @instructions
@@ -250,16 +259,13 @@ getCarInfoByIndex(inventory, index);
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
-}function getModelYears(arr) {
-  let cars_year=[];
-  /* code here */
-  for(let i=0; i<arr.length; i++){
-    cars_year.push(arr[i].car_year);
-  }
-  return cars_year;
+
+function getLastCarInfo(inventory) {
+   const lastCar = inventory[inventory.length-1];
+  console.log(`This is a ${lastCar.car_make} ${lastCar.car_model}`);
+  return lastCar;
 }
+getLastCarInfo(inventory);
 
 /**
  * ### Challenge `getModelYears`
@@ -270,8 +276,16 @@ function getLastCarInfo(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
+function getModelYears(inventory) {
+  const carYears = [];
+  for (i = 0; i < inventory.length; i++) {
+  carYears.push(inventory[i].car_year);
+  }
+  
+  console.log(carYears);
+  }
 
+  getModelYears(inventory);
 
 /**
  * ### Challenge `getCarInfoById`
@@ -288,58 +302,6 @@ function getModelYears(/* code here */) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoById(/* code here */) {
-  /* code here */
-}
-
-/**
- * ### Challenge `getOlderCars`
- * * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
- * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
- * 
- * @instructions
- * We need a utility to find older cars!
- * getOlderCars takes two arguments:
- *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
- *     (2) a number which is the desired max year.
- * getOlderCars returns an array containing all the cars
- * with a `car_year` which is at most the given desired max year,
- * in the same order as they appear in the original inventory.
-*/
-function getOlderCars(/* code here */) {
-  /* code here */
-}
-
-/**
- * ### Challenge `getGermanCars`
- * * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
- * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
- * 
- * @instructions
- * We need a utility to find German cars!
- * getGermanCars takes a single argument:
- *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
- * getGermanCars returns an array containing all the cars
- * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
- * in the same order as they appear in the original inventory.
-*/
-function getGermanCars(/* code here */) {
-  /* code here */
-}
-
-/**
- * ### Challenge `carMaker`
- * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
- * COMPLETING ALL NON-STRETCH CHALLENGES IN THE REPOSITORY!
- * 
- * @instructions
- * This function takes a single odometer argument (a number) and returns an object.
- * The returned object has the following characteristics:
- *     it has an `odometer` property that contains the argument passed in.
- *     it has a `drive` method that takes a distance as its argument, and
- *         (1) causes the odometer in the object to be increased by the distance,
- *         (2) returns the updated value of the `odometer`.
-*/
-function carMaker(/* code here */) {
   /* code here */
 }
 
