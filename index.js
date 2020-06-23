@@ -26,19 +26,18 @@ function addNumbers(num1, num2) {
 
 /**
  * ### Challenge `sayGoodbye`
- * 
- * @instructions
- * This function should take an a name as an argument,
- * and return a string that says 'Goodbye, {name}. Have a great day.'
- * 
- * For example, if we invoke `sayGoodbye`
- * passing 'Andy' as the argument,
- * the returned value should look like: 'Goodbye, Andy. Have a great day.'
- * 
-*/
-function sayGoodbye(/* code here */) {
-  /* code here */
+ * @instructions This function should take an a name as an argument,
+and return a string that says 'Goodbye, {name}. Have a great day.'
+
+For example, if we invoke `sayGoodbye`
+passing 'Andy' as the argument,
+the returned value should look like: 'Goodbye, Andy. Have a great day.'
+ */
+function sayGoodbye(name) {
+  return `Goodbye, ${name}. Have a great day.`;
 }
+
+console.log(sayGoodbye('Danay'));
 
 /**
  * ### Challenge `temperatureCtoF`
@@ -54,9 +53,13 @@ function sayGoodbye(/* code here */) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(/* code here */) {
-  /* code here */
+function temperatureCtoF(temp) {
+  const sum = Math.round(temp*9/5+32);
+  return sum;
 }
+
+console.log(temperatureCtoF(24));
+
 
 /**
  * ### Challenge `temperatureInF`
@@ -75,9 +78,17 @@ function temperatureCtoF(/* code here */) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(number, temperature){
+  if (temperature === 'F'){
+    return number + 'F';
+  }
+  else if (temperature === 'C'){
+    return temperatureCtoF(number) + 'F';
+  }
 }
+
+console.log(temperatureInF(88, 'F'));
+console.log(temperatureInF(24, 'C'));
 
 
 /**
@@ -96,9 +107,19 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
+function makePersonObject(id, name, email) {
   /* code here */
+  const user = {
+  id: id,
+  name: name,
+  email: email,
+  }
+  return user;
 }
+
+const userLeia = makePersonObject('5', 'Leia', 'leia@leia.com');
+console.log(userLeia);
+
 
 /**
  * ### Challenge `getName`
@@ -113,9 +134,10 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(/*code here*/){
+  /*code here*/
 }
+
 
 
 /**
